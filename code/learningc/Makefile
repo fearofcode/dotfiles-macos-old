@@ -14,4 +14,4 @@ clean:
 	rm $(TARGET) 
 
 test:
-	$(MAKE) clean && $(SCAN_BUILD) make
+	$(MAKE) clean && $(SCAN_BUILD) $(MAKE)
