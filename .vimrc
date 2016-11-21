@@ -20,3 +20,4 @@ syntax on
 set showmatch
 " intelligent comments
 set comments=sl:/*,mb:\ *,elx:\ */
+set laststatus=2
