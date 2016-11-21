@@ -1,5 +1,7 @@
-all: hello_world
+all: learningc
 
-hello_world: hello_world.c
-	gcc -g -o hello_world hello_world.c
+learningc: learningc.c
+	gcc -g -o learningc learningc.c
 
+clean:
+	rm learningc
