@@ -1,11 +1,17 @@
 CC=clang
-all: learningc
+CFLAGS = -g -Wall -pedantic
+MAKE = make
+SCAN_BUILD = scan-build
+TARGET = learningc
 
-learningc: learningc.c
-	$(CC) -g -Wall -pedantic -o learningc learningc.c
+default: all
+all: $(TARGET)
+
+$(TARGET): $(TARGET).c
+	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c 
 
 clean:
-	rm learningc
+	rm $(TARGET) 
 
 test:
-	make clean && scan-build make
+	$(MAKE) clean && $(SCAN_BUILD) make
