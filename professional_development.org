@@ -1,0 +1,5 @@
+* Command line workflow
+** Learning org-mode
+*** Rainer Konig's videos: [[https://www.youtube.com/user/koenighaunstetten/videos]] 
+*** Getting started video: [[https://www.youtube.com/watch?v=bzZ09dAbLEE][Taking Notes in Emacs Org-mode]]
+** TODO move weight loss spreadsheet over to org mode, get plotting set up [[http://orgmode.org/manual/Org_002dPlot.html#Org_002dPlot][Org-Plot in Org Mode manual]]

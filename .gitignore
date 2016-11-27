@@ -1,10 +1,11 @@
-# blacklist everything except some key dotfiles, and .c files in ~/code/learningc/
+# blacklist everything except some key dotfiles, .org files, and .c files in ~/code/learningc/
 
 /*
 !.gitignore
 !.vimrc
 !.tmux.conf
 !.emacs
+!*.org
 
 !code/
 code/*
