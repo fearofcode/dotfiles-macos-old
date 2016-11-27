@@ -1,5 +1,137 @@
-* Command line workflow
-** Learning org-mode
-*** Rainer Konig's videos: [[https://www.youtube.com/user/koenighaunstetten/videos]] 
-*** Getting started video: [[https://www.youtube.com/watch?v=bzZ09dAbLEE][Taking Notes in Emacs Org-mode]]
-** TODO move weight loss spreadsheet over to org mode, get plotting set up [[http://orgmode.org/manual/Org_002dPlot.html#Org_002dPlot][Org-Plot in Org Mode manual]]
+#+TITLE: So good they can't ignroe you/Git gud (at writing code) or get rekt
+#+TODO: TODO(t) WAIT(w@/!) | DONE(d!) CANCELED(c@)
+
+* DONE Command line workflow [1/1]
+  :LOGBOOK:  
+  - State "DONE"       from ""           [2016-11-27 Sun 15:53]
+  :END:      
+** DONE Basic mechanics of working with org-mode [3/3]
+   :LOGBOOK:  
+   - State "DONE"       from "TODO"       [2016-11-27 Sun 15:53]
+   :END:      
+*** DONE Getting started video: [[https://www.youtube.com/watch?v=bzZ09dAbLEE][Taking Notes in Emacs Org-mode]]
+    :LOGBOOK:  
+    - State "DONE"       from "DONE"       [2016-11-27 Sun 13:50]
+    :END:      
+*** DONE Rainer Konig's videos: [[https://www.youtube.com/user/koenighaunstetten/videos]] 
+    :LOGBOOK:  
+    - State "DONE"       from "TODO"       [2016-11-27 Sun 14:12]
+    :END:      
+    - Note taken on [2016-11-27 Sun 13:42] \\
+      Watched a goodly amount, but ultimately only a subset.
+
+*** DONE port full professional development spreadsheet over to this file 
+    :LOGBOOK:  
+    - State "DONE"       from "WAIT"       [2016-11-27 Sun 15:52]
+    :END:      
+    
+
+* Learning C [0/9]
+** TODO C Primer Plus
+** TODO Practical C Programming 
+** TODO Intermediate C
+** TODO C Interfaces and Implementations
+** TODO Understanding and Using C Pointers
+** TODO Expert C Programming
+** TODO 21st Century C Programming
+** TODO Autotools book
+** TODO Understand and comprehend Linus Torvalds' double pointer comment http://grisha.org/blog/2013/04/02/linus-on-understanding-pointers/ / https://www.youtube.com/watch?v=GiAhUYCUDVc
+
+* Algorithms and data structures (write code in C) [0/5]
+** TODO Look through data structures/algorithms books and decide which ones to read from, such as:
+** TODO Algorithms Unlocked
+** TODO Sedgewick's /Algorithms/
+** TODO Skiena's /Algorithm Design Manual/
+** TODO CLRS
+
+* Assembly language, UNIX systems programming, machine organization [0/11]
+** TODO Assembly Language Step-by-Step: Programming with Linux
+** TODO How Linux works 
+** TODO Introduction to 64 Bit Assembly Programming for Linux and OS X
+** TODO Modern Assembly Language Programming with the ARM Processor (+ buy Raspberry Pi)
+** TODO Raspberry Pi Assembly Language RASPBIAN Beginners: Hands On Guide 
+** TODO The Linux Programming Interface: A Linux and UNIX System Programming Handbook 
+** TODO Shared Memory Application Programming: Concepts and Strategies in Multicore Application Programming
+** TODO The Art of Multiprocessor Programming 
+** TODO The Art of Concurrency: A Thread Monkey's Guide to Writing Parallel Applications 
+** TODO Computer Systems: A Programmer's Perspective
+** TODO Project: read and understand http://timetobleed.com/the-broken-promises-of-mrireeyarv/ if it doesn't require compiler/interpreter knowledge :project:
+
+* Operating systems [0/12]
+** TODO OSTEP http://pages.cs.wisc.edu/~remzi/OSTEP/
+*** Maybe Anderon's OSPP, Tanenbaum, etc. if OSTEP doesn't work out 
+** TODO Possible project: tools to detect thread problems in code, e.g https://github.com/google/sanitizers/wiki/ThreadSanitizerCppManual :project:
+** TODO Possible (fun) project: kernel module that blinks keyboard LEDs http://www.tldp.org/LDP/lkmpg/2.6/html/x1194.html :project:
+** TODO Possible project; try to do something like Tim Bray's Wide Finder; maybe try to convince him to fork over the data set for modern analysis? :project:
+** TODO Possible project: OS 161 http://os161.eecs.harvard.edu/ or other OS projects :project:
+** TODO Possible project: Arch Linux -> Linux from scratch	    :project:
+** TODO Possible project: Windows internals -> game botting	    :project:
+** TODO Possible project: read through and understand Joe Damato's blog posts :project:
+** TODO Possible project: Brendan Gregg's tracing tools http://www.brendangregg.com/blog/2016-10-27/dtrace-for-linux-2016.html :project:
+** TODO Possible project: Joe Damato's computer project list https://docs.google.com/document/d/1V0CnufAf-85Jn1W2c_Qvfzbm2ss9WY4yJ41jQWwA-5Q/edit :project:
+** TODO Possible project: MIT's OS course https://pdos.csail.mit.edu/6.828/2016/overview.html :project:
+** TODO Possible project: read through http://carlos.bueno.org/optimization/mature-optimization.pdf :project:
+
+* Networks [0/10]
+** TODO Computer Networks, Fifth Edition: A Systems Approach
+** TODO The Illustrated Network: How TCP/IP Works In A Modern Netowrk
+** TODO Interconnections: Bridges, Routers, Switches, and Internetworking Protocols 
+** TODO High Performance Browser Networking (already purchased)
+** TODO [[https://www.amazon.com/Every-Developer-Should-OdeToCode-Programming-ebook/dp/B0076Z6VMI/ref%3Dsr_1_1?s%3Dbooks&ie%3DUTF8&qid%3D1480202887&sr%3D1-1&keywords%3Dhttp][What Every Developer Should Know About HTTP]]
+** TODO Tangled Web: A Guide to Securing Modern Web Application
+** TODO Project: fast static blogging with Hugo/Jekyll and a CDN; also try Varnish and compare https://lustforge.com/2016/02/27/hosting-hugo-on-aws/ http://book.varnish-software.com/4.0/chapters/Design_Principles.html :project:
+** TODO Possible project: wifi password cracking/auditing	    :project:
+** TODO Possible project: DDoS mitigation			    :project:
+** TODO Possible project: OpenBSD + i3 https://www.amazon.com/Absolute-OpenBSD-Unix-Practical-Paranoid/dp/1593274769 :project:
+
+* Compilers and programming languages [0/6]
+** TODO Programming Language Pragmatics
+** TODO Engineering a Compiler
+** TODO The Garbage Collection Handbook
+** TODO The Definitive ANTLR 4 Reference
+** TODO Possible project: learn Go and ressurrect https://github.com/trustpath/sequence
+** TODO Possible project: read DJB's slides on optimization and comment https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf
+
+* Databases/transaction processing [0/1]
+** TODO sort through databases books and prioritize them here
+
+* Distributed systems [0/2]
+** TODO Prioritize books and enter them here
+** TODO [[http://christophermeiklejohn.com/distributed/systems/2013/07/12/readings-in-distributed-systems.html][CS Meiklejohn's readings in distributed systems]]
+** Project: learn Clojure and reproduce some of Kyle Kingsbury's Jepsen posts, try them out on other databases/systems (Kafka/RabbitMQ/Redis maybe) :project:
+
+* Capstone projects 
+** Possible project: how to actually do analytics/use/build OLAP cubes :project:
+** Possible project: pessimistic concurrency in a toy gift card web app http://sakurity.com/blog/2015/05/21/starbucks.html compare how to do it in MySQL, PostgreSQL; advisory locks vs. row-level locks :project:
+** Project: Django cache invalidation through Postgres logical decoding :project:
+** Project: streaming RSS/Twitter client based off Kafka w/ auto scaling or something :project:
+** Project: CRDTs + collaborative editing in real-time web apps	    :project:
+** Project: parallel Hearthstone search				    :project:
+** Project: Oracle ETL [[https://www.amazon.com/Automated-ETL-Testing-Richard-Thrust-ebook/dp/B00MLNJRU8/ref%3Dla_B00IO0EZ0Y_1_1?s%3Dbooks&ie%3DUTF8&qid%3D1480290343&sr%3D1-1][Automated ETL Testing]] [[https://www.amazon.com/Data-Warehouse-Workshop-Providing-Experience/dp/1494926962/ref%3Dsr_1_fkmr0_2?ie%3DUTF8&qid%3D1480290442&sr%3D8-2-fkmr0&keywords%3Doracle%2Betl][The Data Warehouse Workshop: Providing Practical Experience to the Aspiring ETL Developer]] :project:
+
+* Lower priority/do when time
+** TODO move weight loss spreadsheet over to org mode, get plotting set up [[http://orgmode.org/manual/Org_002dPlot.html#Org_002dPlot][Org-Plot in Org Mode manual]] :health:
+** /From Mathematics to Generic Programming/
+** TODO reinstall IdeaVim and try =set :relativenumber= to get relative line numbers going
+
+* Misc/someday bucket
+** SICP
+** TAOCP 
+** Vim extensions
+*** http://jeffkreeftmeijer.com/2013/vims-new-hybrid-line-number-mode/
+*** http://www.vim.org/scripts/script.php?script_id=1658
+*** https://github.com/takac/vim-hardtime
+*** https://github.com/wikitopian/hardmode
+*** https://github.com/kien/ctrlp.vim
+*** https://github.com/tpope/vim-surround
+*** https://github.com/tpope/vim-sensible
+*** https://github.com/tpope/vim-fugitive 
+*** http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
+*** https://github.com/craigemery/vim-autotag
+*** http://cscope.sourceforge.net/
+*** http://beyondgrep.com/
+*** https://github.com/Valloric/YouCompleteMe
+*** https://github.com/vim-syntastic/syntastic
+
+** Learn how to actually do A/B testing and data-driven product development like a fucking adult
+*** [[http://mcfunley.com/data-driven-products-now]]

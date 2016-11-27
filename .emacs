@@ -44,6 +44,9 @@ Return a list of installed packages or nil for every skipped package."
 (require 'evil)
 (evil-mode t)
 
+;; http://orgmode.org/manual/Tracking-TODO-state-changes.html
+(setq org-log-into-drawer t)
+
 ;; http://orgmode.org/manual/Activation.html#Activation
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
@@ -61,6 +64,9 @@ Return a list of installed packages or nil for every skipped package."
    (quote
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(inhibit-startup-screen t)
+ '(org-modules
+   (quote
+    (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m)))
  '(package-selected-packages (quote (solarized-theme evil-visual-mark-mode)))
  '(tool-bar-mode nil))
 
