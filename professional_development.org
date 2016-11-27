@@ -1,4 +1,4 @@
-#+TITLE: So good they can't ignroe you/Git gud (at writing code) or get rekt
+#+TITLE: So good they can't ignore you/Git gud or get rekt
 #+TODO: TODO(t) WAIT(w@/!) | DONE(d!) CANCELED(c@)
 
 * DONE Command line workflow [1/1]
