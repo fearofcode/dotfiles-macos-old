@@ -7,6 +7,8 @@
 (setq package-enable-at-startup nil)
 (package-initialize)
 
+(setq c-default-style "linux"
+          c-basic-offset 4)
 ;; taken from http://blog.aaronbieber.com/2015/05/24/from-vim-to-emacs-in-fourteen-days.html
 (defun ensure-package-installed (&rest packages)
   "Assure every package is installed, ask for installation if it’s not.
@@ -35,6 +37,8 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; https://github.com/Fanael/relative-line-numbers
 (global-relative-line-numbers-mode)
+
+;; http://stackoverflow.com/questions/443302/emacs-how-to-compile-run-make-without-pressing-enter-for-the-compile-command
 
 ;; turn off tool bar and scroll bar
 (tool-bar-mode -1)
