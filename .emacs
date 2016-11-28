@@ -83,9 +83,17 @@ Return a list of installed packages or nil for every skipped package."
       ;; WARNING!  Depending on the default font,
       ;; if the size is not supported very well, the frame will be clipped
       ;; so that the beginning of the buffer may not be visible correctly. 
-      (set-face-attribute 'default nil :height 140)
+      (set-face-attribute 'default nil :height 140))
 
-      )
+ (when (eq system-type 'gnu/linux)
+      ;; default Latin font (e.g. Menlo)
+      (set-face-attribute 'default nil :family "DejaVu Sans Mono")
+      ;; default font size (point * 10)
+      ;;
+      ;; WARNING!  Depending on the default font,
+      ;; if the size is not supported very well, the frame will be clipped
+      ;; so that the beginning of the buffer may not be visible correctly. 
+      (set-face-attribute 'default nil :height 120))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
