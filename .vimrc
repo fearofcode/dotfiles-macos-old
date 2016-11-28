@@ -21,3 +21,5 @@ set showmatch
 " intelligent comments
 set comments=sl:/*,mb:\ *,elx:\ */
 set laststatus=2
+" make Ctrl-D only scroll 15 lines rather than half the screen
+set scroll=15
