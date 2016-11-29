@@ -1,0 +1,13 @@
+#+TITLE: Random notes from learning C
+
+** How to ignore individual warnings in Clang
+#+BEGIN_SRC c
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wdouble-promotion"
+    /* this would normally produce an error with -Weverything, -Werror */
+    printf("FLT_EPSILON = %e\n", FLT_EPSILON);
+    #pragma clang diagnostic pop
+#+END_SRC
+
+*** [[https://www.bignerdranch.com/blog/a-bit-on-warnings/][A Bit On Warnings]]
+** =%a= to print floats in hex notation (C99/C11)
