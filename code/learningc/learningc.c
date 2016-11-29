@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include <stdbool.h>
 
 int main(void) {
-  /* wtf why is Emacs only indenting 2 spaces? idk it's late */
-  int x, y;
-  scanf("%d %d", &x, &y);
-  printf("%d\n", x & y);
-  printf("%p %p\n", (void *) &x, (void *) &y);
-  return 0;
+    printf("int = %zd\n", sizeof(int));
+    printf("char = %zd\n", sizeof(char));
+    printf("long = %zd\n", sizeof(long));
+    printf("long long = %zd\n", sizeof(long long));
+    printf("double = %zd\n", sizeof(double));
+    printf("long double = %zd\n", sizeof(long double));
+    return 0;
 }

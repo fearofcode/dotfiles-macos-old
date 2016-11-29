@@ -1,5 +1,5 @@
 CC=clang
-CFLAGS = -g -Wall -pedantic -std=c11
+CFLAGS = -g -Weverything -Werror -pedantic -std=c11
 ASSEMBLER_CFLAGS = -S -O3
 MAKE = make
 # OS X's clang doesn't come with scan-build because ????, so:
