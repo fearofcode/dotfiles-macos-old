@@ -40,9 +40,10 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; http://stackoverflow.com/questions/443302/emacs-how-to-compile-run-make-without-pressing-enter-for-the-compile-command
 
-;; turn off tool bar and scroll bar
+;; turn off tool bar, scroll bar, and menu bar
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+(menu-bar-mode -1)
 
 ;; vi key bindings
 (require 'evil)
