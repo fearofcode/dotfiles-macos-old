@@ -1,7 +1,7 @@
 #+TITLE: Random notes from learning C
 
 ** How to ignore individual warnings in Clang
-#+BEGIN_SRC c
+#+BEGIN_SRC C
     #pragma clang diagnostic push
     #pragma clang diagnostic ignored "-Wdouble-promotion"
     /* this would normally produce an error with -Weverything, -Werror */
