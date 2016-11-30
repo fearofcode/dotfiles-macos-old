@@ -53,14 +53,20 @@
 ** TODO Understand and comprehend Linus Torvalds' double pointer comment
 *** http://grisha.org/blog/2013/04/02/linus-on-understanding-pointers/ / https://www.youtube.com/watch?v=GiAhUYCUDVc
 
-* Algorithms and data structures (write code in C) [0/5]
-** TODO Look through data structures/algorithms books and decide which ones to read from, such as:
-** TODO Algorithms Unlocked
+* Algorithms and data structures (write code in C) [1/7]
+** TODO Look through data structures/algorithms books and decide which ones to read from
+** CANCELED Algorithms Unlocked
+   :LOGBOOK:  
+   - State "CANCELED"   from "TODO"       [2016-11-29 Tue 21:25] \\
+     I have enough other material that it shouldn't be necessary. I already have some prior context on algorithms and data structures
+   :END:      
+** TODO Algorithms in C
 ** TODO Sedgewick's /Algorithms/
 ** TODO Skiena's /Algorithm Design Manual/
+** TODO /Programming Pearls/
 ** TODO CLRS
 
-* Assembly language, UNIX systems programming, machine organization, concurrency [0/15]
+* Assembly language, UNIX systems programming, machine organization, concurrency [3/15]
 ** TODO Inside the Machine 
 ** TODO How Linux works
 ** TODO Assembly Language Step-by-Step: Programming with Linux
@@ -68,18 +74,30 @@
 ** TODO Modern Assembly Language Programming with the ARM Processor (+ buy Raspberry Pi)
 ** TODO Raspberry Pi Assembly Language RASPBIAN Beginners: Hands On Guide 
 ** TODO The Linux Programming Interface: A Linux and UNIX System Programming Handbook 
-** TODO Project: how fast are append-only reads/writes? How fast is parallel file I/O? :project:
-** TODO Shared Memory Application Programming: Concepts and Strategies in Multicore Application Programming
+** CANCELED Shared Memory Application Programming: Concepts and Strategies in Multicore Application Programming
+   :LOGBOOK:  
+   - State "CANCELED"   from "TODO"       [2016-11-29 Tue 08:59] \\
+     Seems redundant with other concurrency books, may try later
+   :END:      
 ** TODO The Art of Multiprocessor Programming 
+** TODO Programming with POSIX Threads
 ** TODO The Art of Concurrency: A Thread Monkey's Guide to Writing Parallel Applications 
-** TODO Computer Systems: A Programmer's Perspectiv
-** TODO Discovering Modern C++ -> C++ Concurrency In Action: Practical Multithreading
-** TODO Read-only Twitter client in C++				    :project:
+** TODO Computer Systems: A Programmer's Perspective
+** CANCELED Discovering Modern C++ -> C++ Concurrency In Action: Practical Multithreading
+   :LOGBOOK:  
+   - State "CANCELED"   from "TODO"       [2016-11-29 Tue 09:00] \\
+     Too much to do
+   :END:      
+** CANCELED Read-only Twitter client in C++			    :project:
+   :LOGBOOK:  
+   - State "CANCELED"   from "TODO"       [2016-11-29 Tue 09:00]
+   :END:      
 ** TODO Project: read and understand http://timetobleed.com/the-broken-promises-of-mrireeyarv/ if it doesn't require compiler/interpreter knowledge :project:
 
-* Operating systems [0/14]
+* Operating systems [0/15]
 ** TODO OSTEP http://pages.cs.wisc.edu/~remzi/OSTEP/
 *** Maybe Anderon's OSPP, Tanenbaum, etc. if OSTEP doesn't work out 
+** TODO Project: how fast are append-only reads/writes? How fast is parallel file I/O? :project:
 ** TODO (Maybe) [[https://www.gitbook.com/book/0xax/linux-insides/details][Linux Insides]] [[http://www.ibm.com/developerworks/library/l-linuxboot/index.html][Inside the Linux boot process (2006)]]
 ** TODO Watch and possibly comment (in a blog post, in a reasonable, intelligent way) to https://www.youtube.com/watch?v=L9v4Mg8wi4U
 ** TODO Possible project: tools to detect thread problems in code, e.g https://github.com/google/sanitizers/wiki/ThreadSanitizerCppManual :project:
@@ -149,6 +167,7 @@
 ** TODO reinstall IdeaVim and try =set :relativenumber= to get relative line numbers going
 
 * Misc/someday bucket
+** /Fluent Python/
 ** SICP
 ** TAOCP 
 ** Vim extensions
