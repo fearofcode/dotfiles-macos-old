@@ -1,6 +1,7 @@
 CC=clang
 CFLAGS = -g -Weverything -Werror -pedantic -std=c11
 ASSEMBLER_CFLAGS = -S -O3
+RELEASE_FLAGS = -Weverything -Werror -pedantic -std=c11 -O3
 MAKE = make
 # OS X's clang doesn't come with scan-build because ????, so:
 # $ brew install llvm
@@ -13,6 +14,9 @@ all: $(TARGET)
 
 $(TARGET): $(TARGET).c
 	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c 
+
+release: $(TARGET).c
+	$(CC) $(RELEASE_FLAGS) -o $(TARGET).release $(TARGET).c
 
 assembler: $(TARGET).c
 	$(CC) $(ASSEMBLER_CFLAGS) $(TARGET).c 
