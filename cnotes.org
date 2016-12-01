@@ -11,3 +11,7 @@
 
 *** [[https://www.bignerdranch.com/blog/a-bit-on-warnings/][A Bit On Warnings]]
 ** =%a= to print floats in hex notation (C99/C11)
+** C99's policy on modular arithmetic with negative values is: a % b < 0 iff a < 0; a % b == a - (a/b)*b
+*** 11 / -5 == -2, 11 % - 2 == 1
+*** a % b == a - (a/b)*b
+*** -11 % 5 = -11 - (-11/5)*5 = -11 - (-2)*5 = -11 - (-10) = -1

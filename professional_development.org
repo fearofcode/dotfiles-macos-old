@@ -50,17 +50,18 @@
 ** TODO Expert C Programming
 ** TODO 21st Century C Programming
 ** TODO Autotools book
-** TODO Understand and comprehend Linus Torvalds' double pointer comment
+** TODO Understand and comprehend Linus Torvalds' double pointer comment :project:
 *** http://grisha.org/blog/2013/04/02/linus-on-understanding-pointers/ / https://www.youtube.com/watch?v=GiAhUYCUDVc
 
-* Algorithms and data structures (write code in C) [1/7]
+* Algorithms and data structures (write code in C) [1/8]
 ** TODO Look through data structures/algorithms books and decide which ones to read from
 ** CANCELED Algorithms Unlocked
    :LOGBOOK:  
    - State "CANCELED"   from "TODO"       [2016-11-29 Tue 21:25] \\
      I have enough other material that it shouldn't be necessary. I already have some prior context on algorithms and data structures
    :END:      
-** TODO Algorithms in C
+** TODO Weiss's Algorithms and Data Structures in C
+** TODO Sedgewick's Algorithms in C
 ** TODO Sedgewick's /Algorithms/
 ** TODO Skiena's /Algorithm Design Manual/
 ** TODO /Programming Pearls/
