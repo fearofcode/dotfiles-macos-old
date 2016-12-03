@@ -154,7 +154,11 @@
 *** https://www.youtube.com/watch?v=QM1iUe6IofM
 * Capstone projects 
 ** Possible project: how to actually do analytics/use/build OLAP cubes :project:
+** Project: trace through session handling and see how secret keys are used to identify users :project:
 ** Possible project: pessimistic concurrency in a toy gift card web app http://sakurity.com/blog/2015/05/21/starbucks.html compare how to do it in MySQL, PostgreSQL; advisory locks vs. row-level locks :project:
+*** Possible sample application: concert ticket sales app where you can resell tickets to other users
+*** Doesn't actually require payment processing to play with, but could be interesting
+*** [[https://pragprog.com/book/nrwebpay/take-my-money][Take My Money]]
 ** Project: Django cache invalidation through Postgres logical decoding :project:
 ** Project: streaming RSS/Twitter client based off Kafka w/ auto scaling or something :project:
 ** Project: CRDTs + collaborative editing in real-time web apps	    :project:
