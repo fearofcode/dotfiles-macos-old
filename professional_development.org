@@ -24,7 +24,29 @@
     :LOGBOOK:  
     - State "DONE"       from "WAIT"       [2016-11-27 Sun 15:52]
     :END:      
-    
+* CSS and JavaScript suck ass, but fight the ocean and you will drown
+** WAIT [[https://www.amazon.com/Front-End-Web-Development-Ranch-Guide/dp/0134433947][Front-end Web Development: The Big Nerd Ranch Guide]]
+   :LOGBOOK:  
+   - State "WAIT"       from ""           [2016-12-03 Sat 19:23] \\
+     Review at https://www.amazon.com/review/RL60VE4K11RM3/ref=cm_cr_dp_cmt?ie=UTF8&ASIN=0134433947&channel=detail-glance&nodeID=283155&store=books#wasThisHelpful
+     makes it seem lousy
+   :END:      
+** [[https://www.amazon.com/Learning-JavaScript-Essentials-Application-Development/dp/1491914912][Learning JavaScript]]
+** [[http://eloquentjavascript.net/][Eloquent JavaScript]]
+** You Don't Know JS series
+** WAIT [[https://leanpub.com/exploring-es6][Exploring ES6]]
+   :LOGBOOK:  
+   - State "WAIT"       from ""           [2016-12-03 Sat 19:38] \\
+     Seems redundant with other ES6 book
+   :END:      
+** [[https://www.amazon.com/Understanding-ECMAScript-Definitive-JavaScript-Developers/dp/1593277571/][Understanding ECMAScript 6]]
+** [[https://www.packtpub.com/web-development/react-design-patterns-and-best-practices][React Design Patterns and Best Practices]]
+** [[https://www.amazon.com/CSS-Master-Organized-Efficient-Right/dp/0994182627][CSS Master]]
+** [[https://www.amazon.com/CSS-Mastery-Andy-Budd/dp/1430258632][CSS Mastery]]
+** [[https://www.amazon.com/CSS-Secrets-Solutions-Everyday-Problems/dp/1449372635][CSS Secrets]]
+** [[https://www.packtpub.com/web-development/learning-bootstrap-4-second-edition][Learning Boostrap 4]]
+** [[https://leanpub.com/enduringcss][Enduring CSS]]
+   
 
 * Learning C [0/9]
 ** TODO C Primer Plus [3/4]
@@ -127,11 +149,12 @@
 ** TODO Possible project: DDoS mitigation			    :project:
 ** TODO Possible project: OpenBSD + i3 https://www.amazon.com/Absolute-OpenBSD-Unix-Practical-Paranoid/dp/1593274769 :project:
 
-* Compilers and programming languages [0/7]
+* Compilers and programming languages [0/8]
 ** TODO Programming Language Pragmatics
 ** TODO Engineering a Compiler
 ** TODO The Garbage Collection Handbook
 ** TODO The Definitive ANTLR 4 Reference
+** TODO [[https://interpreterbook.com/][Writing an Interpreter in Go]]
 ** TODO Possible project: Look at [[http://clang.llvm.org/OpenProjects.html][Clang Project List]] and see if any are doable/interesting.
 *** Possibly buy a book on LLVM and read to prepare
 ** TODO Possible project: learn Go and ressurrect https://github.com/trustpath/sequence
@@ -143,6 +166,7 @@
 * Distributed systems [0/2]
 ** TODO Prioritize books and enter them here
 ** TODO [[http://christophermeiklejohn.com/distributed/systems/2013/07/12/readings-in-distributed-systems.html][CS Meiklejohn's readings in distributed systems]]
+** [[https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-yuan.pdf][Simple Testing Can Prevent Most Critical Failures]]
 ** Project: learn Clojure and reproduce some of Kyle Kingsbury's Jepsen posts, try them out on other databases/systems (Kafka/RabbitMQ/Redis maybe) :project:
 
 ** Project: investigate linear I/O in Kafka https://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines
@@ -155,6 +179,8 @@
 *** https://www.youtube.com/watch?v=IRTfhkiAqPw
 *** https://www.youtube.com/watch?v=QM1iUe6IofM
 * Capstone projects 
+** Windows Internals + [[https://www.nostarch.com/gamehacking][Game Hacking]]
+** [[https://www.nostarch.com/bughunter][Bug Hunter's Diary]]
 ** Possible project: how to actually do analytics/use/build OLAP cubes :project:
 ** Project: trace through session handling and see how secret keys are used to identify users :project:
 ** Possible project: pessimistic concurrency in a toy gift card web app http://sakurity.com/blog/2015/05/21/starbucks.html compare how to do it in MySQL, PostgreSQL; advisory locks vs. row-level locks :project:
@@ -195,3 +221,26 @@
 
 ** Learn how to actually do A/B testing and data-driven product development like a fucking adult
 *** [[http://mcfunley.com/data-driven-products-now]]
+* UX/Usability
+** [[https://www.amazon.com/Dont-Make-Think-Revisited-Usability/dp/0321965515][Don't Make Me Think]]
+** [[https://www.amazon.com/UX-Strategy-Innovative-Digital-Products/dp/1449372864][UX Strategy: How To Design Innovative Digital Products that People Want]]
+** [[https://www.amazon.com/Joy-Experience-Interactive-Developers-Usability/dp/013427671X][The Joy of UX: User Experience and Interactive Design for Developers]]
+** [[https://www.amazon.com/Designing-UX-Forms-Create-Aspects/dp/0994347057/][Designing UX: Forms]]
+** [[https://www.amazon.com/Emotional-Design-Love-Everyday-Things/dp/0465051367][Emotional Design: Why We Love or Hate Everyday Things]]
+** [[https://www.amazon.com/Non-Designers-Design-Book-4th/dp/0133966151][The Non-Designer's Design Book]]
+** [[https://www.amazon.com/Information-Architecture-Beyond-Louis-Rosenfeld/dp/1491911689][Information Architecture: For the Web and Beyond]]
+** [[https://www.amazon.com/Jump-Start-Sketch-Master-Designers/dp/0994346964][Jump Start Sketch]]
+* Graphic design
+** [[https://www.amazon.com/Graphic-Design-Basics-Revised-Expanded/dp/161689332X][Graphic Design: The New Basics]]
+** [[https://www.amazon.com/Graphic-Design-Thinking-Briefs/dp/1568989792][Graphic Design Thinking]]
+** [[https://www.amazon.com/Graphic-Design-Process-Problem-Solution/dp/1856698262][Graphic Design Process: From Problem to Solution, 20 Case Studies]]
+** [[https://www.amazon.com/Color-Design-Workbook-World-Graphic/dp/1592534333][Color Design Workbook]]
+** [[https://www.amazon.com/Design-Elements-Color-Fundamentals-Understanding/dp/1592537197][Design Elements: Color Fundamentals]]
+** [[https://www.amazon.com/Design-Elements-2nd-Understanding-Expanded/dp/1592539270][Design Elements: Understanding the rules and knowing when to break them]]
+** [[https://www.amazon.com/Typography-Workbook-Real-World-Graphic-Design/dp/1592533019][Typography Workbook: A Real-world Guide to Using Type in Graphic Design]]
+** [[https://www.amazon.com/Thinking-Type-2nd-revised-expanded/dp/1568989695][Thinking With Type]]
+** [[https://www.amazon.com/Design-Elements-Color-Fundamentals-Understanding/dp/1592537197][Design Elements: Color Fundamentals]]
+** [[https://www.amazon.com/Learn-Illustrator-Graphic-Design-Illustration/dp/0134397789][Illustrator book]]
+** [[https://www.amazon.com/Learn-Adobe-Photoshop-Visual-Communication-Preparation/dp/0134397770][Photoshop book]]
+** [[https://www.amazon.com/Vector-Basic-Training-Systematic-Precision/dp/0134176731][Vector Basic Training]]
+** [[https://www.amazon.com/Things-Designer-People-Voices-Matter/dp/0321767535][100 Things Every Designer Needs to Know About People]]
