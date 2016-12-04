@@ -1,5 +1,5 @@
 CC=clang
-CFLAGS = -g -Weverything -Werror -pedantic -std=c11
+CFLAGS = -g -Wall -Werror -pedantic -std=c11
 ASSEMBLER_CFLAGS = -S -O3
 RELEASE_FLAGS = -Weverything -Werror -pedantic -std=c11 -O3
 MAKE = make
@@ -24,4 +24,4 @@ clean:
 	rm $(TARGET) 
 
 test:
-	$(MAKE) clean && $(SCAN_BUILD) $(MAKE)
+	$(SCAN_BUILD) $(MAKE)

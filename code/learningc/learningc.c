@@ -1,30 +1,29 @@
 #include <stdio.h>
-#include <float.h>
-#include <math.h>
-#include <stdlib.h>
+#include <ctype.h>
 
-int main(int argc, char** argv) {
-    /* calculate 1 + 1/2 + 1/4 + 1/8 + ... */
-    double sum = 0.0;
-    unsigned long term_cnt = 0;
-    double denominator = 1.0;
-    double exponent;
-    
-    if (argc == 1) {
-	fprintf(stderr, "Supply an argument\n");
-	return 1;
+int main() {
+    unsigned int space_cnt = 0;
+    unsigned int newline_cnt = 0;
+    unsigned int other_ch_cnt = 0;
+    char ch;
+
+    while ((ch = getchar()) != '#') {
+	if (isspace(ch)) {
+	    space_cnt++;
+	}
+
+	if (ch == '\n') {
+	    newline_cnt++;
+	}
+
+	if (!isspace(ch) && ch != '\n') {
+	    other_ch_cnt++;
+	}
+
     }
 
-    exponent = strtod(argv[1], NULL);
-    printf("Using exponent %f\n", exponent);
-
-    while (fabs(1.0/denominator) > DBL_EPSILON) {
-	double term = 1.0 / denominator;
-	denominator *= exponent;
-	sum += term;
-	term_cnt++;
-	//printf("i = %lu: %f\n", term_cnt, sum);
-    }
-    printf("%f (%lu terms to converge)\n", sum, term_cnt);
+    printf("Spaces: %d\n", space_cnt);
+    printf("Newlines: %d\n", newline_cnt);
+    printf("Other characters: %d\n", other_ch_cnt);
     return 0;
 }
