@@ -24,3 +24,24 @@
 
    So the =break= keeps non-matching =case= statements (which don't
    get evaluated) from exdecuting.
+** Pointer addition in C takes into account the data type
+So if =data= is an array of type =int=, =data + i= (where =i= is also
+an integer) will be a multiple of =sizeof(int)=.
+
+Likewise if =data= were an array of doubles, =data + i= would be be
+different, so that incrementing or decrementing =i= will iterate along
+the proper byte boundaries of the array.
+
+=data + i= should always equal =&data[i]=.
+
+** Passing an array to a function that takes an array/pointer parameter does not copy the array. It copies the address that the array name points to.
+How would it copy the entire array and pass the entire array by value?
+How would the compiler know how long the array is? It wouldn't work.
+
+Apparently C++ allows =std::vector= 's to be passed in by reference or
+value somehow, which is what one could get confused with (I was).
+
+** C array literal syntax
+#+BEGIN_SRC C
+    int *literal = (int []) { 5, 8, 6, 12};
+#+END_SRC

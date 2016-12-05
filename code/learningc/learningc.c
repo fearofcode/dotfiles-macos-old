@@ -1,42 +1,45 @@
 #include <stdio.h>
 
-void swap(int* x, int* y) {
-    int temp = *x;
-    *x = *y;
-    *y = temp;
+void array_func(int* data)
+{
+    for(int i = 0; i < 5; i++) {
+	printf("%d\n", data[i]);
+    }
 }
 
-void to_base_n(unsigned int k, unsigned int base) {
-    if (k >= base) {
-	to_base_n(k/base, base);
+int two_dimensional_sum(int ar[][4]) {
+    int sum = 0;
+
+    for(int i = 0; i < 4; i++) {
+	for(int j = 0; j < 4; j++) {
+	    sum += ar[i][j];
+	}
     }
 
-    printf("%d", k % base);
-}
-
-void iter_fib(unsigned int k) {
-    unsigned int a = 0;
-    unsigned int b = 1;
-    unsigned int c = a + b;
-    
-    for(int i = 1; i <= k; i++) {
-	printf("%d\n", c);
-	c = a + b;
-	a = b;
-	b = c;
-    }
+    return sum;
 }
 
 int main() {
-    int x = 5, y = 10;
-    printf("before swap, x = %d, y = %d\n", x, y);
-    swap(&x, &y);
-    printf("after swap, x = %d, y = %d\n", x, y); 
-    to_base_n(5, 2);
-    printf("\n");
-    to_base_n(129, 8);
-    printf("\n");
+    int data[5] = {12, 5, 4, -1, 3};
+    double more_data[5] = {3.8, 2.6, -1.0, 0.222, 0.00001};
 
-    iter_fib(20);
+    for(int i = 0; i < 5; i++) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wformat-pedantic"
+	printf("%d: %p (%d), %p (%f)\n", i, data + i, *(data + i), more_data + i, *(more_data + i));
+#pragma clang diagnostic pop
+    }
+    array_func(data);
+
+    int two_dimensional_array[4][4] = { {1, 2, 3, 4}, {5, 6, 1, 0}, {9, 12, 16, 20}, {0, -1, 0, 1} };
+
+    printf("%d\n", two_dimensional_sum(two_dimensional_array));
+
+    int *literal = (int []) { 5, 8, 6, 12};
+
+    for(int i = 0; i < 4; i++) {
+	printf("%d\n", literal[i]);
+    }
+    
     return 0;
 }
