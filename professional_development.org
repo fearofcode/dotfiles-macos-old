@@ -149,12 +149,13 @@
 ** TODO Possible project: DDoS mitigation			    :project:
 ** TODO Possible project: OpenBSD + i3 https://www.amazon.com/Absolute-OpenBSD-Unix-Practical-Paranoid/dp/1593274769 :project:
 
-* Compilers and programming languages [0/8]
+* Compilers and programming languages [0/9]
 ** TODO Programming Language Pragmatics
 ** TODO Engineering a Compiler
 ** TODO The Garbage Collection Handbook
 ** TODO The Definitive ANTLR 4 Reference
 ** TODO [[https://interpreterbook.com/][Writing an Interpreter in Go]]
+** TODO [[http://www.aosabook.org/en/posa/parsing-xml-at-the-speed-of-light.html][Parsing XML At The Speed Of Light]]
 ** TODO Possible project: Look at [[http://clang.llvm.org/OpenProjects.html][Clang Project List]] and see if any are doable/interesting.
 *** Possibly buy a book on LLVM and read to prepare
 ** TODO Possible project: learn Go and ressurrect https://github.com/trustpath/sequence

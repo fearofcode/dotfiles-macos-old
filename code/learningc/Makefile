@@ -1,7 +1,7 @@
 CC=clang
-CFLAGS = -g -Wall -Werror -pedantic -std=c11
+CFLAGS = -g -Wall -Werror -lc -pedantic -std=c11
 ASSEMBLER_CFLAGS = -S -O3
-RELEASE_FLAGS = -Weverything -Werror -pedantic -std=c11 -O3
+RELEASE_FLAGS = -Wall -Werror -pedantic -std=c11 -O3
 MAKE = make
 # OS X's clang doesn't come with scan-build because ????, so:
 # $ brew install llvm
