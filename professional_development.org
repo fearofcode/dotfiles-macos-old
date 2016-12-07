@@ -183,6 +183,7 @@
 * Capstone projects 
 ** Windows Internals + [[https://www.nostarch.com/gamehacking][Game Hacking]]
 ** [[https://www.nostarch.com/bughunter][Bug Hunter's Diary]]
+** Capstone: spend more time with C and master it https://www.quora.com/How-can-one-uncover-the-secrets-of-C
 ** Possible project: how to actually do analytics/use/build OLAP cubes :project:
 ** Project: trace through session handling and see how secret keys are used to identify users :project:
 ** Possible project: pessimistic concurrency in a toy gift card web app http://sakurity.com/blog/2015/05/21/starbucks.html compare how to do it in MySQL, PostgreSQL; advisory locks vs. row-level locks :project:
