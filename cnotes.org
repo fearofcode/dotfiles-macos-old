@@ -1,5 +1,15 @@
 #+TITLE: Random notes from learning C
 
+** How to step into libc source code
+- Install libc source: =sudo apt-get install glibc-source=
+- Install libc debug symbols: =sudo apt-get install libc6-dbg=
+- Unzip libc source directory: =cd /usr/src/glibc; sudo tar xf glibc-2.23.tar.sz=
+- When debugging, add directory to source path: =dir /usr/src/glibc/glibc-2.23=
+
+I think?
+
+https://sourceware.org/gdb/download/onlinedocs/gdb/Source-Path.html#Source-Path is the relevant docs on the last command
+
 ** How to ignore individual warnings in Clang
 #+BEGIN_SRC C
     #pragma clang diagnostic push
@@ -45,3 +55,49 @@ value somehow, which is what one could get confused with (I was).
 #+BEGIN_SRC C
     int *literal = (int []) { 5, 8, 6, 12};
 #+END_SRC
+
+** Explanation about how it's possible to write =*c = toupper(*c)=: http://eli.thegreenplace.net/2011/12/15/understanding-lvalues-and-rvalues-in-c-and-c
+** C pointer shit: what the fuck is =* (char * const *)= pointer shit in https://gist.github.com/fearofcode/e79e4308a61300a6649a9af1da21dc3a ?
+#+BEGIN_SRC C
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    #define LEN 3
+
+    static int qsort_strcmp(const void *p1, const void *p2) {
+	/* TODO WHAT THE FUCK IS THIS POINTER SHIT WHAT THE FUCK JESUS CHRIST */
+	return strcmp(* (char * const *) p1, * (char * const *) p2);
+    }
+
+    int main() {
+	const char* strings[] = {
+	    "here is a string",
+	    "and here is another",
+	    "i (lowercase) would like these sorted, please."
+	};
+
+	for(int i = 0; i < LEN; i++) {
+	    printf("%s\n", strings[i]);
+	}
+
+	qsort(strings, LEN, sizeof(char *), qsort_strcmp);
+
+	printf("Sorted, the strings are:\n");
+
+	for(int i = 0; i < LEN; i++) {
+	    printf("%s\n", strings[i]);
+	}
+	return 0;
+    }
+#+END_SRC
+
+The man page for =qsort(3)= has this incredibly unenlightening comment:
+
+#+BEGIN_SRC C
+              /* The actual arguments to this function are "pointers to
+              pointers to char", but strcmp(3) arguments are "pointers
+              to char", hence the following cast plus dereference */
+#+END_SRC
+
+Uh. OK?

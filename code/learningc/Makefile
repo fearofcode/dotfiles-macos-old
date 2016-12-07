@@ -1,5 +1,5 @@
-CC=clang
-CFLAGS = -g -Wall -Werror -lc -pedantic -std=c11
+CC=gcc
+CFLAGS = -fno-builtin -g -Wall -Werror -lc -pedantic -std=c11
 ASSEMBLER_CFLAGS = -S -O3
 RELEASE_FLAGS = -Wall -Werror -pedantic -std=c11 -O3
 MAKE = make
