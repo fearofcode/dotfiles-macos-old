@@ -24,28 +24,6 @@
     :LOGBOOK:  
     - State "DONE"       from "WAIT"       [2016-11-27 Sun 15:52]
     :END:      
-* CSS and JavaScript suck ass, but fight the ocean and you will drown
-** WAIT [[https://www.amazon.com/Front-End-Web-Development-Ranch-Guide/dp/0134433947][Front-end Web Development: The Big Nerd Ranch Guide]]
-   :LOGBOOK:  
-   - State "WAIT"       from ""           [2016-12-03 Sat 19:23] \\
-     Review at https://www.amazon.com/review/RL60VE4K11RM3/ref=cm_cr_dp_cmt?ie=UTF8&ASIN=0134433947&channel=detail-glance&nodeID=283155&store=books#wasThisHelpful
-     makes it seem lousy
-   :END:      
-** [[https://www.amazon.com/Learning-JavaScript-Essentials-Application-Development/dp/1491914912][Learning JavaScript]]
-** [[http://eloquentjavascript.net/][Eloquent JavaScript]]
-** You Don't Know JS series
-** WAIT [[https://leanpub.com/exploring-es6][Exploring ES6]]
-   :LOGBOOK:  
-   - State "WAIT"       from ""           [2016-12-03 Sat 19:38] \\
-     Seems redundant with other ES6 book
-   :END:      
-** [[https://www.amazon.com/Understanding-ECMAScript-Definitive-JavaScript-Developers/dp/1593277571/][Understanding ECMAScript 6]]
-** [[https://www.packtpub.com/web-development/react-design-patterns-and-best-practices][React Design Patterns and Best Practices]]
-** [[https://www.amazon.com/CSS-Master-Organized-Efficient-Right/dp/0994182627][CSS Master]]
-** [[https://www.amazon.com/CSS-Mastery-Andy-Budd/dp/1430258632][CSS Mastery]]
-** [[https://www.amazon.com/CSS-Secrets-Solutions-Everyday-Problems/dp/1449372635][CSS Secrets]]
-** [[https://www.packtpub.com/web-development/learning-bootstrap-4-second-edition][Learning Boostrap 4]]
-** [[https://leanpub.com/enduringcss][Enduring CSS]]
    
 
 * Learning C [0/9]
@@ -195,6 +173,28 @@
 ** Project: CRDTs + collaborative editing in real-time web apps	    :project:
 ** Project: parallel Hearthstone search				    :project:
 ** Project: Oracle ETL [[https://www.amazon.com/Automated-ETL-Testing-Richard-Thrust-ebook/dp/B00MLNJRU8/ref%3Dla_B00IO0EZ0Y_1_1?s%3Dbooks&ie%3DUTF8&qid%3D1480290343&sr%3D1-1][Automated ETL Testing]] [[https://www.amazon.com/Data-Warehouse-Workshop-Providing-Experience/dp/1494926962/ref%3Dsr_1_fkmr0_2?ie%3DUTF8&qid%3D1480290442&sr%3D8-2-fkmr0&keywords%3Doracle%2Betl][The Data Warehouse Workshop: Providing Practical Experience to the Aspiring ETL Developer]] :project:
+* CSS and JavaScript suck ass, but fight the ocean and you will drown
+** WAIT [[https://www.amazon.com/Front-End-Web-Development-Ranch-Guide/dp/0134433947][Front-end Web Development: The Big Nerd Ranch Guide]]
+   :LOGBOOK:  
+   - State "WAIT"       from ""           [2016-12-03 Sat 19:23] \\
+     Review at https://www.amazon.com/review/RL60VE4K11RM3/ref=cm_cr_dp_cmt?ie=UTF8&ASIN=0134433947&channel=detail-glance&nodeID=283155&store=books#wasThisHelpful
+     makes it seem lousy
+   :END:      
+** [[https://www.amazon.com/Learning-JavaScript-Essentials-Application-Development/dp/1491914912][Learning JavaScript]]
+** [[http://eloquentjavascript.net/][Eloquent JavaScript]]
+** You Don't Know JS series
+** WAIT [[https://leanpub.com/exploring-es6][Exploring ES6]]
+   :LOGBOOK:  
+   - State "WAIT"       from ""           [2016-12-03 Sat 19:38] \\
+     Seems redundant with other ES6 book
+   :END:      
+** [[https://www.amazon.com/Understanding-ECMAScript-Definitive-JavaScript-Developers/dp/1593277571/][Understanding ECMAScript 6]]
+** [[https://www.packtpub.com/web-development/react-design-patterns-and-best-practices][React Design Patterns and Best Practices]]
+** [[https://www.amazon.com/CSS-Master-Organized-Efficient-Right/dp/0994182627][CSS Master]]
+** [[https://www.amazon.com/CSS-Mastery-Andy-Budd/dp/1430258632][CSS Mastery]]
+** [[https://www.amazon.com/CSS-Secrets-Solutions-Everyday-Problems/dp/1449372635][CSS Secrets]]
+** [[https://www.packtpub.com/web-development/learning-bootstrap-4-second-edition][Learning Boostrap 4]]
+** [[https://leanpub.com/enduringcss][Enduring CSS]]
 
 * Lower priority/do when time
 ** File structures/B+ trees http://cseweb.ucsd.edu/classes/wi02/cse102/syllabus.html
@@ -224,6 +224,10 @@
 
 ** Learn how to actually do A/B testing and data-driven product development like a fucking adult
 *** [[http://mcfunley.com/data-driven-products-now]]
+* Interesting talks watched
+** [[https://www.youtube.com/watch?v%3Dgas2v1emubU][Load Balancing is Impossible]] : counter-intuitive results about bad performance of random load balancing
+** [[https://www.youtube.com/watch?v%3DZzYyl5vAWcA][Diving into the Details with DTrace]] : awesome example of debugging randomly slow tests with DTrace
+** [[https://www.youtube.com/watch?v%3D9uRho69xSAI][Continuing Education at Work]] : exciting idea about how to start a book club at work
 * UX/Usability
 ** [[https://www.amazon.com/Dont-Make-Think-Revisited-Usability/dp/0321965515][Don't Make Me Think]]
 ** [[https://www.amazon.com/UX-Strategy-Innovative-Digital-Products/dp/1449372864][UX Strategy: How To Design Innovative Digital Products that People Want]]
