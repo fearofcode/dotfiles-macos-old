@@ -150,15 +150,12 @@
 ** Project: learn Clojure and reproduce some of Kyle Kingsbury's Jepsen posts, try them out on other databases/systems (Kafka/RabbitMQ/Redis maybe) :project:
 
 ** Project: investigate linear I/O in Kafka https://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines
-* Software engineering [0/3]
-** TODO Clean Code
-** TODO Refactoring
-** TODO Code Complete
-** Watch and possibly respond to people critiquing OOP		    :project:
-*** https://www.youtube.com/watch?v=V6VP-2aIcSc
-*** https://www.youtube.com/watch?v=IRTfhkiAqPw
-*** https://www.youtube.com/watch?v=QM1iUe6IofM
 * Capstone projects 
+** Implement Mitzenmacher's Power of Two Choices Algorithm in HAProxy or nginx
+*** [[http://www.eecs.harvard.edu/~michaelm/postscripts/mythesis.pdf][The Power of TWo Choices in Randomized Load Balancing]]
+*** [[https://www.youtube.com/watch?v%3Dgas2v1emubU][Load Balancing is Impossible]] : counter-intuitive results about bad performance of random load balancing
+*** http://nginx.org/en/docs/http/load_balancing.html
+*** https://blog.buoyant.io/2016/03/16/beyond-round-robin-load-balancing-for-latency/
 ** Windows Internals + [[https://www.nostarch.com/gamehacking][Game Hacking]]
 ** [[https://www.nostarch.com/bughunter][Bug Hunter's Diary]]
 ** Capstone: spend more time with C and master it https://www.quora.com/How-can-one-uncover-the-secrets-of-C
@@ -173,6 +170,14 @@
 ** Project: CRDTs + collaborative editing in real-time web apps	    :project:
 ** Project: parallel Hearthstone search				    :project:
 ** Project: Oracle ETL [[https://www.amazon.com/Automated-ETL-Testing-Richard-Thrust-ebook/dp/B00MLNJRU8/ref%3Dla_B00IO0EZ0Y_1_1?s%3Dbooks&ie%3DUTF8&qid%3D1480290343&sr%3D1-1][Automated ETL Testing]] [[https://www.amazon.com/Data-Warehouse-Workshop-Providing-Experience/dp/1494926962/ref%3Dsr_1_fkmr0_2?ie%3DUTF8&qid%3D1480290442&sr%3D8-2-fkmr0&keywords%3Doracle%2Betl][The Data Warehouse Workshop: Providing Practical Experience to the Aspiring ETL Developer]] :project:
+* Software engineering [0/3]
+** TODO Clean Code
+** TODO Refactoring
+** TODO Code Complete
+** Watch and possibly respond to people critiquing OOP		    :project:
+*** https://www.youtube.com/watch?v=V6VP-2aIcSc
+*** https://www.youtube.com/watch?v=IRTfhkiAqPw
+*** https://www.youtube.com/watch?v=QM1iUe6IofM
 * CSS and JavaScript suck ass, but fight the ocean and you will drown
 ** WAIT [[https://www.amazon.com/Front-End-Web-Development-Ranch-Guide/dp/0134433947][Front-end Web Development: The Big Nerd Ranch Guide]]
    :LOGBOOK:  
