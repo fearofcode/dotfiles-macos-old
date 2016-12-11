@@ -1,12 +1,16 @@
-#define _GNU_SOURCE
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
+struct book {
+    const char * title;
+};
+
+struct book make_a_book(const char *title) {
+    /* this uses designated initializers and compound literals, both C99 features */
+    return (struct book) {.title = title};
+}
 
 int main(int argc, char **argv) {
-    double data = 1.235;
-    const double * dp = &data;
-    // if we wrote something like "*dp = 2.386;" it would generate an error
-    printf("%f\n", *dp);
+    struct book b = make_a_book("TAOCP");
+    printf("%s\n", b.title);
     return 0;
 }
