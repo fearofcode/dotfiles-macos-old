@@ -38,12 +38,16 @@ Return a list of installed packages or nil for every skipped package."
 ;; https://github.com/Fanael/relative-line-numbers
 (global-relative-line-numbers-mode)
 
-;; http://stackoverflow.com/questions/443302/emacs-how-to-compile-run-make-without-pressing-enter-for-the-compile-command
-
-;; turn off tool bar, scroll bar, and menu bar
+;; turn off tool bar and scroll bar
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(menu-bar-mode -1)
+
+;; stolen from https://piotrkazmierczak.com/2010/emacs-as-the-ultimate-latex-editor/
+(setq TeX-save-query nil)
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+(add-hook 'LaTeX-mode-hook 'auto-fill-mode)
 
 ;; vi key bindings
 (require 'evil)
