@@ -170,7 +170,9 @@
 ** Project: CRDTs + collaborative editing in real-time web apps	    :project:
 ** Project: parallel Hearthstone search				    :project:
 ** Project: Oracle ETL [[https://www.amazon.com/Automated-ETL-Testing-Richard-Thrust-ebook/dp/B00MLNJRU8/ref%3Dla_B00IO0EZ0Y_1_1?s%3Dbooks&ie%3DUTF8&qid%3D1480290343&sr%3D1-1][Automated ETL Testing]] [[https://www.amazon.com/Data-Warehouse-Workshop-Providing-Experience/dp/1494926962/ref%3Dsr_1_fkmr0_2?ie%3DUTF8&qid%3D1480290442&sr%3D8-2-fkmr0&keywords%3Doracle%2Betl][The Data Warehouse Workshop: Providing Practical Experience to the Aspiring ETL Developer]] :project:
-* Software engineering [0/3]
+* Software engineering/soft skills [0/3]
+** [[https://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330][Practical Object-Oriented Design in Ruby]]
+** Peopleware
 ** TODO Clean Code
 ** TODO Refactoring
 ** TODO Code Complete

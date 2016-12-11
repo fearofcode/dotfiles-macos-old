@@ -4,24 +4,41 @@
 #include <string.h>
 
 int main(int argc, char **argv) {
-    if (argc != 2) {
-	fprintf(stderr, "Provide a parameter for # of words");
+    const char * filename = "numbers.data";
+    const size_t sz = 10000;
+    double buf[sz];
+    
+    FILE *fp;
+
+    if ((fp = fopen(filename, "wb")) == NULL) {
+	fprintf(stderr, "Couldn't open file %s\n", filename);
 	exit(EXIT_FAILURE);
     }
 
-    int word_cnt = atoi(argv[1]);
+    for(int i = 0; i < sz; i++) {
+	buf[i] = 1.0/(i+1);
+    }
+
+    fwrite(buf, sizeof(double), sz, fp);
+
+    fclose(fp);
+
+    if ((fp = fopen(filename, "rb")) == NULL) {
+	fprintf(stderr, "Couldn't read file %s\n", filename);
+	exit(EXIT_FAILURE);
+    }
     
-    char * words[word_cnt];
-
-    for(int i = 0; i < word_cnt; i++) {
-	size_t len = 0;
-	getline(&words[i], &len, stdin);
+    for(int i = 0; i < sz; i += 100) {
+	const long pos = (long) i * sizeof(double);
+	fseek(fp, pos, SEEK_SET);
+	double value;
+	fread(&value, sizeof (double), 1, fp);
+	if (value != buf[i]) {
+	    printf("Value at %d (%d) = %f vs. %f\n", i, pos, value, buf[i]);
+	}
     }
 
-    for(int i = 0; i < word_cnt; i++) {
-	printf("%s", words[i]);
-	free(words[i]);
-    }
+    fclose(fp);
     
     return 0;
 }
