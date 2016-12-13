@@ -53,8 +53,11 @@
 ** TODO Understand and comprehend Linus Torvalds' double pointer comment :project:
 *** http://grisha.org/blog/2013/04/02/linus-on-understanding-pointers/ / https://www.youtube.com/watch?v=GiAhUYCUDVc
 
-* Algorithms and data structures (write code in C) [1/8]
-** TODO Look through data structures/algorithms books and decide which ones to read from
+* Algorithms and data structures (write code in C) [2/8]
+** DONE Look through data structures/algorithms books and decide which ones to read from
+   :LOGBOOK:  
+   - State "DONE"       from "TODO"       [2016-12-12 Mon 22:22]
+   :END:      
 ** CANCELED Algorithms Unlocked
    :LOGBOOK:  
    - State "CANCELED"   from "TODO"       [2016-11-29 Tue 21:25] \\
