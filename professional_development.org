@@ -79,7 +79,12 @@
 ** TODO Introduction to 64 Bit Assembly Programming for Linux and OS X
 ** TODO Modern Assembly Language Programming with the ARM Processor (+ buy Raspberry Pi)
 ** TODO Raspberry Pi Assembly Language RASPBIAN Beginners: Hands On Guide 
-** TODO The Linux Programming Interface: A Linux and UNIX System Programming Handbook 
+** WAIT The Linux Programming Interface: A Linux and UNIX System Programming Handbook 
+   :LOGBOOK:  
+   - State "WAIT"       from "TODO"       [2016-12-11 Sun 22:53] \\
+     Too big, reference manual more than tutorial
+   :END:      
+** Linux System Programming
 ** CANCELED Shared Memory Application Programming: Concepts and Strategies in Multicore Application Programming
    :LOGBOOK:  
    - State "CANCELED"   from "TODO"       [2016-11-29 Tue 08:59] \\
@@ -127,9 +132,26 @@
 ** TODO Possible project: MIT's OS course https://pdos.csail.mit.edu/6.828/2016/overview.html :project:
 ** TODO Possible project: read through http://carlos.bueno.org/optimization/mature-optimization.pdf :project:
 
+* Game hacking as introduction to infosec
+** Windows internals
+** Discovering Modern C++
+** Programming Massively Parallel Processors
+** (Subset) Game Coding Complete
+** (Maybe) Gray Hat Python: try it, see if it's useful
+** (Maybe) Rootkit Arsenal, already purchased, might as well try it
+** (Maybe) Practical Reverse Engineering, already purchased, might as well try it
+** (Maybe) Reversing: Secrets of Reverse Engineering, already purchased, might as well try it
+** Game Hacking: Developing Autonomous Bots for Online Games
+** https://hackmag.com/uncategorized/deceiving-blizzard-warden/
+** (maybe, if we want to get fancy) Artificial Intelligence for Games, other game AI books
+** Popular infosec books, lock picking, see if infosec could be interesting
 * Networks [0/11]
 ** TODO Computer Networks, Fifth Edition: A Systems Approach
-** TODO The Illustrated Network: How TCP/IP Works In A Modern Netowrk
+** TODO The Illustrated Network: How TCP/IP Works In A Modern Network
+** Upgrading and Repairing PCs
+** Networking All-in-One For Dummies (yeah, yeah)
+** Cisco Networking All-in-One for Dummies (fuck off)
+** Networking: A Beginner's Guide
 ** TODO Interconnections: Bridges, Routers, Switches, and Internetworking Protocols 
 ** TODO High Performance Browser Networking (already purchased)
 ** TODO [[https://www.amazon.com/Every-Developer-Should-OdeToCode-Programming-ebook/dp/B0076Z6VMI/ref%3Dsr_1_1?s%3Dbooks&ie%3DUTF8&qid%3D1480202887&sr%3D1-1&keywords%3Dhttp][What Every Developer Should Know About HTTP]]
@@ -140,6 +162,14 @@
 ** TODO Possible project: wifi password cracking/auditing	    :project:
 ** TODO Possible project: DDoS mitigation			    :project:
 ** TODO Possible project: OpenBSD + i3 https://www.amazon.com/Absolute-OpenBSD-Unix-Practical-Paranoid/dp/1593274769 :project:
+
+* Possible goal: infosec?
+** [[http://www.rand.org/content/dam/rand/pubs/monographs/2004/RAND_MG126.pdf][Out of the Ordinary: Finding Threats by Analyzing Unusual Behavior]]
+** Buy interesting infosec/crypto books, prioritize them and already purchased books here
+** [[http://insecure.org/stf/smashstack.html][Smashing The Stack For Fun And Profit]]
+** [[https://github.com/kurobeats/pentest-bookmarks/blob/master/BookmarksList.md][Pentesting bookmarks]]
+** Free PDF: [[https://www.cl.cam.ac.uk/~rja14/book.html][Security Engineering]]
+** [[https://github.com/jacobian/infosec-engineering][Infosec reading list]]
 
 * Compilers and programming languages [0/9]
 ** TODO Programming Language Pragmatics
@@ -152,7 +182,6 @@
 *** Possibly buy a book on LLVM and read to prepare
 ** TODO Possible project: learn Go and ressurrect https://github.com/trustpath/sequence
 ** TODO Possible project: read DJB's slides on optimization and comment https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf
-
 * Databases/transaction processing [0/1]
 ** TODO sort through databases books and prioritize them here
 
@@ -186,6 +215,7 @@
 * Software engineering/soft skills [0/3]
 ** [[https://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330][Practical Object-Oriented Design in Ruby]]
 ** Peopleware
+** Lots of software architecture books on Amazon. Prioritize them here
 ** TODO Clean Code
 ** TODO Refactoring
 ** TODO Code Complete
