@@ -12,8 +12,6 @@ $(TARGET): $(TARGET).c
 release: $(TARGET).c
 	$(CC) $(RELEASE_FLAGS) -o $(TARGET).release $(TARGET).c
 
-assembler: $(TARGET).c
-	$(CC) $(ASSEMBLER_CFLAGS) $(TARGET).c 
 clean:
 	rm $(TARGET) 
 
