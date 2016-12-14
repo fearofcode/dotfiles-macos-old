@@ -43,7 +43,7 @@
     - State "DONE"       from ""           [2016-11-27 Sun 22:26]
     :END:      
 *** TODO Read rest of book
-** TODO Practical C Programming 
+** TODO Practical C Programming (probably only floating point chapter)
 ** TODO Intermediate C Programming
 ** TODO Understanding and Using C Pointers
 ** TODO C Interfaces and Implementations
@@ -134,7 +134,7 @@
 ** TODO Possible project: read through http://carlos.bueno.org/optimization/mature-optimization.pdf :project:
 
 * Game hacking as introduction to infosec
-** Windows internals
+** Windows internals books: purchase, prioritize and collect
 ** Discovering Modern C++
 ** Programming Massively Parallel Processors
 ** (Subset) Game Coding Complete
