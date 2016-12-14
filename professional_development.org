@@ -164,12 +164,12 @@
 ** TODO Possible project: OpenBSD + i3 https://www.amazon.com/Absolute-OpenBSD-Unix-Practical-Paranoid/dp/1593274769 :project:
 
 * Possible goal: infosec?
-** [[http://www.rand.org/content/dam/rand/pubs/monographs/2004/RAND_MG126.pdf][Out of the Ordinary: Finding Threats by Analyzing Unusual Behavior]]
 ** Buy interesting infosec/crypto books, prioritize them and already purchased books here
 ** [[http://insecure.org/stf/smashstack.html][Smashing The Stack For Fun And Profit]]
 ** [[https://github.com/kurobeats/pentest-bookmarks/blob/master/BookmarksList.md][Pentesting bookmarks]]
 ** Free PDF: [[https://www.cl.cam.ac.uk/~rja14/book.html][Security Engineering]]
 ** [[https://github.com/jacobian/infosec-engineering][Infosec reading list]]
+** [[http://www.rand.org/content/dam/rand/pubs/monographs/2004/RAND_MG126.pdf][Out of the Ordinary: Finding Threats by Analyzing Unusual Behavior]]
 
 * Compilers and programming languages [0/9]
 ** TODO Programming Language Pragmatics
