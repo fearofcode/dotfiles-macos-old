@@ -111,6 +111,7 @@
 *** Maybe Anderon's OSPP, Tanenbaum, etc. if OSTEP doesn't work out 
 ** TODO Project: how fast are append-only reads/writes? How fast is parallel file I/O? :project:
 ** TODO (Maybe) [[https://www.gitbook.com/book/0xax/linux-insides/details][Linux Insides]] [[http://www.ibm.com/developerworks/library/l-linuxboot/index.html][Inside the Linux boot process (2006)]]
+** [[https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/][Dive Into BPF]]
 ** TODO Watch and possibly comment (in a blog post, in a reasonable, intelligent way) to https://www.youtube.com/watch?v=L9v4Mg8wi4U
 ** TODO Investigate Linux's caching of files			    :project:
 *** https://hoytech.com/vmtouch/
@@ -143,6 +144,7 @@
 ** (Maybe) Reversing: Secrets of Reverse Engineering, already purchased, might as well try it
 ** Game Hacking: Developing Autonomous Bots for Online Games
 ** https://hackmag.com/uncategorized/deceiving-blizzard-warden/
+** [[https://www.reddit.com/r/REGames/][Reverse Engineering Games subreddit]]
 ** (maybe, if we want to get fancy) Artificial Intelligence for Games, other game AI books
 ** Popular infosec books, lock picking, see if infosec could be interesting
 * Networks [0/11]
