@@ -171,6 +171,7 @@
 ** [[https://github.com/jacobian/infosec-engineering][Infosec reading list]]
 ** [[http://www.rand.org/content/dam/rand/pubs/monographs/2004/RAND_MG126.pdf][Out of the Ordinary: Finding Threats by Analyzing Unusual Behavior]]
 
+** [[http://openwall.info/wiki/_media/people/jvanegue/files/woot12.pdf][SMT Solvers for Software Security]]
 * Compilers and programming languages [0/9]
 ** TODO Programming Language Pragmatics
 ** TODO Engineering a Compiler

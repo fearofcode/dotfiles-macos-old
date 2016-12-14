@@ -1,5 +1,19 @@
 #+TITLE: Random notes from learning C
 
+** Difference in behavior between macros and functions
+Macros will just blindly substitute param values.
+
+Functions will evaluate them as a single value.
+
+So passing =++x= to a macro can give undesired results if this is not kept in mind:
+
+#+BEGIN_SRC C
+#define SQR(X) ((X) * (X)) /* we are smart and efficient programmers! no function call! */
+int k = 42;
+printf("%d\n", SQRT(++k)); /* actually requires a Clang pragma if building with -Werror; triggers -Wunsequenced */
+#+END_SRC
+
+The above snippet prints =1892= (== 43 * 44), not =1764= (== 42 * 42) as may have been hoped.
 ** How to step into libc source code
 - Install libc source: =sudo apt-get install glibc-source=
 - Install libc debug symbols: =sudo apt-get install libc6-dbg=
