@@ -92,6 +92,7 @@
      Seems redundant with other concurrency books, may try later
    :END:      
 ** TODO The Art of Multiprocessor Programming 
+** [[http://cs.brown.edu/courses/cs176/lectures.shtml][Class lectures for course that uses Art of Multiprocessor Programming]]
 ** TODO Programming with POSIX Threads
 ** TODO The Art of Concurrency: A Thread Monkey's Guide to Writing Parallel Applications 
 ** TODO Computer Systems: A Programmer's Perspective
