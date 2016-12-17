@@ -142,6 +142,7 @@
 ** (Maybe) Rootkit Arsenal, already purchased, might as well try it
 ** (Maybe) Practical Reverse Engineering, already purchased, might as well try it
 ** (Maybe) Reversing: Secrets of Reverse Engineering, already purchased, might as well try it
+** Memory Forensics
 ** Game Hacking: Developing Autonomous Bots for Online Games
 ** https://hackmag.com/uncategorized/deceiving-blizzard-warden/
 ** [[https://www.reddit.com/r/REGames/][Reverse Engineering Games subreddit]]
