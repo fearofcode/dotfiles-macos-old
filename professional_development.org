@@ -75,6 +75,7 @@
 ** TODO How Linux works
 ** TODO Read through and write up LaTeX summary of https://en.wikipedia.org/wiki/Two's_complement
 ** TODO [[http://savannah.spinellicreations.com//pgubook/ProgrammingGroundUp-1-0-lettersize.pdf][Programming From The Ground Up]] [[http://www.cs.princeton.edu/courses/archive/spring04/cos217/][Old Princeton course page that used the book]]
+** [[https://software.intel.com/sites/default/files/managed/39/c5/325462-sdm-vol-1-2abcd-3abcd.pdf][IA64 Software Developer's Manuals (PDF)]]
 ** TODO Assembly Language Step-by-Step: Programming with Linux
 ** TODO Introduction to 64 Bit Assembly Programming for Linux and OS X
 ** TODO Modern Assembly Language Programming with the ARM Processor (+ buy Raspberry Pi)
@@ -91,6 +92,7 @@
      Seems redundant with other concurrency books, may try later
    :END:      
 ** TODO The Art of Multiprocessor Programming 
+** [[http://cs.brown.edu/courses/cs176/lectures.shtml][Class lectures for course that uses Art of Multiprocessor Programming]]
 ** TODO Programming with POSIX Threads
 ** TODO The Art of Concurrency: A Thread Monkey's Guide to Writing Parallel Applications 
 ** TODO Computer Systems: A Programmer's Perspective
