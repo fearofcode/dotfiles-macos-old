@@ -26,8 +26,11 @@
     :END:      
    
 
-* Learning C [0/9]
-** TODO C Primer Plus [3/4]
+* Learning C [1/10]
+** DONE C Primer Plus [4/4]
+   :LOGBOOK:  
+   - State "DONE"       from "TODO"       [2016-12-17 Sat 12:23]
+   :END:      
 *** DONE Learn how Emacs' cc-mode works (Makefiles, etc)
     :LOGBOOK:  
     - State "DONE"       from "WAIT"       [2016-11-27 Sun 22:24]
@@ -42,18 +45,22 @@
     :LOGBOOK:  
     - State "DONE"       from ""           [2016-11-27 Sun 22:26]
     :END:      
-*** TODO Read rest of book
+*** DONE Read rest of book
+    :LOGBOOK:  
+    - State "DONE"       from "TODO"       [2016-12-17 Sat 12:23]
+    :END:      
 ** TODO Practical C Programming (probably only floating point chapter)
 ** TODO Intermediate C Programming
 ** TODO Understanding and Using C Pointers
-** TODO C Interfaces and Implementations
-** TODO Expert C Programming
+** WAIT C Interfaces and Implementations
+** WAIT Expert C Programming
 ** TODO 21st Century C Programming
-** TODO Autotools book
+** TODO Write simple versions of elementary data structures (linked list, queue, binary search tree) from scratch
+** WAIT Autotools book
 ** TODO Understand and comprehend Linus Torvalds' double pointer comment :project:
 *** http://grisha.org/blog/2013/04/02/linus-on-understanding-pointers/ / https://www.youtube.com/watch?v=GiAhUYCUDVc
 
-* Algorithms and data structures (write code in C) [2/8]
+* Algorithms and data structures (write code in C) [2/9]
 ** DONE Look through data structures/algorithms books and decide which ones to read from
    :LOGBOOK:  
    - State "DONE"       from "TODO"       [2016-12-12 Mon 22:22]
@@ -70,6 +77,7 @@
 ** TODO /Programming Pearls/
 ** TODO CLRS
 
+** TODO Write basic versions of the most common data structures (linked list, queue, BST, red-black tree, priority queue, max heap, etc) from scratch in C
 * Assembly language, UNIX systems programming, machine organization, concurrency [3/18]
 ** TODO Inside the Machine 
 ** TODO How Linux works
@@ -93,8 +101,9 @@
    :END:      
 ** TODO The Art of Multiprocessor Programming 
 ** [[http://cs.brown.edu/courses/cs176/lectures.shtml][Class lectures for course that uses Art of Multiprocessor Programming]]
-** TODO Programming with POSIX Threads
-** TODO The Art of Concurrency: A Thread Monkey's Guide to Writing Parallel Applications 
+** [[https://en.wikipedia.org/wiki/Read-copy-update][Read-copy update]]
+** WAIT Programming with POSIX Threads
+** WAIT The Art of Concurrency: A Thread Monkey's Guide to Writing Parallel Applications 
 ** TODO Computer Systems: A Programmer's Perspective
 ** CANCELED Discovering Modern C++ -> C++ Concurrency In Action: Practical Multithreading
    :LOGBOOK:  
@@ -134,22 +143,6 @@
 ** TODO Possible project: Joe Damato's computer project list https://docs.google.com/document/d/1V0CnufAf-85Jn1W2c_Qvfzbm2ss9WY4yJ41jQWwA-5Q/edit :project:
 ** TODO Possible project: MIT's OS course https://pdos.csail.mit.edu/6.828/2016/overview.html :project:
 ** TODO Possible project: read through http://carlos.bueno.org/optimization/mature-optimization.pdf :project:
-
-* Game hacking as introduction to infosec
-** Windows internals books: purchase, prioritize and collect
-** Discovering Modern C++
-** Programming Massively Parallel Processors
-** (Subset) Game Coding Complete
-** (Maybe) Gray Hat Python: try it, see if it's useful
-** (Maybe) Rootkit Arsenal, already purchased, might as well try it
-** (Maybe) Practical Reverse Engineering, already purchased, might as well try it
-** (Maybe) Reversing: Secrets of Reverse Engineering, already purchased, might as well try it
-** Memory Forensics
-** Game Hacking: Developing Autonomous Bots for Online Games
-** https://hackmag.com/uncategorized/deceiving-blizzard-warden/
-** [[https://www.reddit.com/r/REGames/][Reverse Engineering Games subreddit]]
-** (maybe, if we want to get fancy) Artificial Intelligence for Games, other game AI books
-** Popular infosec books, lock picking, see if infosec could be interesting
 * Networks [0/11]
 ** TODO Computer Networks, Fifth Edition: A Systems Approach
 ** TODO The Illustrated Network: How TCP/IP Works In A Modern Network
@@ -167,16 +160,6 @@
 ** TODO Possible project: wifi password cracking/auditing	    :project:
 ** TODO Possible project: DDoS mitigation			    :project:
 ** TODO Possible project: OpenBSD + i3 https://www.amazon.com/Absolute-OpenBSD-Unix-Practical-Paranoid/dp/1593274769 :project:
-
-* Possible goal: infosec?
-** Buy interesting infosec/crypto books, prioritize them and already purchased books here
-** [[http://insecure.org/stf/smashstack.html][Smashing The Stack For Fun And Profit]]
-** [[https://github.com/kurobeats/pentest-bookmarks/blob/master/BookmarksList.md][Pentesting bookmarks]]
-** Free PDF: [[https://www.cl.cam.ac.uk/~rja14/book.html][Security Engineering]]
-** [[https://github.com/jacobian/infosec-engineering][Infosec reading list]]
-** [[http://www.rand.org/content/dam/rand/pubs/monographs/2004/RAND_MG126.pdf][Out of the Ordinary: Finding Threats by Analyzing Unusual Behavior]]
-
-** [[http://openwall.info/wiki/_media/people/jvanegue/files/woot12.pdf][SMT Solvers for Software Security]]
 * Compilers and programming languages [0/9]
 ** TODO Programming Language Pragmatics
 ** TODO Engineering a Compiler
@@ -188,6 +171,40 @@
 *** Possibly buy a book on LLVM and read to prepare
 ** TODO Possible project: learn Go and ressurrect https://github.com/trustpath/sequence
 ** TODO Possible project: read DJB's slides on optimization and comment https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf
+* Physics, electrical engineering, circuits, computer architecture
+** TODO list out exact book sequence
+** AOPS math books up through calculus
+** Multivariable calculus
+** Elementary linear algebra
+** Math and physics books to get through http://wireless.engineering.nyu.edu/fundamentals-of-electric-circuits-1-2016/
+** Computer architecture
+** Modern Processor Design
+** The Elements of Computing Systems
+* Game hacking as introduction to infosec
+** Windows internals books: purchase, prioritize and collect
+** Discovering Modern C++
+** Programming Massively Parallel Processors
+** (Subset) Game Coding Complete
+** (Maybe) Gray Hat Python: try it, see if it's useful
+** (Maybe) Rootkit Arsenal, already purchased, might as well try it
+** (Maybe) Practical Reverse Engineering, already purchased, might as well try it
+** (Maybe) Reversing: Secrets of Reverse Engineering, already purchased, might as well try it
+** Memory Forensics
+** Game Hacking: Developing Autonomous Bots for Online Games
+** https://hackmag.com/uncategorized/deceiving-blizzard-warden/
+** [[https://www.reddit.com/r/REGames/][Reverse Engineering Games subreddit]]
+** (maybe, if we want to get fancy) Artificial Intelligence for Games, other game AI books
+** Popular infosec books, lock picking, see if infosec could be interesting
+
+* Possible goal: infosec?
+** Buy interesting infosec/crypto books, prioritize them and already purchased books here
+** [[http://insecure.org/stf/smashstack.html][Smashing The Stack For Fun And Profit]]
+** [[https://github.com/kurobeats/pentest-bookmarks/blob/master/BookmarksList.md][Pentesting bookmarks]]
+** Free PDF: [[https://www.cl.cam.ac.uk/~rja14/book.html][Security Engineering]]
+** [[https://github.com/jacobian/infosec-engineering][Infosec reading list]]
+** [[http://www.rand.org/content/dam/rand/pubs/monographs/2004/RAND_MG126.pdf][Out of the Ordinary: Finding Threats by Analyzing Unusual Behavior]]
+
+** [[http://openwall.info/wiki/_media/people/jvanegue/files/woot12.pdf][SMT Solvers for Software Security]]
 * Databases/transaction processing [0/1]
 ** TODO sort through databases books and prioritize them here
 
