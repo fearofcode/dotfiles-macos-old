@@ -26,7 +26,7 @@
     :END:      
    
 
-* Learning C [1/10]
+* Learning C [2/10]
 ** DONE C Primer Plus [4/4]
    :LOGBOOK:  
    - State "DONE"       from "TODO"       [2016-12-17 Sat 12:23]
@@ -49,7 +49,10 @@
     :LOGBOOK:  
     - State "DONE"       from "TODO"       [2016-12-17 Sat 12:23]
     :END:      
-** TODO Practical C Programming (probably only floating point chapter)
+** DONE Practical C Programming (probably only floating point chapter)
+   :LOGBOOK:  
+   - State "DONE"       from "TODO"       [2016-12-17 Sat 22:13]
+   :END:      
 ** TODO Intermediate C Programming
 ** TODO Understanding and Using C Pointers
 ** WAIT C Interfaces and Implementations
