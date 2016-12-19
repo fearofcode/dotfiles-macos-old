@@ -1,5 +1,6 @@
 #+TITLE: Random notes from learning C
 
+** =extern= is not needed for function prototypes. It's implicit.
 ** Difference in behavior between macros and functions
 Macros will just blindly substitute param values.
 

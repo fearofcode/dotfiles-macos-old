@@ -1,28 +1,46 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdarg.h>
+#include <string.h>
 
-double * new_arr(int n, ...) {
-    va_list ap;
-    va_start(ap, n);
-    
-    double *data = (double *) malloc(sizeof(double) * n);
-
-    for(int i = 0; i < n; i++) {
-	data[i] = va_arg(ap, double);
-    }
-
-    va_end(ap);
-    
-    return data;
-}
+int areDistinct(int * arr, int len);
 
 int main(int argc, char **argv) {
-    double * data = new_arr(5, 1.2, 3.4, 5.6, 6.8, -3.0);
+    if (argc != 2) {
+	return EXIT_FAILURE;
+    }
 
-    for(int i = 0; i < 5; i++) {
-	printf("%d = %f\n", i, data[i]);
+    FILE* fptr = fopen(argv[1], "r");
+
+    if (fptr == NULL) {
+	return EXIT_FAILURE;
+    }
+
+    int length = 0;
+    int value;
+
+    while (fscanf(fptr, "%d", &value) == 1) {
+	length++;
+    }
+
+    fseek(fptr, 0, SEEK_SET);
+
+    int * arr = (int *) malloc(length * sizeof(int));
+
+    length = 0;
+
+    while (fscanf(fptr, "%d", &(arr[length])) == 1) {
+	length++;
+    }
+
+    fclose(fptr);
+
+    if (length == 0) {
+	return EXIT_SUCCESS;
     }
     
-    return 0;
+    int dist = areDistinct(arr, length);
+
+    printf("%s\n", dist ? "Elements are distinct" : "Elements are not distinct");
+
+    return EXIT_SUCCESS;
 }

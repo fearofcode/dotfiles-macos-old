@@ -224,6 +224,7 @@
 *** [[https://www.youtube.com/watch?v%3Dgas2v1emubU][Load Balancing is Impossible]] : counter-intuitive results about bad performance of random load balancing
 *** http://nginx.org/en/docs/http/load_balancing.html
 *** https://blog.buoyant.io/2016/03/16/beyond-round-robin-load-balancing-for-latency/
+** Do something with RocksDB/LevelDB? Maybe creating indexes? Explore internals?
 ** Windows Internals + [[https://www.nostarch.com/gamehacking][Game Hacking]]
 ** [[https://www.nostarch.com/bughunter][Bug Hunter's Diary]]
 ** Capstone: spend more time with C and master it https://www.quora.com/How-can-one-uncover-the-secrets-of-C
