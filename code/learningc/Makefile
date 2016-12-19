@@ -6,6 +6,7 @@ DEBUG_TARGET = $(TARGET).debug
 RELEASE_TARGET = $(TARGET).release
 SRC_FILES := $(TARGET).c aredistinct.c # $(wildcard *.c) to get all files
 OBJECT_FILES := ${SRC_FILES:.c=.o}
+
 BASE_FLAGS = -Wall -Wextra -Wshadow -Werror -Wfatal-errors -pedantic -std=gnu11 -m64 \
 	-Wno-missing-braces -Wextra -Wno-missing-field-initializers -Wformat=2 \
 	-Wswitch-default -Wswitch-enum -Wcast-align -Wpointer-arith \
@@ -13,23 +14,31 @@ BASE_FLAGS = -Wall -Wextra -Wshadow -Werror -Wfatal-errors -pedantic -std=gnu11 
 	-Wundef -Wnested-externs -Wcast-qual -Wshadow -Wunreachable-code \
 	-Wlogical-op -Wfloat-equal -Wstrict-aliasing=2 -Wredundant-decls \
 	-Wold-style-definition # http://stackoverflow.com/a/1667114 
+GCOV_CFLAGS = -fprofile-arcs -ftest-coverage # add to DEBUG_FLAGS below to measure code coverage with gcov
+DEBUG_FLAGS = -g
+RELEASE_FLAGS = -O3
+GCOV_LFLAGS = -lgcov --coverage # add to LFLAGS below to measure code coverage with gcov
+LFLAGS +=
+
+VALGRIND = valgrind --tool=memcheck --verbose --log-file
 
 .PHONY: all clean distclean
 
-all: debug release
+all: debug
 
-debug: CFLAGS += -g $(BASE_FLAGS)
+debug: CFLAGS += $(DEBUG_FLAGS) $(BASE_FLAGS)
 debug: $(OBJECT_FILES)
-	$(CC) $(CFLAGS) $(OBJECT_FILES) -o $(DEBUG_TARGET)
+	$(CC) $(LFLAGS) $(CFLAGS) $(OBJECT_FILES) -o $(DEBUG_TARGET)
 
-release: CFLAGS += -O3 $(BASE_FLAGS)
+release: CFLAGS += $(RELEASE_FLAGS) $(BASE_FLAGS)
 release: $(OBJECT_FILES)
-	$(CC) $(CFLAGS) $(OBJECT_FILES) -o $(RELEASE_TARGET)
+	$(CC) $(OBJECT_FILES) -o $(RELEASE_TARGET)
 
 clean:
 	$(RM) $(TARGET)
-	$(RM) $(OBJECT_FILES)
-	$(RM) output*
+	$(RM) *.o
+	$(RM) output* log*
+	$(RM) *.gcov *.gcno
 
 distclean: clean
 
@@ -39,13 +48,18 @@ test0: $(DEBUG_TARGET)
 	touch expected0
 	./$(DEBUG_TARGET) input0 > output0
 	diff expected0 output0
+	$(VALGRIND)=log0 ./$(DEBUG_TARGET) input0 > /dev/null
 
 test1: $(DEBUG_TARGET)
 	./$(DEBUG_TARGET) input1 > output1
 	diff expected1 output1
+	$(VALGRIND)=log1 ./$(DEBUG_TARGET) input1 > /dev/null
+	gcov $(SRC_FILES)
 
 test2: $(DEBUG_TARGET)
 	./$(DEBUG_TARGET) input2 > output2
 	diff expected2 output2
+	$(VALGRIND)=log2 ./$(DEBUG_TARGET) input2 > /dev/null
+	gcov $(SRC_FILES)
 
 test: test0 test1 test2
