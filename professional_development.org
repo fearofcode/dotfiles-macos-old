@@ -128,6 +128,7 @@
 ** Look at Anderson
 ** Try Xinu book
 ** Try Tanenbaum's MINIX book
+** [[http://www.kroah.com/log/linux/howto.html][HOWTO do Linux kernel development]]
 ** TODO Project: how fast are append-only reads/writes? How fast is parallel file I/O? :project:
 ** TODO (Maybe) [[https://www.gitbook.com/book/0xax/linux-insides/details][Linux Insides]] [[http://www.ibm.com/developerworks/library/l-linuxboot/index.html][Inside the Linux boot process (2006)]]
 ** [[https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/][Dive Into BPF]]
