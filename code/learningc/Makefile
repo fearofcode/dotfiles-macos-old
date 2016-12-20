@@ -48,18 +48,13 @@ test0: $(DEBUG_TARGET)
 	touch expected0
 	./$(DEBUG_TARGET) input0 > output0
 	diff expected0 output0
-	$(VALGRIND)=log0 ./$(DEBUG_TARGET) input0 > /dev/null
 
 test1: $(DEBUG_TARGET)
 	./$(DEBUG_TARGET) input1 > output1
 	diff expected1 output1
-	$(VALGRIND)=log1 ./$(DEBUG_TARGET) input1 > /dev/null
-	gcov $(SRC_FILES)
 
 test2: $(DEBUG_TARGET)
 	./$(DEBUG_TARGET) input2 > output2
 	diff expected2 output2
-	$(VALGRIND)=log2 ./$(DEBUG_TARGET) input2 > /dev/null
-	gcov $(SRC_FILES)
 
 test: test0 test1 test2
