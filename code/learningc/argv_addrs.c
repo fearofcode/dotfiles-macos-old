@@ -12,7 +12,7 @@ int main(int argc, char **argv) {
     }
 
     for(int i = argc-1; i >= 0; i--) {
-	printf("argv[%d]\t\t%p\t%s\n", i, &argv[i], argv[i]);
+	printf("argv[%d]\t\t%p\t%p\n", i, &argv[i], argv[i]);
     }
     printf("argv\t\t%p\t%p\n", &argv, argv);
     printf("argc\t\t%p\t%d\n", &argc, argc);
