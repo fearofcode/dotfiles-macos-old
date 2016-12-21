@@ -18,7 +18,8 @@ static int qsort_strcmp(const void *p1, const void *p2) {
      * `const char * const *`, but that's not strictly necessary.
      * 
      * After that, we have a well-casted pointer-pointer that we can
-     * simply dereference to get our actual strings. That gives us a
+     * simply dereference to get our actual strings -- dereferencing
+     * the char ** gives a char *, i.e., a string. That gives us a
      * const char * we can pass to strcmp().
      * 
      * A less concise, hopefully more clear version appears below.
