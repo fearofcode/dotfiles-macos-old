@@ -15,14 +15,23 @@ static int qsort_strcmp(const void *p1, const void *p2) {
      * want to cast p1 and p2 as const char **.
      * 
      * It's possible to add more consts to make an expression like
-     * `const char * const *`, but that's not strictly necessary.
+     * `const char * const *`, but that's not strictly necessary --
+     * that seems almost intentionally designed to confuse people not
+     * familiar with C's right-to-left declaration rules.
      * 
      * After that, we have a well-casted pointer-pointer that we can
      * simply dereference to get our actual strings -- dereferencing
-     * the char ** gives a char *, i.e., a string. That gives us a
-     * const char * we can pass to strcmp().
+     * the const char ** gives a char *, i.e., a string. We can then
+     * pass that string to strcmp() as usual now that we've finally
+     * bridged the gap from void * -> const char ** -> const char *
+     * via casting and dereferencing.
      * 
-     * A less concise, hopefully more clear version appears below.
+     * With the hard part over, to make a functioning qsort comparison
+     * function that returns -1, 0, or 1 as required, we can just use
+     * strcmp()'s return value as is.
+     * 
+     * A less concise but hopefully more clear implementation appears
+     * below.
      */
 
     const char * * str_ptr1 = (const char * *) p1;
