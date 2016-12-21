@@ -22,7 +22,7 @@ static int qsort_strcmp(const void *p1, const void *p2) {
      *
      *    * (char * const *) p1
      * 
-     * A less concise, hopefully more clear version appears  below.
+     * A less concise, hopefully more clear version appears below.
      */
 
     char * const * str_ptr1 = (char * const *) p1;
@@ -54,5 +54,5 @@ int main() {
     for(int i = 0; i < LEN; i++) {
 	printf("%s\n", strings[i]);
     }
-    return 0;
+    return EXIT_SUCCESS;
 }
