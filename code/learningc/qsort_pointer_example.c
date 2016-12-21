@@ -8,26 +8,24 @@ static int qsort_strcmp(const void *p1, const void *p2) {
     /**
      * Terse version of this function:
      *
-     *     return strcmp(* (const char * const *) p1, * (const char * const *) p2);
+     *     return strcmp(* (const char **) p1, * (const char **) p2);
      * 
      * Here's what's going on. Each array element is a `const char
      * *`. p1 and p2 are pointers to those const char *'s.  So we'll
-     * want to cast p1 and p2 as char **. But p1 and p2 are const
-     * pointers, so the type we'll want to cast to will be a const
-     * pointer pointer: `const char * const *`. The two consts reflect
-     * that both the pointer and the string are const.
+     * want to cast p1 and p2 as const char **.
      * 
-     * After that, we have a well-casted expression that we can simply
-     * dereference to get our actual strings. Putting it all together,
-     * we get:
-     *
-     *    * (char * const *) p1
+     * It's possible to add more consts to make an expression like
+     * `const char * const *`, but that's not strictly necessary.
+     * 
+     * After that, we have a well-casted pointer-pointer that we can
+     * simply dereference to get our actual strings. That gives us a
+     * const char * we can pass to strcmp().
      * 
      * A less concise, hopefully more clear version appears below.
      */
 
-    const char * const * str_ptr1 = (const char * const *) p1;
-    const char * const * str_ptr2 = (const char * const *) p2;
+    const char * * str_ptr1 = (const char * *) p1;
+    const char * * str_ptr2 = (const char * *) p2;
 
     const char * str1 = *str_ptr1;
     const char * str2 = *str_ptr2;
