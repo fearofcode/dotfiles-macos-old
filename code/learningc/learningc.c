@@ -1,46 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-int areDistinct(int * arr, int len);
+int main(void) {
+    const int rows = 8;
+    const int columns = 3;
 
-int main(int argc, char **argv) {
-    if (argc != 2) {
-	return EXIT_FAILURE;
-    }
-
-    FILE* fptr = fopen(argv[1], "r");
-
-    if (fptr == NULL) {
-	return EXIT_FAILURE;
-    }
-
-    int length = 0;
-    int value;
-
-    while (fscanf(fptr, "%d", &value) == 1) {
-	length++;
-    }
-
-    fseek(fptr, 0, SEEK_SET);
-
-    int * arr = (int *) malloc(length * sizeof(int));
-
-    length = 0;
-
-    while (fscanf(fptr, "%d", &(arr[length])) == 1) {
-	length++;
-    }
-
-    fclose(fptr);
-
-    if (length == 0) {
-	return EXIT_SUCCESS;
-    }
+    int **data = (int **) malloc(rows * sizeof(int *));
     
-    int dist = areDistinct(arr, length);
+    for(int i = 0; i < rows; i++) {
+	data[i] = (int *) malloc(columns * sizeof(int));
+	
+	for(int j = 0; j < columns; j++) {
+	    data[i][j] = i + j;
+	    printf("data[%d][%d] = %d, &data[%d][%d] = %p\n", i, j, data[i][j], i, j, (void*)&data[i][j]);
+	}
 
-    printf("%s\n", dist ? "Elements are distinct" : "Elements are not distinct");
+	free(data[i]);
+    }
 
+    free(data);
     return EXIT_SUCCESS;
 }
