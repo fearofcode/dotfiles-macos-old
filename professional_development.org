@@ -63,7 +63,7 @@
 ** TODO Understand and comprehend Linus Torvalds' double pointer comment :project:
 *** http://grisha.org/blog/2013/04/02/linus-on-understanding-pointers/ / https://www.youtube.com/watch?v=GiAhUYCUDVc
 
-* Algorithms and data structures (write code in C) [2/9]
+* Algorithms and data structures (write code in C/Python) [2/9]
 ** DONE Look through data structures/algorithms books and decide which ones to read from
    :LOGBOOK:  
    - State "DONE"       from "TODO"       [2016-12-12 Mon 22:22]
@@ -78,6 +78,8 @@
 ** TODO Sedgewick's /Algorithms/
 ** TODO Skiena's /Algorithm Design Manual/
 ** TODO /Programming Pearls/
+** [[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm][6.006: Introduction to Algorithms]]
+** [[https://interactivepython.org/runestone/static/pythonds/index.html][Problem Solving with Algorithms and Data Structures Using Python]]
 ** TODO CLRS
 
 ** [[http://ticki.github.io/blog/skip-lists-done-right/][Skip Lists Done Right]]
@@ -121,7 +123,47 @@
    :END:      
 ** TODO [[https://brennan.io/2015/01/16/write-a-shell-in-c/][Write a Shell in C]]
 ** TODO Project: read and understand http://timetobleed.com/the-broken-promises-of-mrireeyarv/ if it doesn't require compiler/interpreter knowledge :project:
-
+* Physics/math -> EE -> computer architecture 
+** TODO list out exact book sequence
+** AOPS math books up through calculus
+** Multivariable calculus
+** Linear algebra books already owned
+** If doing 6.003:
+*** Real analysis, complex analysis
+*** Fourier Analysis And Its Applications
+*** Fourier Analysis: An Introduction (blue book already owned)
+** Going off of http://www.eecs.mit.edu/sites/default/files/6-1.pdf in breadth-first order, bottom-up; look up MIT materials for each subsequent course
+** 6.041: Introduction to Probability, 2nd Edition
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/index.htm
+** 18.03: Diffeq's
+*** https://ocw.mit.edu/courses/mathematics/18-03-differential-equations-spring-2010/index.htm
+*** Assigned book looks terrible, use different one instead
+*** Barbu and cheap Dover one by Tenenbaum
+** 8.01: Physics I
+*** University Physics with Modern Physics is expensive as fuck, so buying old 11th edition to go along with MIT course page
+*** Supplement with Morin's Problems and Solutions in Introductory Mechanics
+** 8.02: Physics II, Electricity and Magnetism
+*** https://ocw.mit.edu/courses/physics/8-02x-physics-ii-electricity-magnetism-with-an-experimental-focus-spring-2005/index.htm
+*** ^ That uses Young and Freedman, so makes sense and avoids having to read Shankar
+** 8.03: Physics III
+*** https://ocw.mit.edu/courses/physics/8-03-physics-iii-spring-2003/index.htm
+*** The two vibration/waves books
+** 6.01: Intro EECS 1
+*** Just go with material at https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/index.htm
+** 6.02: Intro EECS 2
+*** Just go with material at https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/index.htm
+** 6.002: Circuits
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-002-circuits-and-electronics-spring-2007/
+*** Foundations of Analog and Digital Electronic Circuits
+** 6.003: Signals and Systems (maybe)
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-003-signals-and-systems-fall-2011/index.htm
+*** Already own Oppenheim and Willsky. Score!
+** 6.004: Computation Structures (Computer Architecture)
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-004-computation-structures-spring-2009/index.htm
+*** Supplement with Digital Design and Computer Architecture: ARM Edition
+** 6.823: Computer System Architecture
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-823-computer-system-architecture-fall-2005/index.htm
+*** Already own Hennessy and Patterson
 * Operating systems [0/16]
 ** TODO OSTEP http://pages.cs.wisc.edu/~remzi/OSTEP/
 *** Maybe Anderon's OSPP, Tanenbaum, etc. if OSTEP doesn't work out 
@@ -132,6 +174,7 @@
 ** TODO Project: how fast are append-only reads/writes? How fast is parallel file I/O? :project:
 ** TODO (Maybe) [[https://www.gitbook.com/book/0xax/linux-insides/details][Linux Insides]] [[http://www.ibm.com/developerworks/library/l-linuxboot/index.html][Inside the Linux boot process (2006)]]
 ** [[https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/][Dive Into BPF]]
+** [[https://lwn.net/Articles/250967/][What every programmer should know about memory, part 1]]
 ** TODO Watch and possibly comment (in a blog post, in a reasonable, intelligent way) to https://www.youtube.com/watch?v=L9v4Mg8wi4U
 ** TODO Investigate Linux's caching of files			    :project:
 *** https://hoytech.com/vmtouch/
@@ -181,41 +224,6 @@
 *** Possibly buy a book on LLVM and read to prepare
 ** TODO Possible project: learn Go and ressurrect https://github.com/trustpath/sequence
 ** TODO Possible project: read DJB's slides on optimization and comment https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf
-* Physics, electrical engineering, circuits, computer architecture
-** TODO list out exact book sequence
-** AOPS math books up through calculus
-** Multivariable calculus
-** Elementary linear algebra
-** Math and physics books to get through http://wireless.engineering.nyu.edu/fundamentals-of-electric-circuits-1-2016/
-** Computer architecture
-** Modern Processor Design
-** The Elements of Computing Systems
-** 6.004
-* Game hacking as introduction to infosec
-** Windows internals books: purchase, prioritize and collect
-** Discovering Modern C++
-** Programming Massively Parallel Processors
-** (Subset) Game Coding Complete
-** (Maybe) Gray Hat Python: try it, see if it's useful
-** (Maybe) Rootkit Arsenal, already purchased, might as well try it
-** (Maybe) Practical Reverse Engineering, already purchased, might as well try it
-** (Maybe) Reversing: Secrets of Reverse Engineering, already purchased, might as well try it
-** Memory Forensics
-** Game Hacking: Developing Autonomous Bots for Online Games
-** https://hackmag.com/uncategorized/deceiving-blizzard-warden/
-** [[https://www.reddit.com/r/REGames/][Reverse Engineering Games subreddit]]
-** (maybe, if we want to get fancy) Artificial Intelligence for Games, other game AI books
-** Popular infosec books, lock picking, see if infosec could be interesting
-
-* Possible goal: infosec?
-** Buy interesting infosec/crypto books, prioritize them and already purchased books here
-** [[http://insecure.org/stf/smashstack.html][Smashing The Stack For Fun And Profit]]
-** [[https://github.com/kurobeats/pentest-bookmarks/blob/master/BookmarksList.md][Pentesting bookmarks]]
-** Free PDF: [[https://www.cl.cam.ac.uk/~rja14/book.html][Security Engineering]]
-** [[https://github.com/jacobian/infosec-engineering][Infosec reading list]]
-** [[http://www.rand.org/content/dam/rand/pubs/monographs/2004/RAND_MG126.pdf][Out of the Ordinary: Finding Threats by Analyzing Unusual Behavior]]
-
-** [[http://openwall.info/wiki/_media/people/jvanegue/files/woot12.pdf][SMT Solvers for Software Security]]
 * Databases/transaction processing [0/1]
 ** TODO sort through databases books and prioritize them here
 
@@ -261,6 +269,17 @@
 *** https://www.youtube.com/watch?v=QM1iUe6IofM
 * Return to math/machine learning
 ** [[https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b#.qbhtijm72][Yes, you should understand backprop]]
+* Game hacking
+
+* Infosec
+** Buy interesting infosec/crypto books, prioritize them and already purchased books here
+** [[http://insecure.org/stf/smashstack.html][Smashing The Stack For Fun And Profit]]
+** [[https://github.com/kurobeats/pentest-bookmarks/blob/master/BookmarksList.md][Pentesting bookmarks]]
+** Free PDF: [[https://www.cl.cam.ac.uk/~rja14/book.html][Security Engineering]]
+** [[https://github.com/jacobian/infosec-engineering][Infosec reading list]]
+** [[http://www.rand.org/content/dam/rand/pubs/monographs/2004/RAND_MG126.pdf][Out of the Ordinary: Finding Threats by Analyzing Unusual Behavior]]
+
+** [[http://openwall.info/wiki/_media/people/jvanegue/files/woot12.pdf][SMT Solvers for Software Security]]
 * CSS and JavaScript suck ass, but fight the ocean and you will drown
 ** WAIT [[https://www.amazon.com/Front-End-Web-Development-Ranch-Guide/dp/0134433947][Front-end Web Development: The Big Nerd Ranch Guide]]
    :LOGBOOK:  

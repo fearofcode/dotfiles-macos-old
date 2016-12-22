@@ -4,7 +4,7 @@
 
 #define LEN 3
 
-static int qsort_strcmp(const void *p1, const void *p2) {
+static int qsort_strcmp(const void * restrict p1, const void * restrict p2) {
     /**
      * Terse version of this function:
      *
@@ -34,11 +34,11 @@ static int qsort_strcmp(const void *p1, const void *p2) {
      * below.
      */
 
-    const char * * str_ptr1 = (const char * *) p1;
-    const char * * str_ptr2 = (const char * *) p2;
+    const char * * restrict str_ptr1 = (const char * * restrict) p1;
+    const char * *  restrict str_ptr2 = (const char * * restrict) p2;
 
-    const char * str1 = *str_ptr1;
-    const char * str2 = *str_ptr2;
+    const char * restrict str1 = *str_ptr1;
+    const char * restrict str2 = *str_ptr2;
     
     return strcmp(str1, str2);
 }
