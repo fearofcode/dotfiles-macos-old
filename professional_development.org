@@ -165,6 +165,8 @@
 *** Supplement with Digital Design and Computer Architecture: ARM Edition
 ** 6.007: Applied EM
 *** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-007-electromagnetic-energy-from-motors-to-lasers-spring-2011/index.htm
+** 6.011: Comm, Control and Signal Processing
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-011-introduction-to-communication-control-and-signal-processing-spring-2010/index.htm    
 ** 6.012: Microelectronic Circuits
 *** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-012-microelectronic-devices-and-circuits-fall-2009/index.htm
 *** Free downloadable ebook!
