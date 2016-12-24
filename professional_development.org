@@ -123,15 +123,15 @@
    :END:      
 ** TODO [[https://brennan.io/2015/01/16/write-a-shell-in-c/][Write a Shell in C]]
 ** TODO Project: read and understand http://timetobleed.com/the-broken-promises-of-mrireeyarv/ if it doesn't require compiler/interpreter knowledge :project:
-* Physics/math -> EE -> computer architecture 
+* Physics/math -> EE -> computer architecture/control theory/engineer all the things
 ** TODO list out exact book sequence
 ** AOPS math books up through calculus
 ** Multivariable calculus
 ** Linear algebra books already owned
-** If doing 6.003:
-*** Real analysis, complex analysis
-*** Fourier Analysis And Its Applications
-*** Fourier Analysis: An Introduction (blue book already owned)
+** Real analysis, complex analysis
+** Fourier Analysis And Its Applications
+** Fourier Analysis: An Introduction (blue book already owned)
+** All the other math books in cart and on shelf that are relevant
 ** Going off of http://www.eecs.mit.edu/sites/default/files/6-1.pdf in breadth-first order, bottom-up; look up MIT materials for each subsequent course
 ** 6.041: Introduction to Probability, 2nd Edition
 *** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/index.htm
@@ -148,6 +148,8 @@
 ** 8.03: Physics III
 *** https://ocw.mit.edu/courses/physics/8-03-physics-iii-spring-2003/index.htm
 *** The two vibration/waves books
+** 8.04: Quantum Physics I
+*** https://ocw.mit.edu/courses/physics/8-04-quantum-physics-i-spring-2013/index.htm
 ** 6.01: Intro EECS 1
 *** Just go with material at https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/index.htm
 ** 6.02: Intro EECS 2
@@ -161,9 +163,16 @@
 ** 6.004: Computation Structures (Computer Architecture)
 *** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-004-computation-structures-spring-2009/index.htm
 *** Supplement with Digital Design and Computer Architecture: ARM Edition
+** 6.007: Applied EM
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-007-electromagnetic-energy-from-motors-to-lasers-spring-2011/index.htm
+** 6.012: Microelectronic Circuits
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-012-microelectronic-devices-and-circuits-fall-2009/index.htm
+*** Free downloadable ebook!
 ** 6.823: Computer System Architecture
 *** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-823-computer-system-architecture-fall-2005/index.htm
 *** Already own Hennessy and Patterson
+** Later: control classes from course 2
+*** https://ocw.mit.edu/courses/find-by-topic/#cat=engineering&subcat=mechanicalengineering&spec=dynamicsandcontrol
 * Operating systems [0/16]
 ** TODO OSTEP http://pages.cs.wisc.edu/~remzi/OSTEP/
 *** Maybe Anderon's OSPP, Tanenbaum, etc. if OSTEP doesn't work out 
