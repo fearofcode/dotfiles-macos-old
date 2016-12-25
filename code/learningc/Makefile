@@ -18,7 +18,7 @@ GCOV_CFLAGS = -fprofile-arcs -ftest-coverage # add to DEBUG_FLAGS below to measu
 DEBUG_FLAGS = -g
 RELEASE_FLAGS = -O3
 GCOV_LFLAGS = -lgcov --coverage # add to LFLAGS below to measure code coverage with gcov
-LFLAGS +=
+LFLAGS += -lpthread
 
 VALGRIND = valgrind --tool=memcheck --verbose --log-file
 
@@ -28,7 +28,7 @@ all: debug
 
 debug: CFLAGS += $(DEBUG_FLAGS) $(BASE_FLAGS)
 debug: $(OBJECT_FILES)
-	$(CC) $(LFLAGS) $(CFLAGS) $(OBJECT_FILES) -o $(DEBUG_TARGET)
+	$(CC) $(CFLAGS) $(OBJECT_FILES) -o $(DEBUG_TARGET) $(LFLAGS)
 
 release: CFLAGS += $(RELEASE_FLAGS) $(BASE_FLAGS)
 release: $(OBJECT_FILES)

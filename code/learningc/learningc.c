@@ -1,34 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <pthread.h>
 
-typedef struct {
-    int age;
-    char *name;
-} person;
-
-int compare_by_age(const void *p1, const void *p2) {
-    return ((const person *) p1)->age - ((const person *) p2)->age;
+void * worker(void * arg) {
+    printf("hello from worker thread %d\n", *(int *) arg);
+    return NULL;
 }
 
 int main(void) {
-    person* people = malloc(sizeof(person)*2);
+    const int worker_count = 8;
+    pthread_t thread[worker_count];
+    int args[worker_count];
+    
+    for(int i = 0; i < worker_count; i++) {
+	args[i] = i;
+	printf("calling pthread_create with argument %d\n", args[i]);
+	int rtv = pthread_create(&thread[i], NULL, worker, (void*) &args[i]);
 
-    people[0].age = 48;
-    people[0].name = strdup("test");
+	if (rtv != 0) {
+	    fprintf(stderr, "pthread_create() erroneously returned %d\n", rtv);
+	    return EXIT_FAILURE;
+	}
+    }
 
-    people[1].age = 42;
-    people[1].name = strdup("blah");
+    for(int i = 0; i < worker_count; i++) {
+	int rtv = pthread_join(thread[i], NULL);
 
-    printf("%d, %s\n", people[0].age, people[0].name);
-    printf("%d, %s\n", people[1].age, people[1].name);
-
-    qsort(people, 2, sizeof(person), compare_by_age);
-    printf("%d, %s\n", people[0].age, people[0].name);
-    printf("%d, %s\n", people[1].age, people[1].name);
-
-    free(people[1].name);
-    free(people[0].name);
-    free(people);
+	if (rtv != 0) {
+	    fprintf(stderr, "pthread_join() erroneously returned %d\n", rtv);
+	    return EXIT_FAILURE;
+	}
+    }
+    
+    
     return EXIT_SUCCESS;
 }
