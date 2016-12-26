@@ -176,6 +176,7 @@
 ** Later: control classes from course 2
 *** https://ocw.mit.edu/courses/find-by-topic/#cat=engineering&subcat=mechanicalengineering&spec=dynamicsandcontrol
 ** [[https://www.edx.org/course/introduction-control-system-design-first-mitx-6-302-0x#!][Introduction To Control System Design]] - build a self-levitating helicopter arm thing! Dope!
+** [[http://fourierandwavelets.org/FSP_v1.1_2014.pdf][Foundations of Signal Processing (PDF)]] 
 * Operating systems [0/16]
 ** TODO OSTEP http://pages.cs.wisc.edu/~remzi/OSTEP/
 *** Maybe Anderon's OSPP, Tanenbaum, etc. if OSTEP doesn't work out 
@@ -187,6 +188,7 @@
 ** TODO (Maybe) [[https://www.gitbook.com/book/0xax/linux-insides/details][Linux Insides]] [[http://www.ibm.com/developerworks/library/l-linuxboot/index.html][Inside the Linux boot process (2006)]]
 ** [[https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/][Dive Into BPF]]
 ** [[https://lwn.net/Articles/250967/][What every programmer should know about memory, part 1]]
+** [[http://feederio.com/book/37/the-little-book-about-os-development][The Little Book About OS Development]]
 ** TODO Watch and possibly comment (in a blog post, in a reasonable, intelligent way) to https://www.youtube.com/watch?v=L9v4Mg8wi4U
 ** TODO Investigate Linux's caching of files			    :project:
 *** https://hoytech.com/vmtouch/

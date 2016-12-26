@@ -32,7 +32,7 @@ debug: $(OBJECT_FILES)
 
 release: CFLAGS += $(RELEASE_FLAGS) $(BASE_FLAGS)
 release: $(OBJECT_FILES)
-	$(CC) $(OBJECT_FILES) -o $(RELEASE_TARGET)
+	$(CC) $(CFLAGS) $(OBJECT_FILES) -o $(RELEASE_TARGET) $(LFLAGS)
 
 clean:
 	$(RM) $(TARGET)
