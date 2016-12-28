@@ -177,6 +177,7 @@
 *** https://ocw.mit.edu/courses/find-by-topic/#cat=engineering&subcat=mechanicalengineering&spec=dynamicsandcontrol
 ** [[https://www.edx.org/course/introduction-control-system-design-first-mitx-6-302-0x#!][Introduction To Control System Design]] - build a self-levitating helicopter arm thing! Dope!
 ** [[http://fourierandwavelets.org/FSP_v1.1_2014.pdf][Foundations of Signal Processing (PDF)]] 
+** [[http://iiis.tsinghua.edu.cn/~weixu/files/master_thesis.pdf][Feedback Control Theory and Processing System Log Streams]]
 * Operating systems [0/16]
 ** TODO OSTEP http://pages.cs.wisc.edu/~remzi/OSTEP/
 *** Maybe Anderon's OSPP, Tanenbaum, etc. if OSTEP doesn't work out 
