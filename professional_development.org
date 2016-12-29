@@ -152,32 +152,34 @@
 *** https://ocw.mit.edu/courses/physics/8-04-quantum-physics-i-spring-2013/index.htm
 ** 6.01: Intro EECS 1
 *** Just go with material at https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/index.htm
-** 6.02: Intro EECS 2
-*** Just go with material at https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/index.htm
-** 6.002: Circuits
+** 6.002: Circuits (assumed by Spring 2006 6.004 OCW, so do it)
 *** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-002-circuits-and-electronics-spring-2007/
 *** Foundations of Analog and Digital Electronic Circuits
-** 6.003: Signals and Systems (maybe)
+** 6.02: Intro EECS 2 (maybe)
+*** Go with material at https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/index.htm
+*** Supplement with Lathi
+** 6.003: Signals and Systems
 *** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-003-signals-and-systems-fall-2011/index.htm
 *** Already own Oppenheim and Willsky. Score!
-** 6.004: Computation Structures (Computer Architecture)
-*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-004-computation-structures-spring-2009/index.htm
-*** Supplement with Digital Design and Computer Architecture: ARM Edition
-** 6.007: Applied EM
-*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-007-electromagnetic-energy-from-motors-to-lasers-spring-2011/index.htm
 ** 6.011: Comm, Control and Signal Processing
 *** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-011-introduction-to-communication-control-and-signal-processing-spring-2010/index.htm    
-** 6.012: Microelectronic Circuits
-*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-012-microelectronic-devices-and-circuits-fall-2009/index.htm
-*** Free downloadable ebook!
+** Later: control classes like 6.302/2.003; round up all control books and read them
+*** https://ocw.mit.edu/courses/find-by-topic/#cat=engineering&subcat=mechanicalengineering&spec=dynamicsandcontrol
+** [[http://citeseerx.ist.psu.edu/viewdoc/download?doi%3D10.1.1.187.7309&rep%3Drep1&type%3Dpdf][Dynamically Scaling Applications In The Cloud]]
 ** 6.823: Computer System Architecture
 *** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-823-computer-system-architecture-fall-2005/index.htm
 *** Already own Hennessy and Patterson
-** Later: control classes from course 2
-*** https://ocw.mit.edu/courses/find-by-topic/#cat=engineering&subcat=mechanicalengineering&spec=dynamicsandcontrol
 ** [[https://www.edx.org/course/introduction-control-system-design-first-mitx-6-302-0x#!][Introduction To Control System Design]] - build a self-levitating helicopter arm thing! Dope!
+** 6.004: Computation Structures (Computer Architecture)
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-004-computation-structures-spring-2009/index.htm
+*** Supplement with Digital Design and Computer Architecture: ARM Edition
 ** [[http://fourierandwavelets.org/FSP_v1.1_2014.pdf][Foundations of Signal Processing (PDF)]] 
 ** [[http://iiis.tsinghua.edu.cn/~weixu/files/master_thesis.pdf][Feedback Control Theory and Processing System Log Streams]]
+** 6.007: Applied EM (maybe)
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-007-electromagnetic-energy-from-motors-to-lasers-spring-2011/index.htm
+** 6.012: Microelectronic Circuits
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-012-microelectronic-devices-and-circuits-fall-2009/index.htm
+*** Free downloadable ebook! (maybe)
 * Operating systems [0/16]
 ** TODO OSTEP http://pages.cs.wisc.edu/~remzi/OSTEP/
 *** Maybe Anderon's OSPP, Tanenbaum, etc. if OSTEP doesn't work out 
