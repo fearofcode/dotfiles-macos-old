@@ -66,6 +66,26 @@
 ** TODO Understand and comprehend Linus Torvalds' double pointer comment :project:
 *** http://grisha.org/blog/2013/04/02/linus-on-understanding-pointers/ / https://www.youtube.com/watch?v=GiAhUYCUDVc
 
+* Preparatory math (including prep for 6.006)
+** AOPS math books up through calculus
+** Foundations of Combinatorics with Applications
+** Graph Theory with Applications
+** Organize bookshelf by subject
+** Linear algebra
+** Differential equations
+** Multivariable Calculus, Clark Bray / Advanced Calculus: A Geometric View
+** Abstract algebra
+*** A Book of Abstract Algebra
+*** Abstract Algebra: An Inquiry-Based approach
+** An Introduction to Number Theory With Cryptography / Introduction to Cryptography with Maple
+*** Preparation for optimization book that uses Maple
+** Concrete Mathematics
+** Real analysis
+*** Understanding Analysis
+*** Foundations of Mathematical Analysis (has Fourier series chapter)
+*** TODO go through other books
+** Complex analysis
+** [[https://www.math.upenn.edu/~wilf/gfology2.pdf][generatingfunctionology (PDF)]]
 * Algorithms and data structures (write code in C/Python) [2/9]
 ** DONE Look through data structures/algorithms books and decide which ones to read from
    :LOGBOOK:  
@@ -77,26 +97,25 @@
      I have enough other material that it shouldn't be necessary. I already have some prior context on algorithms and data structures
    :END:      
 ** TODO Weiss's Algorithms and Data Structures in C
+** [[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm][6.006: Introduction to Algorithms]]
 ** TODO Sedgewick's Algorithms in C
 ** TODO Sedgewick's /Algorithms/
 ** TODO Skiena's /Algorithm Design Manual/
 ** TODO /Programming Pearls/
-** [[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm][6.006: Introduction to Algorithms]]
 ** [[https://interactivepython.org/runestone/static/pythonds/index.html][Problem Solving with Algorithms and Data Structures Using Python]]
 ** TODO CLRS
 
 ** [[http://ticki.github.io/blog/skip-lists-done-right/][Skip Lists Done Right]]
 ** TODO Write basic versions of the most common data structures (linked list, queue, BST, red-black tree, priority queue, max heap, etc) from scratch in C
 ** Do it in Python, too!
-* Assembly language, UNIX systems programming, machine organization, concurrency [3/18]
+* Assembly language, UNIX systems programming, machine organization, concurrency [4/18]
 ** TODO Inside the Machine 
 ** TODO How Linux works
-** TODO Read through and write up LaTeX summary of https://en.wikipedia.org/wiki/Two's_complement
-** TODO [[http://savannah.spinellicreations.com//pgubook/ProgrammingGroundUp-1-0-lettersize.pdf][Programming From The Ground Up]] [[http://www.cs.princeton.edu/courses/archive/spring04/cos217/][Old Princeton course page that used the book]]
-** [[https://software.intel.com/sites/default/files/managed/39/c5/325462-sdm-vol-1-2abcd-3abcd.pdf][IA64 Software Developer's Manuals (PDF)]]
+** CANCELED [[http://savannah.spinellicreations.com//pgubook/ProgrammingGroundUp-1-0-lettersize.pdf][Programming From The Ground Up]] [[http://www.cs.princeton.edu/courses/archive/spring04/cos217/][Old Princeton course page that used the book]]
 ** TODO Assembly Language Step-by-Step: Programming with Linux
 ** TODO Introduction to 64 Bit Assembly Programming for Linux and OS X
 ** TODO Modern Assembly Language Programming with the ARM Processor (+ buy Raspberry Pi)
+** TODO Read through and write up LaTeX summary of https://en.wikipedia.org/wiki/Two's_complement
 ** TODO Raspberry Pi Assembly Language RASPBIAN Beginners: Hands On Guide 
 ** WAIT The Linux Programming Interface: A Linux and UNIX System Programming Handbook 
    :LOGBOOK:  
@@ -111,7 +130,6 @@
    :END:      
 ** TODO The Art of Multiprocessor Programming 
 ** [[http://cs.brown.edu/courses/cs176/lectures.shtml][Class lectures for course that uses Art of Multiprocessor Programming]]
-** [[https://en.wikipedia.org/wiki/Read-copy-update][Read-copy update]]
 ** WAIT Programming with POSIX Threads
 ** WAIT The Art of Concurrency: A Thread Monkey's Guide to Writing Parallel Applications 
 ** TODO Computer Systems: A Programmer's Perspective
@@ -124,17 +142,53 @@
    :LOGBOOK:  
    - State "CANCELED"   from "TODO"       [2016-11-29 Tue 09:00]
    :END:      
+** [[https://en.wikipedia.org/wiki/Read-copy-update][Read-copy update]]
 ** TODO [[https://brennan.io/2015/01/16/write-a-shell-in-c/][Write a Shell in C]]
 ** TODO Project: read and understand http://timetobleed.com/the-broken-promises-of-mrireeyarv/ if it doesn't require compiler/interpreter knowledge :project:
+** [[https://software.intel.com/sites/default/files/managed/39/c5/325462-sdm-vol-1-2abcd-3abcd.pdf][IA64 Software Developer's Manuals (PDF)]]
+* Operating systems [0/16]
+** MINIX book
+*** Courses using it: http://wiki.minix3.org/doku.php?id=courses
+*** UCSB course using it: http://www.cs.ucsb.edu/~ravenben/classes/170/index.html 
+*** Additional project doing thread-local storage http://www.cs.ucsb.edu/~chris/teaching/cs170/projects/proj4.html
+** TODO Anderson
+*** [[http://web.stanford.edu/~ouster/cgi-bin/cs140-winter16/index.php][CS140 @ Stanford]]
+** TODO OSTEP http://pages.cs.wisc.edu/~remzi/OSTEP/
+*** Maybe Anderon's OSPP, Tanenbaum, etc. if OSTEP doesn't work out 
+** Linux Kernel Development
+** Try Xinu book
+** [[http://www.kroah.com/log/linux/howto.html][HOWTO do Linux kernel development]]
+** TODO Project: how fast are append-only reads/writes? How fast is parallel file I/O? :project:
+** TODO (Maybe) [[https://www.gitbook.com/book/0xax/linux-insides/details][Linux Insides]] [[http://www.ibm.com/developerworks/library/l-linuxboot/index.html][Inside the Linux boot process (2006)]]
+** [[https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/][Dive Into BPF]]
+** [[https://lwn.net/Articles/250967/][What every programmer should know about memory, part 1]]
+** [[http://feederio.com/book/37/the-little-book-about-os-development][The Little Book About OS Development]]
+** TODO Watch and possibly comment (in a blog post, in a reasonable, intelligent way) to https://www.youtube.com/watch?v=L9v4Mg8wi4U
+** TODO Investigate Linux's caching of files			    :project:
+*** https://hoytech.com/vmtouch/
+*** https://www.thomas-krenn.com/en/wiki/Linux_Page_Cache_Basics
+*** http://www.linuxatemyram.com/play.html
+*** http://queue.acm.org/detail.cfm?id=1814327
+*** https://varnish-cache.org/docs/trunk/phk/notes.html
+*** http://oldblog.antirez.com/post/what-is-wrong-with-2006-programming.html
+*** Did Varnish abandon the approach Kamp talked about? https://info.varnish-software.com/blog/introducing-varnish-massive-storage-engine
+** TODO Possible project: tools to detect thread problems in code, e.g https://github.com/google/sanitizers/wiki/ThreadSanitizerCppManual :project:
+** TODO Possible (fun) project: kernel module that blinks keyboard LEDs http://www.tldp.org/LDP/lkmpg/2.6/html/x1194.html :project:
+** TODO Possible project; try to do something like Tim Bray's Wide Finder; maybe try to convince him to fork over the data set for modern analysis? :project:
+** TODO Possible project: OS 161 http://os161.eecs.harvard.edu/ or other OS projects :project:
+** TODO Possible project: Arch Linux -> Linux from scratch	    :project:
+** TODO Possible project: Windows internals -> game botting	    :project:
+** TODO Possible project: read through and understand Joe Damato's blog posts :project:
+** TODO Possible project: Brendan Gregg's tracing tools http://www.brendangregg.com/blog/2016-10-27/dtrace-for-linux-2016.html :project:
+** TODO Possible project: Joe Damato's computer project list https://docs.google.com/document/d/1V0CnufAf-85Jn1W2c_Qvfzbm2ss9WY4yJ41jQWwA-5Q/edit :project:
+** TODO Possible project: MIT's OS course https://pdos.csail.mit.edu/6.828/2016/overview.html :project:
+** TODO Possible project: read through http://carlos.bueno.org/optimization/mature-optimization.pdf :project:
+** [[https://en.wikipedia.org/wiki/Tanenbaum%25E2%2580%2593Torvalds_debate][Tanenbaum-Torvalds debate]]
+* Engineering math (deep)
+** Fourier analysis
+** Probability, statistics, queueing theory
+** Hilbert spaces
 * Physics/math -> EE -> computer architecture/control theory/engineer all the things
-** TODO list out exact book sequence
-** AOPS math books up through calculus
-** Multivariable calculus
-** Linear algebra books already owned
-** Real analysis, complex analysis
-** Fourier Analysis And Its Applications
-** Fourier Analysis: An Introduction (blue book already owned)
-** All the other math books in cart and on shelf that are relevant
 ** Going off of http://www.eecs.mit.edu/sites/default/files/6-1.pdf in breadth-first order, bottom-up; look up MIT materials for each subsequent course
 ** 6.041: Introduction to Probability, 2nd Edition
 *** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/index.htm
@@ -183,38 +237,6 @@
 ** 6.012: Microelectronic Circuits
 *** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-012-microelectronic-devices-and-circuits-fall-2009/index.htm
 *** Free downloadable ebook! (maybe)
-* Operating systems [0/16]
-** TODO OSTEP http://pages.cs.wisc.edu/~remzi/OSTEP/
-*** Maybe Anderon's OSPP, Tanenbaum, etc. if OSTEP doesn't work out 
-** Look at Anderson
-** Try Xinu book
-** Try Tanenbaum's MINIX book
-** [[http://www.kroah.com/log/linux/howto.html][HOWTO do Linux kernel development]]
-** TODO Project: how fast are append-only reads/writes? How fast is parallel file I/O? :project:
-** TODO (Maybe) [[https://www.gitbook.com/book/0xax/linux-insides/details][Linux Insides]] [[http://www.ibm.com/developerworks/library/l-linuxboot/index.html][Inside the Linux boot process (2006)]]
-** [[https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/][Dive Into BPF]]
-** [[https://lwn.net/Articles/250967/][What every programmer should know about memory, part 1]]
-** [[http://feederio.com/book/37/the-little-book-about-os-development][The Little Book About OS Development]]
-** TODO Watch and possibly comment (in a blog post, in a reasonable, intelligent way) to https://www.youtube.com/watch?v=L9v4Mg8wi4U
-** TODO Investigate Linux's caching of files			    :project:
-*** https://hoytech.com/vmtouch/
-*** https://www.thomas-krenn.com/en/wiki/Linux_Page_Cache_Basics
-*** http://www.linuxatemyram.com/play.html
-*** http://queue.acm.org/detail.cfm?id=1814327
-*** https://varnish-cache.org/docs/trunk/phk/notes.html
-*** http://oldblog.antirez.com/post/what-is-wrong-with-2006-programming.html
-*** Did Varnish abandon the approach Kamp talked about? https://info.varnish-software.com/blog/introducing-varnish-massive-storage-engine
-** TODO Possible project: tools to detect thread problems in code, e.g https://github.com/google/sanitizers/wiki/ThreadSanitizerCppManual :project:
-** TODO Possible (fun) project: kernel module that blinks keyboard LEDs http://www.tldp.org/LDP/lkmpg/2.6/html/x1194.html :project:
-** TODO Possible project; try to do something like Tim Bray's Wide Finder; maybe try to convince him to fork over the data set for modern analysis? :project:
-** TODO Possible project: OS 161 http://os161.eecs.harvard.edu/ or other OS projects :project:
-** TODO Possible project: Arch Linux -> Linux from scratch	    :project:
-** TODO Possible project: Windows internals -> game botting	    :project:
-** TODO Possible project: read through and understand Joe Damato's blog posts :project:
-** TODO Possible project: Brendan Gregg's tracing tools http://www.brendangregg.com/blog/2016-10-27/dtrace-for-linux-2016.html :project:
-** TODO Possible project: Joe Damato's computer project list https://docs.google.com/document/d/1V0CnufAf-85Jn1W2c_Qvfzbm2ss9WY4yJ41jQWwA-5Q/edit :project:
-** TODO Possible project: MIT's OS course https://pdos.csail.mit.edu/6.828/2016/overview.html :project:
-** TODO Possible project: read through http://carlos.bueno.org/optimization/mature-optimization.pdf :project:
 * Networks [0/11]
 ** TODO Computer Networks, Fifth Edition: A Systems Approach
 ** TODO The Illustrated Network: How TCP/IP Works In A Modern Network
