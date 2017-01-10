@@ -188,6 +188,63 @@
 ** Fourier analysis
 ** Probability, statistics, queueing theory
 ** Hilbert spaces
+* Learning path: 2.14/2.151 Advanced Control
+** 8.01: Physics I
+*** University Physics with Modern Physics is expensive as fuck, so buying old 11th edition to go along with MIT course page
+*** Supplement with Morin's Problems and Solutions in Introductory Mechanics
+** 8.02: Physics II, Electricity and Magnetism
+*** https://ocw.mit.edu/courses/physics/8-02x-physics-ii-electricity-magnetism-with-an-experimental-focus-spring-2005/index.htm
+*** ^ That uses Young and Freedman, so makes sense and avoids having to read Shankar
+** 2.087: Engineering Math
+*** https://ocw.mit.edu/courses/mechanical-engineering/2-087-engineering-math-differential-equations-and-linear-algebra-fall-2014/index.htm
+*** Already have Strang's DiffEq's + LinAlg book
+** 6.01: Intro EECS 1
+*** Just go with material at https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/index.htm
+** 6.02: Intro EECS 2
+*** Go with material at https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/index.htm
+** 6.003: Signals and Systems
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-003-signals-and-systems-fall-2011/index.htm
+*** Already own Oppenheim and Willsky. Score!
+** 6.011: Comm, Control and Signal Processing
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-011-introduction-to-communication-control-and-signal-processing-spring-2010/index.htm    
+** Practical electronics books
+** Maybe advanced math books to deeply understand transforms
+** Other EE/computer architecture stuff: 6.004? Electromagnetism/Lathi?
+** 2.003: Dynamics and Control
+*** https://ocw.mit.edu/courses/mechanical-engineering/2-003j-dynamics-and-control-i-spring-2007/
+** 2.004: Dynamics and Control II
+*** https://ocw.mit.edu/courses/mechanical-engineering/2-004-dynamics-and-control-ii-spring-2008/index.htm
+** 2.04A: Systems And Controls
+*** https://ocw.mit.edu/courses/mechanical-engineering/2-04a-systems-and-controls-spring-2013/index.htm
+** 2.14 Analysis and Design of Feedback Control Systems
+*** https://ocw.mit.edu/courses/mechanical-engineering/2-14-analysis-and-design-of-feedback-control-systems-spring-2014/index.htm
+** 2.151: No materials, the assholes
+*** Just read through Brogan
+** 2.171 Analysis and Design of Digital Control Systems
+*** https://ocw.mit.edu/courses/mechanical-engineering/2-171-analysis-and-design-of-digital-control-systems-fall-2006/index.htm
+** 6.241: Dynamic Systems And control
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-241j-dynamic-systems-and-control-spring-2011/index.htm
+** 6.243 Nonlinear Systems (maybe? don't buy anything)
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-243j-dynamics-of-nonlinear-systems-fall-2003/index.htm
+** 6.245: Multivariable Control Systems
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-245-multivariable-control-systems-spring-2004/index.htm
+
+** 6.432: Stochastic Processes, Detection, and Estimation
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-432-stochastic-processes-detection-and-estimation-spring-2004/syllabus/
+*** IDK what books to get, just read through Kay
+** 6.435: System Identification
+*** Just read through Kay, the recommended book looks bad
+*** https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-435-system-identification-spring-2005/index.htm
+** CSE 590K: Analysis and Control of Computer Systems Using Linear Discrete-Time System Theory
+*** http://research.microsoft.com/en-us/um/people/liuj/cse590k2008winter/ 
+** Followup material
+*** The Art of Control Engineering
+*** Feedback and Control for Everyone
+*** Computer-Controlled Systems
+*** Feedback Control for Computer Systems
+*** Nonlinear control by Khalil
+*** Probability and Queuing theory books
+*** Machine learning books
 * Physics/math -> EE -> computer architecture/control theory/engineer all the things
 ** Going off of http://www.eecs.mit.edu/sites/default/files/6-1.pdf in breadth-first order, bottom-up; look up MIT materials for each subsequent course
 ** 6.041: Introduction to Probability, 2nd Edition
