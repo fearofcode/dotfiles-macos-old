@@ -66,6 +66,15 @@
 ** TODO Understand and comprehend Linus Torvalds' double pointer comment :project:
 *** http://grisha.org/blog/2013/04/02/linus-on-understanding-pointers/ / https://www.youtube.com/watch?v=GiAhUYCUDVc
 
+* Project: feedback control for queue systems
+** Feedback and Control for Everyone
+** [[http://m.eet.com/media/1112634/f-wescot.pdf][PID Without a PhD]]
+** Core Java
+** Effective Java / Java Concurrency In Practice (skim them, see if good)
+** Kafka: The Definitive Guide
+** Sedgewick's /Algorithms/ up through priority queues + discrete event simulation section
+** Discrete event simulation + PSO (do literature search)
+** Fine tune against live system with coordinate descent
 * Preparatory math (including prep for 6.006)
 ** AOPS math books up through calculus
 ** Foundations of Combinatorics with Applications
