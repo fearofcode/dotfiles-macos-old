@@ -177,6 +177,7 @@
 ** [[https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/][Dive Into BPF]]
 ** [[https://lwn.net/Articles/250967/][What every programmer should know about memory, part 1]]
 ** [[http://feederio.com/book/37/the-little-book-about-os-development][The Little Book About OS Development]]
+** [[https://www.ibm.com/developerworks/linux/library/j-zerocopy/][Efficient data transfer through zero copy]]
 ** TODO Watch and possibly comment (in a blog post, in a reasonable, intelligent way) to https://www.youtube.com/watch?v=L9v4Mg8wi4U
 ** TODO Investigate Linux's caching of files			    :project:
 *** https://hoytech.com/vmtouch/
