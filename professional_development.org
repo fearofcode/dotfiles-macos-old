@@ -81,7 +81,7 @@
 ** Graphite monitoring, database control of simulation parameters to allow live dynamic experimentation
 ** Simulate disturbances (crashes, failure to scale up/down, etc)
 ** Fine tune against actual Kafka queue running dummy consumers with coordinate descent; compare simulated to final values
-** AI Application programming: fuzzy control example
+** AI Application programming: fuzzy control example, Q learning example. Alternatives?
 * Preparatory math (including prep for 6.006)
 ** AOPS math books up through calculus
 ** Foundations of Combinatorics with Applications
