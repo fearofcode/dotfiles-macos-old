@@ -73,6 +73,7 @@
 ** Core Java
 ** Effective Java / Java Concurrency In Practice (skim them, see if good)
 ** [[https://docs.oracle.com/javase/tutorial/2d/][Java 2D graphics]]
+** [[https://jogamp.org/wiki/index.php/Downloading_and_installing_JOGL][Downloading and installing JOGL]]
 ** dyn4j: get inverted pendulum working
 ** [[https://github.com/wnbittle/dyn4j/blob/master/examples/org/dyn4j/samples/Thrust.java][dyn4j thrust exmaple]] maybe try controlling levitation of a ship? try if pendulum fails
 ** [[http://home.ijasca.com/data/documents/ijasc08_published.pdf][Gravitational search]]   
