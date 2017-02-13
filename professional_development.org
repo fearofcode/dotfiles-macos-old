@@ -71,9 +71,11 @@
 ** Kafka: The Definitive Guide
 ** [[http://m.eet.com/media/1112634/f-wescot.pdf][PID Without a PhD]]
 ** Core Java
-** Effective Java / Java Concurrency In Practice (skim them, see if good)
+** [[https://docs.oracle.com/javase/tutorial/displayCode.html?code%3Dhttps://docs.oracle.com/javase/tutorial/uiswing/examples/concurrency/FlipperProject/src/concurrency/Flipper.java][SwingWorker example]]
+** [[https://netbeans.org/kb/docs/java/quickstart-gui.html][Designing a Swing GUI in Netbeans]]
 ** [[https://docs.oracle.com/javase/tutorial/2d/][Java 2D graphics]]
-** [[https://jogamp.org/wiki/index.php/Downloading_and_installing_JOGL][Downloading and installing JOGL]]
+** [[http://www.jfree.org/jfreechart/][JFreeChart]]
+** [[http://www.object-refinery.com/orsoncharts/][Orson Charts (3D)]]
 ** dyn4j: get inverted pendulum working
 ** [[https://github.com/wnbittle/dyn4j/blob/master/examples/org/dyn4j/samples/Thrust.java][dyn4j thrust exmaple]] maybe try controlling levitation of a ship? try if pendulum fails
 ** [[http://home.ijasca.com/data/documents/ijasc08_published.pdf][Gravitational search]]   
@@ -82,7 +84,9 @@
 ** Graphite monitoring, database control of simulation parameters to allow live dynamic experimentation
 ** Simulate disturbances (crashes, failure to scale up/down, etc)
 ** Fine tune against actual Kafka queue running dummy consumers with coordinate descent; compare simulated to final values
+** Effective Java / Java Concurrency In Practice (skim them, see if good)
 ** AI Application programming: fuzzy control example, Q learning example. Alternatives?
+** [[https://jogamp.org/wiki/index.php/Downloading_and_installing_JOGL][Downloading and installing JOGL]] (not strictly necessary, 2d examples will work without this)
 * Preparatory math (including prep for 6.006)
 ** AOPS math books up through calculus
 ** Foundations of Combinatorics with Applications
