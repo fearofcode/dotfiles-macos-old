@@ -1,5 +1,5 @@
 filetype plugin indent on
-set number
+set relativenumber
 set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
@@ -21,5 +21,8 @@ set showmatch
 " intelligent comments
 set comments=sl:/*,mb:\ *,elx:\ */
 set laststatus=2
-" make Ctrl-D only scroll 15 lines rather than half the screen
-set scroll=15
+execute pathogen#infect()
+map <C-n> :NERDTreeToggle<CR>
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
