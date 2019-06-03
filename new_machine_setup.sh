@@ -7,10 +7,13 @@ sudo apt-add-repository ppa:fish-shell/release-3 -y
 sudo apt-get update
 
 sudo apt install \
+    # fast, GPU-accelerated terminal
     alacritty \
     clang \
     curl \
+    # nice alternative shell
     fish \
+    # some fonts
     fonts-hack \
     fonts-inconsolata \
     fonts-ricty-diminished \
@@ -33,6 +36,7 @@ chsh -s /usr/bin/fish
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 
+# ripgrep is a fast grep replacement https://github.com/BurntSushi/ripgrep
 cargo install ripgrep
 
 # setup xclip to work like pbcopy/pbpaste for Mac
@@ -50,8 +54,8 @@ curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/
 cd ~/.vim
 git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim
 
-cp .vimrc ~/.vimrc
-
+cp .vimrc ~
+cp .tmux.conf ~
 cp alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
 echo "Manual steps to perform:"
