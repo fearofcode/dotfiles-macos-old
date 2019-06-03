@@ -51,7 +51,7 @@ echo "alias pbcopy='xclip -selection clipboard'" | tee -a ~/.config/fish/config.
 echo "alias pbpaste='xclip -selection clipboard -o'" | tee -a ~/.config/fish/config.fish
 echo "source $HOME/.cargo/env" | tee -a ~/.config/fish/config.fish
 
-# install jellybeans color theme
+# install jellybeans color theme (for regular go)
 mkdir -p ~/.vim/colors
 cd ~/.vim/colors
 curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
@@ -64,6 +64,14 @@ cp .vimrc ~
 cp .tmux.conf ~
 cp alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
+# install go
+wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.12.6.linux-amd64.tar.gz
+echo "set -gx PATH /usr/local/go/bin $PATH" | tee -a ~/.config/fish/config.fish
+echo "export PATH=$PATH:/usr/local/go/bin" | tee -a ~/.bashrc
+
 echo "Manual steps to perform:"
 echo " * Install Dropbox" # can technically be automated but whatever
 echo " * Get SSH keys from Dropbox"
+echo " * Run :GoInstallBinaries in vim (not neovim)"
+
