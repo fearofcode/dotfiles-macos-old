@@ -1,7 +1,11 @@
 # https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
 set -euxo pipefail
 
-sudo apt install clang \
+sudo add-apt-repository ppa:mmstick76/alacritty
+
+sudo apt install \
+    alacritty \
+    clang \
     curl \
     fonts-hack \
     fonts-inconsolata \
@@ -23,12 +27,11 @@ curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 
 cargo install ripgrep
-cargo install lsd
 
 # setup xclip to work like pbcopy/pbpaste for Mac
 echo "alias pbcopy='xclip -selection clipboard'" | tee -a ~/.bashrc
 echo "alias pbpaste='xclip -selection clipboard -o'" | tee -a ~/.bashrc
-echo "alias ls='lsd'" | tee -a ~/.bashrc
+echo "source $HOME/.cargo/env" | tee -a ~/.bashrc
 
 # install jellybeans color theme
 mkdir -p ~/.vim/colors
@@ -41,7 +44,8 @@ git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim
 
 cp .vimrc ~/.vimrc
 
+cp alacritty.yml $HOME/.config/alacritty/alacritty.yml
+
 echo "Manual steps to perform:"
 echo " * Install Dropbox" # can technically be automated but whatever
 echo " * Get SSH keys from Dropbox"
-echo " * Install patched fonts for LSD at <https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts>"
