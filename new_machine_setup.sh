@@ -17,6 +17,7 @@ sudo apt install \
     fonts-hack \
     fonts-inconsolata \
     fonts-ricty-diminished \
+    htop \
     git \
     llvm \
     postgresql \

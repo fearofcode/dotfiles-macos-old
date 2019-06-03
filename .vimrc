@@ -5,6 +5,8 @@ autocmd BufWritePost arete_scratch.py !python3 arete_scratch.py
 filetype plugin on
 filetype indent on
 
+set number
+
 set nocompatible
 
 " Set to auto read when a file is changed from the outside
@@ -42,10 +44,6 @@ set ignorecase
 
 " When searching try to be smart about cases 
 set smartcase
-
-" Highlight search results
-set hlsearch
-
 " Makes search act like search in modern browsers
 set incsearch 
 
