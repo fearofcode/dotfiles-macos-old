@@ -3,6 +3,7 @@ set -euxo pipefail
 
 sudo add-apt-repository ppa:mmstick76/alacritty -y
 sudo apt-add-repository ppa:fish-shell/release-3 -y
+sudo add-apt-repository ppa:neovim-ppa/stable
 
 sudo apt-get update
 
@@ -20,6 +21,7 @@ sudo apt install \
     htop \
     git \
     llvm \
+    neovim \
     postgresql \
     python3-dev \
     python-dev \
@@ -28,7 +30,10 @@ sudo apt install \
     vim \
     vim-gtk \
     whois \
-    xclip -y
+    xclip \
+    # why not just use Xubuntu? because their ISOs always freeze up on me, IDK
+    xfce4 \
+    xubuntu-desktop -y
 
 # make fish default shell
 chsh -s /usr/bin/fish
