@@ -11,16 +11,16 @@ sudo apt install \
     # fast, GPU-accelerated terminal
     alacritty \
     clang \
+    # needed for exa
+    cmake \
     curl \
     # nice alternative shell
     fish \
     # some fonts
     fonts-hack \
     fonts-inconsolata \
-    fonts-ricty-diminished \
     htop \
     git \
-    llvm \
     neovim \
     postgresql \
     python3-dev \
@@ -44,6 +44,9 @@ source $HOME/.cargo/env
 
 # ripgrep is a fast grep replacement https://github.com/BurntSushi/ripgrep
 cargo install ripgrep
+
+# nice ls replacement
+cargo install exa
 
 # setup xclip to work like pbcopy/pbpaste for Mac
 mkdir -p ~/.config/fish/
