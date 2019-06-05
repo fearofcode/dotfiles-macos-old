@@ -8,6 +8,8 @@ sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
 
 sudo apt install \
+    # for searching for what packages contain things like include files
+    apt-file \
     # fast, GPU-accelerated terminal
     alacritty \
     clang \
