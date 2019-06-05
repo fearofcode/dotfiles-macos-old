@@ -1,6 +1,3 @@
-" evaluate files for use with Arete https://github.com/fearofcode/arete
-autocmd BufWritePost arete_scratch.py !python3 arete_scratch.py
-
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -28,9 +25,6 @@ endif
 
 "Always show current position
 set ruler
-
-" Height of the command bar
-set cmdheight=2
 
 " A buffer becomes hidden when it is abandoned
 set hid
