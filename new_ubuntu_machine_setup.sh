@@ -14,11 +14,11 @@ sudo apt install \
     # needed for exa
     cmake \
     curl \
+    exuberant-ctags \
     # nice alternative shell
     fish \
     # some fonts
     fonts-hack \
-    fonts-inconsolata \
     htop \
     git \
     neovim \
@@ -45,8 +45,8 @@ source $HOME/.cargo/env
 # ripgrep is a fast grep replacement https://github.com/BurntSushi/ripgrep
 cargo install ripgrep
 
-# nice ls replacement
-cargo install exa
+# code lines counter
+cargo install tokei
 
 # setup xclip to work like pbcopy/pbpaste for Mac
 mkdir -p ~/.config/fish/
