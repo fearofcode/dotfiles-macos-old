@@ -226,10 +226,10 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 
 let g:vim_isort_python_version = 'python3'
-let g:flake8_cmd="/home/warren/.local/bin/flake8"
+let g:flake8_cmd=$HOME."/.local/bin/flake8"
 let g:rustfmt_autosave = 1
 
-let g:racer_cmd = "/home/warren/.cargo/bin/racer"
+let g:racer_cmd = $HOME."/.cargo/bin/racer"
 
 " auto flake 8 on save
 autocmd BufWritePost *.py call flake8#Flake8()
