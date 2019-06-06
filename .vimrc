@@ -149,6 +149,9 @@ Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+Plugin 'airblade/vim-rooter'
+Plugin 'cespare/vim-toml'
+Plugin 'plasticboy/vim-markdown'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'prabirshrestha/async.vim'
@@ -172,6 +175,8 @@ filetype plugin indent on    " required
 
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+let g:strip_whitespace_on_save = 1
 
 "python with virtualenv support
 python3 << EOF
