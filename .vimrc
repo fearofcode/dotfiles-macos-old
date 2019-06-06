@@ -2,6 +2,7 @@
 filetype plugin on
 filetype indent on
 
+" 'Hello world!'
 set shell=/usr/bin/fish
 set number
 
@@ -64,33 +65,7 @@ if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
 endif
 
-
-" Add a bit extra margin to the left
-set foldcolumn=1
-
 syntax enable
-
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
-
-try
-    colorscheme jellybeans
-catch
-endtry
-
-set background=dark
-
-if has("gui_running")
-    set guioptions-=T
-    set guioptions-=e
-    set guioptions-=r  "remove right-hand scroll bar
-    set guioptions-=L  "remove left-hand scroll bar
-    set t_Co=256
-    set guitablabel=%M\ %t
-    set guicursor+=a:blinkon0
-    set guifont=Hack\ 14
-endif
 
 set encoding=utf8
 
@@ -123,6 +98,28 @@ set laststatus=2
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+
+try
+    colorscheme jellybeans
+catch
+endtry
+
+set background=dark
+
+if has("gui_running")
+    set guioptions-=T
+    set guioptions-=e
+    set guioptions-=r  "remove right-hand scroll bar
+    set guioptions-=L  "remove left-hand scroll bar
+    set t_Co=256
+    set guitablabel=%M\ %t
+    set guicursor+=a:blinkon0
+    set guifont=Hack\ 14
+endif
+
 " plugin stuff
 
 filetype off                  " required
@@ -134,26 +131,31 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " add plugins here
-Plugin 'vim-scripts/indentpython.vim'
 " not using syntastic because it's not super helpful and conflicts with flake8
 " see https://github.com/vim-syntastic/syntastic/issues/1924
-Plugin 'nvie/vim-flake8'
+
+" generic stuff
+Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'plytophogy/vim-virtualenv'
-Plugin 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 Plugin 'mhinz/vim-signify'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'machakann/vim-highlightedyank'
+Plugin 'airblade/vim-rooter'
+Plugin 'junegunn/fzf'
+
+" language stuff
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'plytophogy/vim-virtualenv'
 Plugin 'fisadev/vim-isort'
+Plugin 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'gorodinskiy/vim-coloresque'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-Plugin 'airblade/vim-rooter'
 Plugin 'cespare/vim-toml'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'machakann/vim-highlightedyank'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'prabirshrestha/async.vim'
@@ -162,10 +164,8 @@ Plugin 'prabirshrestha/vim-lsp'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'jelera/vim-javascript-syntax'
 Plugin 'HerringtonDarkholme/yats.vim'
-
-" (Optional) Multi-entry selection UI.
-Plugin 'junegunn/fzf'
 
 " todo maybe disable this if using YCM?
 " also maybe don't need language servers, we'll see
@@ -174,32 +174,6 @@ Bundle 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
-let g:strip_whitespace_on_save = 1
-
-"python with virtualenv support
-python3 << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
-
-let g:vim_isort_python_version = 'python3'
-let g:flake8_cmd="/home/warren/.local/bin/flake8"
-let g:rustfmt_autosave = 1
-
-let g:racer_cmd = "/home/warren/.cargo/bin/racer"
-
-" auto flake 8 on save
-autocmd BufWritePost *.py call flake8#Flake8()
-" show flake 8 errors in the file
-let g:flake8_show_in_file=1  " show
 
 if executable('rg')
     let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
@@ -240,3 +214,30 @@ if executable('clangd')
                 \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
                 \ })
 endif
+
+"python with virtualenv support
+python3 << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
+
+let g:vim_isort_python_version = 'python3'
+let g:flake8_cmd="/home/warren/.local/bin/flake8"
+let g:rustfmt_autosave = 1
+
+let g:racer_cmd = "/home/warren/.cargo/bin/racer"
+
+" auto flake 8 on save
+autocmd BufWritePost *.py call flake8#Flake8()
+" show flake 8 errors in the file
+let g:flake8_show_in_file=1
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+let g:strip_whitespace_on_save = 1
+
