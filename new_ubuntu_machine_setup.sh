@@ -68,10 +68,6 @@ mkdir -p ~/.vim/colors
 cd ~/.vim/colors
 curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
 
-# install ctrlp
-cd ~/.vim
-git clone https://github.com/ctrlpvim/ctrlp.vim bundle/ctrlp.vim
-
 cp .vimrc ~
 cp .tmux.conf ~
 cp alacritty.yml $HOME/.config/alacritty/alacritty.yml
@@ -89,7 +85,7 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim +PluginInstall +qall
 
-# add completers for rust, go, javascript, python
+# add completers for rust, go, python
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --clang-completer --rust-completer --go-completer
 

@@ -2,6 +2,7 @@
 filetype plugin on
 filetype indent on
 
+set shell=/usr/bin/fish
 set number
 
 set fileformat=unix
@@ -123,8 +124,6 @@ set laststatus=2
 map 0 ^
 
 " plugin stuff
-" use ctrl-p because I am mentally weak
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 filetype off                  " required
 
@@ -136,8 +135,10 @@ Plugin 'gmarik/Vundle.vim'
 
 " add plugins here
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'vim-syntastic/syntastic'
+" not using syntastic because it's not super helpful and conflicts with flake8
+" see https://github.com/vim-syntastic/syntastic/issues/1924
 Plugin 'nvie/vim-flake8'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'plytophogy/vim-virtualenv'
@@ -152,6 +153,7 @@ Plugin 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 Plugin 'airblade/vim-rooter'
 Plugin 'cespare/vim-toml'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'machakann/vim-highlightedyank'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'prabirshrestha/async.vim'
@@ -189,10 +191,15 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 
 let g:vim_isort_python_version = 'python3'
-
+let g:flake8_cmd="/home/warren/.local/bin/flake8"
 let g:rustfmt_autosave = 1
 
 let g:racer_cmd = "/home/warren/.cargo/bin/racer"
+
+" auto flake 8 on save
+autocmd BufWritePost *.py call flake8#Flake8()
+" show flake 8 errors in the file
+let g:flake8_show_in_file=1  " show
 
 if executable('rg')
     let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
