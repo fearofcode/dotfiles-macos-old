@@ -17,11 +17,12 @@ sudo apt install \
     # needed for exa, other stuff to build
     cmake \
     curl \
-    exuberant-ctags \
+    universal-ctags \
     # nice alternative shell
     fish \
     # some fonts
     fonts-hack \
+    fzf \
     htop \
     git \
     postgresql \
