@@ -4,6 +4,7 @@ filetype indent on
 
 set number
 
+set fileformat=unix
 set nocompatible
 
 " Set to auto read when a file is changed from the outside
@@ -25,7 +26,6 @@ endif
 
 "Always show current position
 set ruler
-
 " A buffer becomes hidden when it is abandoned
 set hid
 
@@ -67,14 +67,8 @@ endif
 " Add a bit extra margin to the left
 set foldcolumn=1
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
 syntax enable 
 
-" Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
@@ -86,7 +80,6 @@ endtry
 
 set background=dark
 
-" Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
     set guioptions-=e
@@ -97,26 +90,18 @@ if has("gui_running")
     set guicursor+=a:blinkon0
 endif
 
-" Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups and undo
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
 set nowb
 set noswapfile
 
-
 " Use spaces instead of tabs
 set expandtab
 
-" Be smart when using tabs ;)
 set smarttab
 
 " 1 tab == 4 spaces
@@ -129,12 +114,114 @@ set tw=500
 
 set ai "Auto indent
 set si "Smart indent
+set textwidth=120
 set wrap "Wrap lines
 set laststatus=2
 
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
+" plugin stuff
 " use ctrl-p because I am mentally weak
-
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" add plugins here
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'plytophogy/vim-virtualenv'
+Plugin 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+Plugin 'mhinz/vim-signify'
+Plugin 'fisadev/vim-isort'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+
+Plugin 'rust-lang/rust.vim'
+Plugin 'prabirshrestha/async.vim'
+Plugin 'prabirshrestha/vim-lsp'
+
+Plugin 'leafgarland/typescript-vim'
+Plugin 'HerringtonDarkholme/yats.vim'
+
+" (Optional) Multi-entry selection UI.
+Plugin 'junegunn/fzf'
+
+" todo maybe disable this if using YCM?
+" also maybe don't need language servers, we'll see
+Plugin 'racer-rust/vim-racer'
+Bundle 'Valloric/YouCompleteMe'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"python with virtualenv support
+python3 << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
+
+let g:vim_isort_python_version = 'python3'
+
+let g:rustfmt_autosave = 1
+
+let g:racer_cmd = "/home/warren/.cargo/bin/racer"
+
+if executable('rg')
+    let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
+    set grepprg=rg\ --vimgrep
+    command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+endif
+
+if executable('pyls')
+    au User lsp_setup call lsp#register_server({
+                \ 'name': 'pyls',
+                \ 'cmd': {server_info->['pyls']},
+                \ 'whitelist': ['python'],
+                \ })
+endif
+
+if executable('rls')
+    au User lsp_setup call lsp#register_server({
+                \ 'name': 'rls',
+                \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
+                \ 'workspace_config': {'rust': {'clippy_preference': 'on'}},
+                \ 'whitelist': ['rust'],
+                \ })
+endif
+
+if executable('gopls')
+    au User lsp_setup call lsp#register_server({
+                \ 'name': 'gopls',
+                \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+                \ 'whitelist': ['go'],
+                \ })
+    autocmd BufWritePre *.go LspDocumentFormatSync
+endif
+
+if executable('clangd')
+    au User lsp_setup call lsp#register_server({
+                \ 'name': 'clangd',
+                \ 'cmd': {server_info->['clangd', '-background-index']},
+                \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+                \ })
+endif
