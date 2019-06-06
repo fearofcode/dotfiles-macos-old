@@ -146,20 +146,25 @@ Plugin 'airblade/vim-rooter'
 Plugin 'junegunn/fzf'
 
 " language stuff
+Bundle 'Valloric/YouCompleteMe'
+Plugin "w0rp/ale"
+
+Plugin 'cespare/vim-toml'
+Plugin 'plasticboy/vim-markdown'
+
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'plytophogy/vim-virtualenv'
 Plugin 'fisadev/vim-isort'
-Plugin 'fatih/vim-go', {'do': ':GoInstallBinaries'}
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-Plugin 'cespare/vim-toml'
-Plugin 'plasticboy/vim-markdown'
+
+Plugin 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'prabirshrestha/async.vim'
 Plugin 'prabirshrestha/vim-lsp'
+Plugin 'racer-rust/vim-racer'
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
@@ -167,10 +172,8 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'HerringtonDarkholme/yats.vim'
 
-" todo maybe disable this if using YCM?
-" also maybe don't need language servers, we'll see
-Plugin 'racer-rust/vim-racer'
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'gorodinskiy/vim-coloresque'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
