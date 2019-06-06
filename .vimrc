@@ -36,19 +36,19 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " For regular expressions turn magic on
 set magic
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -67,7 +67,7 @@ endif
 " Add a bit extra margin to the left
 set foldcolumn=1
 
-syntax enable 
+syntax enable
 
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
@@ -84,10 +84,11 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=e
     set guioptions-=r  "remove right-hand scroll bar
-    set guioptions-=L  "remove left-hand scroll bar 
+    set guioptions-=L  "remove left-hand scroll bar
     set t_Co=256
     set guitablabel=%M\ %t
     set guicursor+=a:blinkon0
+    set guifont=Hack\ 14
 endif
 
 set encoding=utf8
