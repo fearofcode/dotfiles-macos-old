@@ -58,11 +58,6 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Properly disable sound on errors on MacVim
-if has("gui_macvim")
-    autocmd GUIEnter * set vb t_vb=
-endif
-
 syntax enable
 
 set encoding=utf8
@@ -117,6 +112,12 @@ if has("gui_running")
     set guitablabel=%M\ %t
     set guicursor+=a:blinkon0
     set guifont=Hack\ 16
+endif
+
+" Properly disable sound on errors on MacVim and set nice Mac font
+if has("gui_macvim")
+    autocmd GUIEnter * set vb t_vb=
+    set guifont=CourierPrimeCode-Regular:h18
 endif
 
 " plugin stuff
