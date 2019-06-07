@@ -135,6 +135,7 @@ Plugin 'gmarik/Vundle.vim'
 " see https://github.com/vim-syntastic/syntastic/issues/1924
 
 " generic stuff
+Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-surround'
@@ -155,6 +156,7 @@ Plugin 'cespare/vim-toml'
 Plugin 'plasticboy/vim-markdown'
 
 Plugin 'vim-scripts/indentpython.vim'
+Bundle "mgedmin/python-imports.vim"
 Plugin 'nvie/vim-flake8'
 Plugin 'plytophogy/vim-virtualenv'
 Plugin 'fisadev/vim-isort'
