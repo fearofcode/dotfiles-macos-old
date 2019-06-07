@@ -313,10 +313,10 @@ live_config_reload: true
 # Default:
 #   - (Linux/macOS) /bin/bash --login
 #   - (Windows) powershell
-shell:
-  program: /usr/bin/fish
-  args:
-    - --login
+#shell:
+#  program: /usr/bin/fish
+#  args:
+#    - --login
 
 # Windows 10 ConPTY backend (Windows only)
 #

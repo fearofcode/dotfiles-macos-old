@@ -2,7 +2,6 @@
 filetype plugin on
 filetype indent on
 
-set shell=/usr/bin/fish
 set number
 
 set fileformat=unix
