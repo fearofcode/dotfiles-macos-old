@@ -42,17 +42,20 @@ curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/
 cd $STARTING_DIR
 
 mkdir -p $HOME/.config/alacritty/
+mkdir -p $HOME/.config/i3/
 
-ln -s $(pwd)/.vimrc $HOME/.vimrc
-ln -s $(pwd)/.tmux.conf $HOME/.tmux.conf
+if [ -e $HOME/.vimrc ]; then rm $HOME/.vimrc; fi
+if [ -e $HOME/.tmux.conf ]; then rm $HOME/.tmux.conf; fi
+ln -s $STARTING_DIR/.vimrc $HOME/.vimrc
+ln -s $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
 
 ALACRITTY_CONFIG_PATH=$HOME/.config/alacritty/alacritty.yml
 if [ -e $ALACRITTY_CONFIG_PATH ]; then rm $ALACRITTY_CONFIG_PATH; fi
-ln -s $(pwd)/alacritty.yml $ALACRITTY_CONFIG_PATH
+ln -s $STARTING_DIR/alacritty.yml $ALACRITTY_CONFIG_PATH
 
 I3_CONFIG_PATH=$HOME/.config/i3/config
 if [ -e $I3_CONFIG_PATH ]; then rm $I3_CONFIG_PATH; fi
-ln -s $(pwd)/i3config $I3_CONFIG_PATH
+ln -s $STARTING_DIR/i3config $I3_CONFIG_PATH
 
 # install go
 wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz -P ~/Downloads/
