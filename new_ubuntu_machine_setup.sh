@@ -50,7 +50,7 @@ ln -s $(pwd)/alacritty.yml $ALACRITTY_CONFIG_PATH
 
 I3_CONFIG_PATH=$HOME/.config/i3/config
 if [ -e $I3_CONFIG_PATH ]; then rm $I3_CONFIG_PATH; fi
-ln -s $(pwd)/config $I3_CONFIG_PATH
+ln -s $(pwd)/i3config $I3_CONFIG_PATH
 
 # install go
 wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz -P ~/Downloads/
