@@ -6,7 +6,7 @@ sudo apt-add-repository ppa:fish-shell/release-3 -y
 
 sudo apt-get update
 
-sudo apt install apt-file alacritty build-essential clang clang-tools cmake curl fish fzf git htop i3 postgresql python3-dev python3-pip tmux tree universal-ctags vim vim-gtk whois xclip -y
+sudo apt install apt-file alacritty build-essential clang clang-tools cmake curl fish fonts-hack fzf git htop i3 postgresql python3-dev python3-pip tmux tree universal-ctags vim vim-gtk whois xclip -y
 
 # make fish default shell
 sudo chsh -s /usr/bin/fish
@@ -40,8 +40,13 @@ mkdir -p $HOME/.config/alacritty/
 ln -s $(pwd)/.vimrc $HOME/.vimrc
 ln -s $(pwd)/.tmux.conf $HOME/.tmux.conf
 
-if [ -e $HOME/.config/alacritty/alacritty.yml ]; then rm $HOME/.config/alacritty/alacritty.yml; fi
-ln -s $(pwd)/.alacritty.yml $HOME/.config/alacritty/alacritty.yml
+ALACRITTY_CONFIG_PATH=$HOME/.config/alacritty/alacritty.yml
+if [ -e $ALACRITTY_CONFIG_PATH ]; then rm $ALACRITTY_CONFIG_PATH; fi
+ln -s $(pwd)/alacritty.yml $ALACRITTY_CONFIG_PATH
+
+I3_CONFIG_PATH=$HOME/.config/i3/config
+if [ -e $I3_CONFIG_PATH ]; then rm $I3_CONFIG_PATH; fi
+ln -s $(pwd)/config $I3_CONFIG_PATH
 
 # install go
 wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz -P ~/Downloads/
@@ -59,4 +64,3 @@ vim +PluginInstall +qall
 # add completers for rust, go, python
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --clang-completer --rust-completer --go-completer
-
