@@ -35,9 +35,11 @@ echo "alias pbcopy='xclip -selection clipboard'" | tee -a ~/.config/fish/config.
 echo "alias pbpaste='xclip -selection clipboard -o'" | tee -a ~/.config/fish/config.fish
 
 # install jellybeans color theme (for regular vim)
+STARTING_DIR=$(pwd)
 mkdir -p ~/.vim/colors
 cd ~/.vim/colors
 curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
+cd $STARTING_DIR
 
 mkdir -p $HOME/.config/alacritty/
 
