@@ -147,7 +147,7 @@ Plugin 'junegunn/fzf'
 
 " language stuff
 Bundle 'Valloric/YouCompleteMe'
-Plugin "w0rp/ale"
+Plugin 'w0rp/ale'
 
 Plugin 'cespare/vim-toml'
 Plugin 'plasticboy/vim-markdown'

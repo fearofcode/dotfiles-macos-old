@@ -35,24 +35,23 @@ echo "alias pbcopy='xclip -selection clipboard'" | tee -a ~/.config/fish/config.
 echo "alias pbpaste='xclip -selection clipboard -o'" | tee -a ~/.config/fish/config.fish
 echo "source $HOME/.cargo/env" | tee -a ~/.config/fish/config.fish
 
-# install jellybeans color theme (for regular go)
-mkdir -p ~/.vim/colors
-cd ~/.vim/colors
-curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
+mkdir -p $HOME/.config/alacritty/
 
-cp .vimrc ~
-cp .tmux.conf ~
-cp alacritty.yml $HOME/.config/alacritty/alacritty.yml
+ln -s $(pwd)/.vimrc $HOME/.vimrc
+ln -s $(pwd)/.tmux.conf $HOME/.tmux.conf
+
+if [ -e $HOME/.config/alacritty/alacritty.yml ]; then rm $HOME/.config/alacritty/alacritty.yml; fi
+ln -s $(pwd)/.alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
 # install go
-wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.12.6.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz -P ~/Downloads/
+sudo tar -C /usr/local -xzf ~/Downloads/go1.12.5.linux-amd64.tar.gz
 echo "set -gx PATH ~/.local/bin /usr/local/go/bin $PATH" | tee -a ~/.config/fish/config.fish
 echo "export PATH=$PATH:/usr/local/go/bin" | tee -a ~/.bashrc
 source ~/.bashrc
 go get -u golang.org/x/tools/cmd/gopls
 
-# we also have to install Vundle because we live in a cruel, remorseless world devoid of hope
+# install Vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim +PluginInstall +qall
