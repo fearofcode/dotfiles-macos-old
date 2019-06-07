@@ -9,7 +9,7 @@ sudo apt-get update
 sudo apt install apt-file alacritty build-essential clang clang-tools cmake curl fish fonts-hack fzf git htop i3 postgresql python3-dev python3-pip tmux tree universal-ctags vim vim-gtk whois xclip -y
 
 # make fish default shell
-sudo chsh -s /usr/bin/fish
+chsh -s /usr/bin/fish
 
 # install Rust
 curl https://sh.rustup.rs -sSf | sh
