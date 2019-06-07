@@ -135,6 +135,8 @@ Plugin 'gmarik/Vundle.vim'
 " see https://github.com/vim-syntastic/syntastic/issues/1924
 
 " generic stuff
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
