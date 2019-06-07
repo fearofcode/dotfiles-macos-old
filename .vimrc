@@ -2,7 +2,6 @@
 filetype plugin on
 filetype indent on
 
-" 'Hello world!'
 set shell=/usr/bin/fish
 set number
 
@@ -117,7 +116,7 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
     set guicursor+=a:blinkon0
-    set guifont=Hack\ 14
+    set guifont=Hack\ 16
 endif
 
 " plugin stuff
