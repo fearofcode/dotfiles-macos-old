@@ -9,8 +9,16 @@ brew update
 brew cask install alacritty
 brew tap homebrew/cask-fonts
 brew cask install font-hack
-# intentionally not installing vim. macvim conflicts with vim and macfim is required for YouCompleteMe
+# intentionally not installing vim. macvim conflicts with vim and macvim is required for YouCompleteMe
 brew install cmake curl fish fzf git tmux tree ctags macvim
+
+echo "Installing Courier Prime Code..."
+wget http://quoteunquoteapps.com/downloads/courier-code.zip -P ~/Downloads/
+STARTING_DIR=$(pwd)
+cd ~/Downloads
+unzip ~/Downloads/courier-code.zip
+cp ttf/* ~/Library/Fonts
+cd $STARTING_DIR
 
 if [ "$(which python3)" == "" ]; then
   echo "Installing Python..."
@@ -36,7 +44,6 @@ cargo install tokei
 cargo install racer
 
 # install jellybeans color theme (for regular vim)
-STARTING_DIR=$(pwd)
 mkdir -p ~/.vim/colors
 cd ~/.vim/colors
 curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
@@ -52,7 +59,7 @@ ln -s $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
 
 ALACRITTY_CONFIG_PATH=$HOME/.config/alacritty/alacritty.yml
 if [ -e $ALACRITTY_CONFIG_PATH ]; then rm $ALACRITTY_CONFIG_PATH; fi
-ln -s $STARTING_DIR/alacritty.yml $ALACRITTY_CONFIG_PATH
+ln -s $STARTING_DIR/alacritty.mac.yml $ALACRITTY_CONFIG_PATH
 
 echo "set -gx PATH ~/.local/bin ~/.cargo/bin /usr/local/go/bin \$PATH" | tee -a ~/.config/fish/config.fish
 if [ "$(which go)" == "" ]; then
