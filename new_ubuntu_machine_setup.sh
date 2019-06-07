@@ -33,7 +33,6 @@ cargo install racer
 mkdir -p ~/.config/fish/
 echo "alias pbcopy='xclip -selection clipboard'" | tee -a ~/.config/fish/config.fish
 echo "alias pbpaste='xclip -selection clipboard -o'" | tee -a ~/.config/fish/config.fish
-echo "source $HOME/.cargo/env" | tee -a ~/.config/fish/config.fish
 
 # install jellybeans color theme (for regular vim)
 mkdir -p ~/.vim/colors
@@ -56,8 +55,8 @@ ln -s $(pwd)/config $I3_CONFIG_PATH
 # install go
 wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz -P ~/Downloads/
 sudo tar -C /usr/local -xzf ~/Downloads/go1.12.5.linux-amd64.tar.gz
-echo "set -gx PATH ~/.local/bin /usr/local/go/bin $PATH" | tee -a ~/.config/fish/config.fish
-echo "export PATH=$PATH:/usr/local/go/bin" | tee -a ~/.bashrc
+echo "set -gx PATH ~/.local/bin ~/.cargo/bin /usr/local/go/bin \$PATH" | tee -a ~/.config/fish/config.fish
+echo "export PATH=\$PATH:/usr/local/go/bin" | tee -a ~/.bashrc
 source ~/.bashrc
 go get -u golang.org/x/tools/cmd/gopls
 

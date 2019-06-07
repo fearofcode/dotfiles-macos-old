@@ -110,6 +110,7 @@ set background=dark
 
 if has("gui_running")
     set guioptions-=T
+    set guioptions-=m
     set guioptions-=e
     set guioptions-=r  "remove right-hand scroll bar
     set guioptions-=L  "remove left-hand scroll bar
