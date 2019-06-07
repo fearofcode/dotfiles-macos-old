@@ -6,39 +6,10 @@ sudo apt-add-repository ppa:fish-shell/release-3 -y
 
 sudo apt-get update
 
-sudo apt install \
-    # for searching for what packages contain things like include files
-    apt-file \
-    # fast, GPU-accelerated terminal
-    alacritty \
-    build-essential \
-    clang \
-    clang-tools \
-    # needed for exa, other stuff to build
-    cmake \
-    curl \
-    universal-ctags \
-    # nice alternative shell
-    fish \
-    # some fonts
-    fonts-hack \
-    fzf \
-    htop \
-    git \
-    postgresql \
-    python3-dev \
-    tmux \
-    tree \
-    vim \
-    vim-gtk \
-    whois \
-    xclip \
-    # why not just use Xubuntu? because their ISOs always freeze up on me, IDK
-    xfce4 \
-    xubuntu-desktop -y
+sudo apt install apt-file alacritty build-essential clang clang-tools cmake curl fish fzf git htop i3 postgresql python3-dev python3-pip tmux tree universal-ctags vim vim-gtk whois xclip -y
 
 # make fish default shell
-chsh -s /usr/bin/fish
+sudo chsh -s /usr/bin/fish
 
 # install Rust
 curl https://sh.rustup.rs -sSf | sh
