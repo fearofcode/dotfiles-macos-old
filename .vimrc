@@ -102,11 +102,6 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-try
-    colorscheme jellybeans
-catch
-endtry
-
 set background=dark
 
 if has("gui_running")
@@ -139,6 +134,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'dracula/vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'machakann/vim-highlightedyank'
@@ -243,3 +239,10 @@ let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 let g:strip_whitespace_on_save = 1
+
+" run this after the plugin is loaded
+try
+    color dracula
+catch
+endtry
+
