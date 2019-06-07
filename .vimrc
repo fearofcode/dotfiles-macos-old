@@ -114,10 +114,10 @@ if has("gui_running")
     set guifont=Hack\ 16
 endif
 
-" Properly disable sound on errors on MacVim and set nice Mac font
+" Properly disable sound on errors on MacVim and set Mac-specific font
 if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
-    set guifont=CourierPrimeCode-Regular:h18
+    set guifont=Hack-Regular:h18
 endif
 
 " plugin stuff
@@ -221,14 +221,14 @@ if executable('clangd')
 endif
 
 "python with virtualenv support
-python3 << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
+"python3 << EOF
+"import os
+"import sys
+"if 'VIRTUAL_ENV' in os.environ:
+"  project_base_dir = os.environ['VIRTUAL_ENV']
+"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"  execfile(activate_this, dict(__file__=activate_this))
+"EOF
 
 let g:vim_isort_python_version = 'python3'
 let g:flake8_cmd=$HOME."/.local/bin/flake8"
@@ -248,3 +248,7 @@ let g:strip_whitespace_on_save = 1
 
 " match editor theme
 let g:airline_theme='jellybeans'
+
+" this will break if you have a different virtualenv setup than the one I use. sigh.
+let g:virtualenv_directory = '.'
+let g:virtualenv_auto_activate = 1

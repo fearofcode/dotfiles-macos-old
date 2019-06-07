@@ -76,7 +76,7 @@ vim +PluginInstall +qall
 
 # add completers for rust, go, python
 cd ~/.vim/bundle/YouCompleteMe
-python3 install.py --clang-completer --rust-completer --go-completer
+python3 install.py --clang-completer --rust-completer --go-completer --ts-completer
 
 # make fish default shell
 sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
