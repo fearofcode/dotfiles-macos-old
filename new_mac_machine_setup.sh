@@ -9,8 +9,10 @@ brew update
 brew cask install alacritty
 brew tap homebrew/cask-fonts
 brew cask install font-hack
-# intentionally not installing vim. macvim conflicts with vim and macvim is required for YouCompleteMe
-brew install cmake curl fish fzf git tmux tree ctags macvim
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+# intentionally not installing vim. macvim conflicts with vim and macvim is required for YouCompleteMe. macvim includes
+# a full console vim (e.g., has python support built in, etc) so we don't lose anything.
+brew install cmake curl fish fzf git tmux tree macvim
 
 echo "Installing Courier Prime Code..."
 wget http://quoteunquoteapps.com/downloads/courier-code.zip -P ~/Downloads/
