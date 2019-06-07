@@ -135,7 +135,6 @@ Plugin 'gmarik/Vundle.vim'
 " see https://github.com/vim-syntastic/syntastic/issues/1924
 
 " generic stuff
-Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-surround'
@@ -157,7 +156,8 @@ Plugin 'plasticboy/vim-markdown'
 
 Plugin 'vim-scripts/indentpython.vim'
 Bundle "mgedmin/python-imports.vim"
-Plugin 'nvie/vim-flake8'
+" nice to have but conflicts with syntastic
+" Plugin 'nvie/vim-flake8'
 Plugin 'plytophogy/vim-virtualenv'
 Plugin 'fisadev/vim-isort'
 Plugin 'raimon49/requirements.txt.vim', {'for': 'requirements'}
@@ -173,8 +173,8 @@ Plugin 'racer-rust/vim-racer'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'jelera/vim-javascript-syntax'
 Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'vim-syntastic/syntastic'
 
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'gorodinskiy/vim-coloresque'
@@ -222,26 +222,16 @@ if executable('clangd')
                 \ })
 endif
 
-"python with virtualenv support
-"python3 << EOF
-"import os
-"import sys
-"if 'VIRTUAL_ENV' in os.environ:
-"  project_base_dir = os.environ['VIRTUAL_ENV']
-"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"  execfile(activate_this, dict(__file__=activate_this))
-"EOF
-
 let g:vim_isort_python_version = 'python3'
-let g:flake8_cmd=$HOME."/.local/bin/flake8"
+" let g:flake8_cmd=$HOME."/.local/bin/flake8"
 let g:rustfmt_autosave = 1
 
 let g:racer_cmd = $HOME."/.cargo/bin/racer"
 
 " auto flake 8 on save
-autocmd BufWritePost *.py call flake8#Flake8()
+" autocmd BufWritePost *.py call flake8#Flake8()
 " show flake 8 errors in the file
-let g:flake8_show_in_file=1
+" let g:flake8_show_in_file=1
 
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -254,3 +244,26 @@ let g:airline_theme='jellybeans'
 " this will break if you have a different virtualenv setup than the one I use. sigh.
 let g:virtualenv_directory = '.'
 let g:virtualenv_auto_activate = 1
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+nnoremap <Leader>f :NERDTreeToggle<Enter>
+let NERDTreeQuitOnOpen = 1
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'node_modules/.bin/eslint'
+
+source $HOME/.projectspecific.vim

@@ -43,6 +43,7 @@ cd $STARTING_DIR
 
 mkdir -p $HOME/.config/alacritty/
 mkdir -p $HOME/.config/i3/
+touch $HOME/.projectspecific.vim
 
 if [ -e $HOME/.vimrc ]; then rm $HOME/.vimrc; fi
 if [ -e $HOME/.tmux.conf ]; then rm $HOME/.tmux.conf; fi

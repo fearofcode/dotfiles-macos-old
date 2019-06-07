@@ -53,6 +53,7 @@ cd $STARTING_DIR
 
 mkdir -p $HOME/.config/fish/
 mkdir -p $HOME/.config/alacritty/
+touch $HOME/.projectspecific.vim
 
 if [ -e $HOME/.vimrc ]; then rm $HOME/.vimrc; fi
 if [ -e $HOME/.tmux.conf ]; then rm $HOME/.tmux.conf; fi
