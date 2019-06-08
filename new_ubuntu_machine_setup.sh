@@ -84,3 +84,5 @@ python3 install.py --clang-completer --rust-completer --go-completer
 xset r rate 200 40
 # set it for virtual console as well
 sudo kbdrate -d 200 -r 40
+
+echo "Install and configure Dropbox, then reboot. The i3 config will start Dropbox."
