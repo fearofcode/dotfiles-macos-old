@@ -6,7 +6,7 @@ sudo apt-add-repository ppa:fish-shell/release-3 -y
 
 sudo apt-get update
 
-sudo apt install apt-file alacritty build-essential clang clang-tools cmake curl fish fonts-hack fonts-inconsolata fzf git htop i3 neofetch postgresql python3-dev python3-pip tmux tree universal-ctags vim vim-gtk whois xclip -y
+sudo apt install apt-file alacritty build-essential clang clang-tools cmake curl fish fonts-hack fonts-inconsolata fzf git htop i3 mediainfo neofetch odt2txt postgresql python-chardet python3-dev python3-pip python3-pygments ranger tmux tree universal-ctags unrar vim vim-gtk whois xclip -y
 
 # make fish default shell
 chsh -s /usr/bin/fish
