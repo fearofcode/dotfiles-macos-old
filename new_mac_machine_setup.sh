@@ -51,18 +51,12 @@ cd ~/.vim/colors
 curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
 cd $STARTING_DIR
 
-mkdir -p $HOME/.config/fish/
 mkdir -p $HOME/.config/alacritty/
 touch $HOME/.projectspecific.vim
 
-if [ -e $HOME/.vimrc ]; then rm $HOME/.vimrc; fi
-if [ -e $HOME/.tmux.conf ]; then rm $HOME/.tmux.conf; fi
-ln -s $STARTING_DIR/.vimrc $HOME/.vimrc
-ln -s $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
-
-ALACRITTY_CONFIG_PATH=$HOME/.config/alacritty/alacritty.yml
-if [ -e $ALACRITTY_CONFIG_PATH ]; then rm $ALACRITTY_CONFIG_PATH; fi
-ln -s $STARTING_DIR/alacritty.mac.yml $ALACRITTY_CONFIG_PATH
+ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
+ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
+ln -sf $STARTING_DIR/alacritty.mac.yml $HOME/.config/alacritty/alacritty.yml
 
 echo "set -gx PATH ~/.local/bin ~/.cargo/bin /usr/local/go/bin \$PATH" | tee -a ~/.config/fish/config.fish
 if [ "$(which go)" == "" ]; then

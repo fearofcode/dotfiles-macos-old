@@ -45,22 +45,11 @@ mkdir -p $HOME/.config/alacritty/
 mkdir -p $HOME/.config/i3/
 touch $HOME/.projectspecific.vim
 
-if [ -e $HOME/.vimrc ]; then rm $HOME/.vimrc; fi
-if [ -e $HOME/.tmux.conf ]; then rm $HOME/.tmux.conf; fi
-ln -s $STARTING_DIR/.vimrc $HOME/.vimrc
-ln -s $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
-
-ALACRITTY_CONFIG_PATH=$HOME/.config/alacritty/alacritty.yml
-if [ -e $ALACRITTY_CONFIG_PATH ]; then rm $ALACRITTY_CONFIG_PATH; fi
-ln -s $STARTING_DIR/alacritty.yml $ALACRITTY_CONFIG_PATH
-
-I3_CONFIG_PATH=$HOME/.config/i3/config
-if [ -e $I3_CONFIG_PATH ]; then rm $I3_CONFIG_PATH; fi
-ln -s $STARTING_DIR/i3config $I3_CONFIG_PATH
-
-I3_STATUS_PATH=$HOME/.config/i3/.i3status.conf
-if [ -e $I3_STATUS_PATH ]; then rm $I3_STATUS_PATH; fi
-ln -s $STARTING_DIR/i3status.conf $I3_STATUS_PATH
+ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
+ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
+ln -sf $STARTING_DIR/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+ln -sf $STARTING_DIR/i3config $HOME/.config/i3/config
+ln -sf $STARTING_DIR/i3status.conf $HOME/.config/i3/.i3status.conf
 
 # install go
 wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz -P ~/Downloads/
