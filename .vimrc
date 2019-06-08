@@ -111,7 +111,7 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
     set guicursor+=a:blinkon0
-    set guifont=Hack\ 16
+    set guifont=Hack\ 14
 endif
 
 " Properly disable sound on errors on MacVim and set Mac-specific font

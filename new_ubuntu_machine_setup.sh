@@ -58,6 +58,10 @@ I3_CONFIG_PATH=$HOME/.config/i3/config
 if [ -e $I3_CONFIG_PATH ]; then rm $I3_CONFIG_PATH; fi
 ln -s $STARTING_DIR/i3config $I3_CONFIG_PATH
 
+I3_STATUS_PATH=$HOME/.config/i3/.i3status.conf
+if [ -e $I3_STATUS_PATH ]; then rm $I3_STATUS_PATH; fi
+ln -s $STARTING_DIR/i3status.conf $I3_STATUS_PATH
+
 # install go
 wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz -P ~/Downloads/
 sudo tar -C /usr/local -xzf ~/Downloads/go1.12.5.linux-amd64.tar.gz
@@ -74,3 +78,9 @@ vim +PluginInstall +qall
 # add completers for rust, go, python
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --clang-completer --rust-completer --go-completer
+
+# increase typematic rate, decrease delay
+#https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Adjusting_typematic_delay_and_rate
+xset r rate 200 40
+# set it for virtual console as well
+sudo kbdrate -d 200 -r 40
