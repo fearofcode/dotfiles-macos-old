@@ -77,3 +77,6 @@ makepkg -si
 
 # sorry
 yay -S google-chrome
+
+# why don't my old pulseaudio keybindings work with i3? whatever
+yay -S pacmixer
