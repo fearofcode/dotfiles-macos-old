@@ -150,7 +150,7 @@ bindsym $mod+r mode "resize"
 #https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Adjusting_typematic_delay_and_rate
 exec --no-startup-id xset r rate 175 45
 # remove this is physical monitor configuration changes
-exec --no-startup-id xrandr --output DP-4 --left-of DP-2 --auto
+# exec --no-startup-id xrandr --output DP-4 --left-of DP-2 --auto
 
 # Pulse Audio controls
 

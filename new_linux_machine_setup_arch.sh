@@ -1,9 +1,12 @@
 # https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
 set -euxo pipefail
 
-sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status alacritty dmenu ttf-hack ttf-lato nvidia
-sudo pacman -Syu git firefox fish rustup highlight ranger python python-chardet python-pip tmux tree whois dig
+sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status alacritty dmenu ttf-hack ttf-lato nvidia nvidia-settings
+sudo pacman -Syu git firefox fish rustup highlight ranger python python-chardet python-pip tmux tree whois dig wget
 sudo pacman -Syu dnsutils go compton clang llvm gvim
+
+wget https://raw.githubusercontent.com/Airblader/dotfiles-manjaro/master/.compton.conf
+mv .compton.conf ~
 
 # make fish default shell
 chsh -s /usr/bin/fish
@@ -65,3 +68,21 @@ python3 install.py --clang-completer --rust-completer --go-completer
 # increase typematic rate, decrease delay
 #https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Adjusting_typematic_delay_and_rate
 xset r rate 200 40
+
+sudo su - postgres
+initdb --locale en_US.UTF-8 -D /var/lib/postgres/data
+exit
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+sudo su - postgres
+# this is for my personal projects, feel free to remove
+createdb arete
+createdb arete_test
+
+cd ~
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+# sorry
+yay -S google-chrome
