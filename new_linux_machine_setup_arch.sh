@@ -60,10 +60,6 @@ vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --clang-completer --rust-completer --go-completer
 
-# increase typematic rate, decrease delay
-#https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Adjusting_typematic_delay_and_rate
-xset r rate 200 40
-
 sudo su - postgres
 initdb --locale en_US.UTF-8 -D /var/lib/postgres/data
 exit
