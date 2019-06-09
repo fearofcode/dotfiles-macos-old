@@ -26,6 +26,8 @@ cargo install tokei
 
 cargo install racer
 
+go get -u golang.org/x/tools/cmd/gopls
+
 # setup xclip to work like pbcopy/pbpaste for Mac
 mkdir -p ~/.config/fish/
 echo "alias pbcopy='xclip -selection clipboard'" | tee -a ~/.config/fish/config.fish
@@ -48,13 +50,6 @@ ln -sf $STARTING_DIR/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 ln -sf $STARTING_DIR/i3config $HOME/.config/i3/config
 ln -sf $STARTING_DIR/i3status.conf $HOME/.config/i3/.i3status.conf
 
-# install go
-wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz -P ~/Downloads/
-sudo tar -C /usr/local -xzf ~/Downloads/go1.12.5.linux-amd64.tar.gz
-echo "set -gx PATH ~/.local/bin ~/.cargo/bin /usr/local/go/bin \$PATH" | tee -a ~/.config/fish/config.fish
-echo "export PATH=\$PATH:/usr/local/go/bin" | tee -a ~/.bashrc
-source ~/.bashrc
-go get -u golang.org/x/tools/cmd/gopls
 
 # install Vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
