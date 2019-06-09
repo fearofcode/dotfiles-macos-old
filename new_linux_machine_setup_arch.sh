@@ -1,7 +1,7 @@
 # https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
 set -euxo pipefail
 
-sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status alacritty dmenu ttf-hack ttf-lato nvidia nvidia-settings
+sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock alacritty dmenu ttf-hack ttf-lato nvidia nvidia-settings
 sudo pacman -Syu git firefox fish rustup highlight ranger python python-chardet python-pip tmux tree whois dig wget
 sudo pacman -Syu dnsutils go compton clang llvm gvim
 
