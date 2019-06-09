@@ -1,9 +1,8 @@
-some dotfiles
--------------
+# some dotfiles
 
 These files can give you a simple, text-oriented programming environment featuring:
 
-* <a href="https://i3wm.org/">i3 window manager</a> (if on Ubuntu Linux)
+* <a href="https://i3wm.org/">i3 window manager</a> (if on Arch or Ubuntu)
 * <a href="http://fishshell.com/">fish shell</a>
 * <a href="https://github.com/jwilm/alacritty">Alacritty terminal</a>
 * vim with a bunch of plugins added that give you autocomplete for Rust, Go and Python
@@ -13,6 +12,9 @@ Here is a simple multi-monitor session showing the terminal, an editor, and a we
 
 <img src="https://raw.githubusercontent.com/fearofcode/shared/master/dotfiles_2019_06_08.png" alt="Simple i3 terminal session using these dotfiles.">
 
-To get something that looks like this, run the `new_ubuntu_machine_setup.sh` script. As the name implies, it has only been tested on Ubuntu.
+To get something that looks like this, run the appropriate script:
 
-On a mac, run `new_mac_machine_setup.sh`. It will get you fish, Alacritty, and the vim setup.
+- `new_linux_machine_setup_ubuntu.sh` on Ubuntu
+- `new_linux_machine_setup_arch` on Arch, which will give you <a href="https://github.com/Airblader/i3">i3-gaps</a>
+    rather than vanilla i3
+- `new_mac_machine_setup.sh` (doesn't give you i3)

@@ -1,22 +1,16 @@
 # https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
 set -euxo pipefail
 
-sudo add-apt-repository ppa:mmstick76/alacritty -y
-sudo apt-add-repository ppa:fish-shell/release-3 -y
-
-sudo apt-get update
-
-sudo apt install apt-file alacritty build-essential clang clang-tools cmake curl fish fonts-hack fonts-inconsolata fzf git htop i3 mediainfo neofetch odt2txt postgresql python-chardet python3-dev python3-pip python3-pygments ranger tmux tree universal-ctags unrar vim vim-gtk whois xclip -y
+sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status alacritty dmenu ttf-hack ttf-lato nvidia
+sudo pacman -Syu git firefox fish rustup highlight ranger python python-chardet python-pip tmux tree whois dig
+sudo pacman -Syu dnsutils go compton clang llvm gvim
 
 # make fish default shell
 chsh -s /usr/bin/fish
 
-# install Rust
-curl https://sh.rustup.rs -sSf | sh
-source $HOME/.cargo/env
-
 pip3 install yapf isort flake8
 
+rustup update
 rustup toolchain add nightly
 rustup default nightly
 rustup component add rls rust-analysis rust-src
@@ -71,7 +65,3 @@ python3 install.py --clang-completer --rust-completer --go-completer
 # increase typematic rate, decrease delay
 #https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Adjusting_typematic_delay_and_rate
 xset r rate 200 40
-# set it for virtual console as well
-sudo kbdrate -d 200 -r 40
-
-echo "Install and configure Dropbox, then reboot. The i3 config will start Dropbox."

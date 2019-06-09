@@ -186,7 +186,3 @@ bar {
     binding_mode       #FF5555 #FF5555 #F8F8F2
   }
 }
-
-# gaps. this will only work with i3-gaps
-for_window [class=".*"] border pixel 0
-gaps inner 15
