@@ -2,9 +2,11 @@
 set -euxo pipefail
 
 sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock alacritty dmenu ttf-hack ttf-lato
-sudo pacman -Syu nvidia nvidia-settings xdg-utils
-sudo pacman -Syu git firefox fish rustup highlight ranger python python-chardet python-pip tmux tree whois dig wget
-sudo pacman -Syu dnsutils go compton clang llvm gvim
+sudo pacman -S nvidia nvidia-settings xdg-utils
+sudo pacman -S git firefox fish rustup highlight ranger python python-chardet python-pip tmux tree whois dig wget
+sudo pacman -S dnsutils go compton clang llvm gvim
+# for watching videos ~ O F F L I N E ~
+sudo pacman -S ffmpeg youtube-dl vlc
 
 wget https://raw.githubusercontent.com/Airblader/dotfiles-manjaro/master/.compton.conf
 mv .compton.conf ~
