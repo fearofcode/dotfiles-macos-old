@@ -241,6 +241,8 @@ let g:strip_whitespace_on_save = 1
 
 " match editor theme
 let g:airline_theme='jellybeans'
+" stops broken Unicode from showing up on arch
+let g:airline_powerline_fonts = 1
 
 " this will break if you have a different virtualenv setup than the one I use. sigh.
 let g:virtualenv_directory = '.'

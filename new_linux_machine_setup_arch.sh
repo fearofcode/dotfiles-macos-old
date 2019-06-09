@@ -1,9 +1,29 @@
 # https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
 set -euxo pipefail
 
-sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock alacritty dmenu ttf-hack ttf-lato
+sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock alacritty dmenu
+sudo pacman -S git openssh
+
+STARTING_DIR=$(pwd)
+cd ~
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+# sorry
+yay -S google-chrome
+
+# why don't my old pulseaudio keybindings work with i3? whatever
+yay -S pacmixer
+
+# so that airline doesn't look fucked
+yay -S powerline-fonts-git
+
+cd $STARTING_DIR
+
+sudo pacman -S ttf-lato powerline powerline-fonts
 sudo pacman -S nvidia nvidia-settings xdg-utils
-sudo pacman -S git firefox fish rustup highlight ranger python python-chardet python-pip tmux tree whois dig wget
+sudo pacman -S firefox fish rustup highlight ranger python python-chardet python-pip tmux tree whois dig wget
 sudo pacman -S dnsutils go compton clang llvm gvim
 # for watching videos ~ O F F L I N E ~
 sudo pacman -S ffmpeg youtube-dl vlc
@@ -37,7 +57,6 @@ echo "alias pbcopy='xclip -selection clipboard'" | tee -a ~/.config/fish/config.
 echo "alias pbpaste='xclip -selection clipboard -o'" | tee -a ~/.config/fish/config.fish
 
 # install jellybeans color theme (for regular vim)
-STARTING_DIR=$(pwd)
 mkdir -p ~/.vim/colors
 cd ~/.vim/colors
 curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
@@ -52,7 +71,6 @@ ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
 ln -sf $STARTING_DIR/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 ln -sf $STARTING_DIR/i3config $HOME/.config/i3/config
 ln -sf $STARTING_DIR/i3status.conf $HOME/.config/i3/.i3status.conf
-
 
 # install Vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -69,17 +87,8 @@ exit
 sudo systemctl start postgresql
 sudo systemctl enable postgresql
 sudo su - postgres
+
 # this is for my personal projects, feel free to remove
 createdb arete
 createdb arete_test
 
-cd ~
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
-# sorry
-yay -S google-chrome
-
-# why don't my old pulseaudio keybindings work with i3? whatever
-yay -S pacmixer

@@ -1,4 +1,4 @@
-# Mod4 for Windows key, Mod1 for Alt. Mod1 is easier to use $mod+hjkl on a Kinesis.
+# Mod4 for Windows key, Mod1 for Alt. Mod1 makes $mod+hjkl easier to use on a Kinesis.
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -180,8 +180,9 @@ bar {
 }
 
 # gaps. this will only work with i3-gaps
-for_window [class=".*"] border pixel 0
-gaps inner 15
+for_window [class="^.*"] border pixel 2
+gaps inner 10
+smart_gaps on
 
 # non-standard binding I added.
 bindsym $mod+Shift+f exec firefox
