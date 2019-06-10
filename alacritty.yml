@@ -162,39 +162,68 @@ persistent_logging: false
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Base16 Default Dark)
+# Colors (Dracula)
+#colors:
+#  # Default colors
+#  primary:
+#    background: '0x282a36'
+#    foreground: '0xf8f8f2'
+#
+#  # Normal colors
+#  normal:
+#    black:   '0x000000'
+#    red:     '0xff5555'
+#    green:   '0x50fa7b'
+#    yellow:  '0xf1fa8c'
+#    blue:    '0xcaa9fa'
+#    magenta: '0xff79c6'
+#    cyan:    '0x8be9fd'
+#    white:   '0xbfbfbf'
+#
+#  # Bright colors
+#  bright:
+#    black:   '0x575b70'
+#    red:     '0xff6e67'
+#    green:   '0x5af78e'
+#    yellow:  '0xf4f99d'
+#    blue:    '0xcaa9fa'
+#    magenta: '0xff92d0'
+#    cyan:    '0x9aedfe'
+#    white:   '0xe6e6e6'
+
+# Shades of Purple from https://github.com/Rigellute/shades-of-purple.vim
 colors:
   # Default colors
   primary:
-    background: '0x181818'
-    foreground: '0xd8d8d8'
+    background: "0x1E1E3F"
+    foreground: "0xE1EFFF"
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0xd8d8d8'
-    cursor: '0xd8d8d8'
+    text: "0x1E1E3F"
+    cursor: "0xFAD000"
 
   # Normal colors
   normal:
-    black:   '0x181818'
-    red:     '0xab4642'
-    green:   '0xa1b56c'
-    yellow:  '0xf7ca88'
-    blue:    '0x7cafc2'
-    magenta: '0xba8baf'
-    cyan:    '0x86c1b9'
-    white:   '0xd8d8d8'
+    black: "0x000000"
+    red: "0xEC3A37"
+    green: "0x75e44c"
+    yellow: "0xFAD000"
+    blue: "0x6943FF"
+    magenta: "0xFF2C70"
+    cyan: "0x80FCFF"
+    white: "0xFFFFFF"
 
   # Bright colors
   bright:
-    black:   '0x585858'
-    red:     '0xab4642'
-    green:   '0xa1b56c'
-    yellow:  '0xf7ca88'
-    blue:    '0x7cafc2'
-    magenta: '0xba8baf'
-    cyan:    '0x86c1b9'
-    white:   '0xf8f8f8'
+    black: "0x5C5C61"
+    red: "0xEC3A37F5"
+    green: "0x3AD900"
+    yellow: "0xFAD000"
+    blue: "0x6943FF"
+    magenta: "0xFB94FF"
+    cyan: "0x80FCFF"
+    white: "0x2D2B55"
 
 # Visual Bell
 #

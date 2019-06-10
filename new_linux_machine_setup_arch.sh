@@ -19,6 +19,9 @@ yay -S pacmixer
 # so that airline doesn't look fucked
 yay -S powerline-fonts-git
 
+# so we can set backgrond color with compton
+yay -S hsetroot
+
 cd $STARTING_DIR
 
 sudo pacman -S ttf-lato powerline powerline-fonts
@@ -55,12 +58,6 @@ go get -u golang.org/x/tools/cmd/gopls
 mkdir -p ~/.config/fish/
 echo "alias pbcopy='xclip -selection clipboard'" | tee -a ~/.config/fish/config.fish
 echo "alias pbpaste='xclip -selection clipboard -o'" | tee -a ~/.config/fish/config.fish
-
-# install jellybeans color theme (for regular vim)
-mkdir -p ~/.vim/colors
-cd ~/.vim/colors
-curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
-cd $STARTING_DIR
 
 mkdir -p $HOME/.config/alacritty/
 mkdir -p $HOME/.config/i3/
