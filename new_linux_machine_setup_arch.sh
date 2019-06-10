@@ -31,7 +31,7 @@ cd $STARTING_DIR
 sudo pacman -S ttf-lato powerline powerline-fonts
 sudo pacman -S nvidia nvidia-settings xdg-utils
 sudo pacman -S firefox fish rustup highlight ranger python python-chardet python-pip tmux tree whois dig wget
-sudo pacman -S dnsutils go compton clang llvm gvim
+sudo pacman -S dnsutils go compton clang llvm gvim scrot gimp
 # for watching videos ~ O F F L I N E ~
 sudo pacman -S ffmpeg youtube-dl vlc
 

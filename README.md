@@ -18,9 +18,15 @@ Notice the border around the active and inactive windows. Little features like t
 intended to make this a lightweight, distraction-free environment that is still functional
 and usable.
 
+The lack of wallpaper, transparency, elaborate bar widgets showing things that are
+unlikely to be at an abnormal level or change significantly anytime soon such as free disk
+space, and other standard <a href="https://www.reddit.com/r/unixporn/">Unix desktop
+customization tropes</a> is very much intentional.
+
 To get something that looks like this, run the appropriate script:
 
-- `new_linux_machine_setup_ubuntu.sh` on Ubuntu
-- `new_linux_machine_setup_arch` on Arch, which will give you <a href="https://github.com/Airblader/i3">i3-gaps</a>
+- `new_linux_machine_setup_arch.sh` on Arch, which will give you <a href="https://github.com/Airblader/i3">i3-gaps</a>
     rather than vanilla i3
+- `new_linux_machine_setup_ubuntu.sh` on Ubuntu. The result will mostly resemble the
+    screenshot but will just have vanilla i3.
 - `new_mac_machine_setup.sh` (doesn't give you i3)
