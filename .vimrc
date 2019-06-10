@@ -133,7 +133,8 @@ Plugin 'gmarik/Vundle.vim'
 " generic stuff
 Plugin 'scrooloose/nerdtree'
 " Plugin 'dracula/vim'
-Plugin 'Rigellute/shades-of-purple.vim'
+" Plugin 'Rigellute/shades-of-purple.vim'
+Plugin 'arcticicestudio/nord-vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -237,8 +238,10 @@ let g:strip_whitespace_on_save = 1
 " match editor theme
 " let g:airline_theme='jellybeans'
 
-let g:shades_of_purple_airline = 1
-let g:airline_theme='shades_of_purple'
+" let g:shades_of_purple_airline = 1
+" let g:airline_theme='shades_of_purple'
+
+let g:airline_theme='base16_nord'
 
 " stops broken Unicode from showing up on arch
 let g:airline_powerline_fonts = 1

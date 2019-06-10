@@ -3,14 +3,14 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-#env:
+env:
   # TERM variable
   #
   # This value is used to set the `$TERM` environment variable for
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  #TERM: xterm-256color
+  TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -192,39 +192,80 @@ draw_bold_text_with_bright_colors: true
 #    white:   '0xe6e6e6'
 
 # Shades of Purple from https://github.com/Rigellute/shades-of-purple.vim
+#colors:
+#  # Default colors
+#  primary:
+#    background: "0x1E1E3F"
+#    foreground: "0xE1EFFF"
+#
+#  # Colors the cursor will use if `custom_cursor_colors` is true
+#  cursor:
+#    text: "0x1E1E3F"
+#    cursor: "0xFAD000"
+#
+#  # Normal colors
+#  normal:
+#    black: "0x000000"
+#    red: "0xEC3A37"
+#    green: "0x75e44c"
+#    yellow: "0xFAD000"
+#    blue: "0x6943FF"
+#    magenta: "0xFF2C70"
+#    cyan: "0x80FCFF"
+#    white: "0xFFFFFF"
+#
+#  # Bright colors
+#  bright:
+#    black: "0x5C5C61"
+#    red: "0xEC3A37F5"
+#    green: "0x3AD900"
+#    yellow: "0xFAD000"
+#    blue: "0x6943FF"
+#    magenta: "0xFB94FF"
+#    cyan: "0x80FCFF"
+#    white: "0x2D2B55"
+# Base16 Nord 256 - alacritty color config
+# arcticicestudio
 colors:
   # Default colors
   primary:
-    background: "0x1E1E3F"
-    foreground: "0xE1EFFF"
+    background: '0x2e3440'
+    foreground: '0xe5e9f0'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: "0x1E1E3F"
-    cursor: "0xFAD000"
+    text: '0x2e3440'
+    cursor: '0xe5e9f0'
 
   # Normal colors
   normal:
-    black: "0x000000"
-    red: "0xEC3A37"
-    green: "0x75e44c"
-    yellow: "0xFAD000"
-    blue: "0x6943FF"
-    magenta: "0xFF2C70"
-    cyan: "0x80FCFF"
-    white: "0xFFFFFF"
+    black:   '0x2e3440'
+    red:     '0x88c0d0'
+    green:   '0xbf616a'
+    yellow:  '0x5e81ac'
+    blue:    '0xebcb8b'
+    magenta: '0xa3be8c'
+    cyan:    '0xd08770'
+    white:   '0xe5e9f0'
 
   # Bright colors
   bright:
-    black: "0x5C5C61"
-    red: "0xEC3A37F5"
-    green: "0x3AD900"
-    yellow: "0xFAD000"
-    blue: "0x6943FF"
-    magenta: "0xFB94FF"
-    cyan: "0x80FCFF"
-    white: "0x2D2B55"
+    black:   '0x4c566a'
+    red:     '0x88c0d0'
+    green:   '0xbf616a'
+    yellow:  '0x5e81ac'
+    blue:    '0xebcb8b'
+    magenta: '0xa3be8c'
+    cyan:    '0xd08770'
+    white:   '0x8fbcbb'
 
+  indexed_colors:
+    - { index: 16, color: '0x81a1c1' }
+    - { index: 17, color: '0xb48ead' }
+    - { index: 18, color: '0x3b4252' }
+    - { index: 19, color: '0x434c5e' }
+    - { index: 20, color: '0xd8dee9' }
+    - { index: 21, color: '0xeceff4' }
 # Visual Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once
