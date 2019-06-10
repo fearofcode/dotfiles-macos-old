@@ -77,6 +77,9 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim +PluginInstall +qall
 
+curl -L https://get.oh-my.fish | fish
+omf install spacefish
+
 # add completers for rust, go, python
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --clang-completer --rust-completer --go-completer
