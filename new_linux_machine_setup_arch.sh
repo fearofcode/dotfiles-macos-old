@@ -2,7 +2,11 @@
 set -euxo pipefail
 
 sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock alacritty dmenu
-sudo pacman -S git openssh
+if [ ! -e "~/.xinitrc"]; then
+    echo "exec i3" >> ~/.xinitrc
+fi
+
+sudo pacman -S git openssh pulseaudio pulseaudio-alsa
 
 STARTING_DIR=$(pwd)
 cd ~
@@ -16,7 +20,7 @@ yay -S google-chrome
 # why don't my old pulseaudio keybindings work with i3? whatever
 yay -S pacmixer
 
-# so that airline doesn't look fucked
+# so that airline doesn't have manky Unicode error shit in it
 yay -S powerline-fonts-git
 
 # so we can set backgrond color with compton
