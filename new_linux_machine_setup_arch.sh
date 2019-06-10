@@ -74,6 +74,12 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim +PluginInstall +qall
 
+# install jellybeans color theme (for regular vim)
+mkdir -p ~/.vim/colors
+cd ~/.vim/colors
+curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
+
+cd $STARTING_DIR
 curl -L https://get.oh-my.fish | fish
 omf install spacefish
 
