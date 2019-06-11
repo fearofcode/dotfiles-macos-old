@@ -56,7 +56,7 @@ touch $HOME/.projectspecific.vim
 
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
 ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
-ln -sf $STARTING_DIR/alacritty.mac.yml $HOME/.config/alacritty/alacritty.yml
+ln -sf $STARTING_DIR/.config/alacritty/alacritty.mac.yml $HOME/.config/alacritty/alacritty.yml
 
 echo "set -gx PATH ~/.local/bin ~/.cargo/bin /usr/local/go/bin \$PATH" | tee -a ~/.config/fish/config.fish
 if [ "$(which go)" == "" ]; then
