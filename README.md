@@ -30,3 +30,8 @@ To get something that looks like this, run the appropriate script:
 - `new_linux_machine_setup_ubuntu.sh` on Ubuntu. The result will mostly resemble the
     screenshot but will just have vanilla i3.
 - `new_mac_machine_setup.sh` (doesn't give you i3)
+
+## Todo
+
+- JSX is a mess right now. Sorry.
+- Haven't done anything with go and not much with Rust so they probably need more work.

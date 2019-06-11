@@ -19,7 +19,7 @@ set wildmenu
 "Always show current position
 set ruler
 " A buffer becomes hidden when it is abandoned
-set hid
+set hidden
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -54,18 +54,13 @@ syntax enable
 
 set encoding=utf8
 
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
-
 set nobackup
 set nowb
 set noswapfile
 
 " Use spaces instead of tabs
 set expandtab
-
 set smarttab
-
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
@@ -80,7 +75,7 @@ set textwidth=90
 set wrap "Wrap lines
 set laststatus=2
 
-" Remap VIM 0 to first non-blank character
+" Remap 0 to first non-blank character
 map 0 ^
 
 if $COLORTERM == 'gnome-terminal'
@@ -100,9 +95,8 @@ if has("gui_running")
     autocmd GUIEnter * set vb t_vb=
 endif
 
-" Properly disable sound on errors on MacVim and set Mac-specific font
+" Mac-specific font
 if has("gui_macvim")
-    autocmd GUIEnter * set vb t_vb=
     set guifont=Hack-Regular:h18
 endif
 
