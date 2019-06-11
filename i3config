@@ -25,7 +25,7 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'Lato-12'"
 
 # -show run to show all applications
-bindsym $mod+d exec rofi -show drun -bw 0 -bc "#B06C75" -bg "#B06C75" -fg "#282A36" -hlbg "#B06C75" -hlfg "#9575cd" -font "Lato 14"
+bindsym $mod+d exec rofi -show drun -bw 0 -bc "#B06C75" -bg "#B06C75" -fg "#282A36" -hlbg "#B06C75" -hlfg "#9575cd" -font "Lato 12"
 
 
 # change focus
