@@ -188,5 +188,5 @@ gaps inner 10
 smart_gaps on
 
 # non-standard binding I added.
-bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+f exec google-chrome-stable
 
