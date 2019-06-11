@@ -49,7 +49,7 @@ touch $HOME/.projectspecific.vim
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
 ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
 ln -sf $STARTING_DIR/.config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
-ln -sf $STARTING_DIR/.config/i3/config $HOME/.config/i3/config
+ln -sf $STARTING_DIR/.config/i3/config.ubuntu $HOME/.config/i3/config
 ln -sf $STARTING_DIR/.config/i3/.i3status.conf $HOME/.config/i3/.i3status.conf
 ln -sf $STARTING_DIR/.config/gtk-3.0/gtk.css $HOME/.config/gtk-3.0/gtk.css
 ln -sf $STARTING_DIR/.config/fish/config.fish $HOME/.config/fish/config.fish
