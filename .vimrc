@@ -136,7 +136,6 @@ Plugin 'mhinz/vim-signify'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'airblade/vim-rooter'
-Plugin 'junegunn/fzf'
 
 " language stuff
 Bundle 'Valloric/YouCompleteMe'
@@ -170,12 +169,6 @@ Plugin 'gorodinskiy/vim-coloresque'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-if executable('rg')
-    let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
-    set grepprg=rg\ --vimgrep
-    command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
-endif
 
 if executable('pyls')
     au User lsp_setup call lsp#register_server({
@@ -269,7 +262,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = 'node_modules/.bin/eslint'
 
 " if additional directories should be excluded for a specific project, you can filter git
-" ls-files output like so:
+" ls-files output like so and put it in .projectspecific.vim:
 " let g:ctrlp_user_command = ['.git','git ls-files -co --exclude-standard | grep -v some_binary_directory | grep -v    something_else']
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard'] "Hide files in .gitignore
 
