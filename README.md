@@ -34,4 +34,9 @@ To get something that looks like this, run the appropriate script:
 ## Todo
 
 - JSX is a mess right now. Sorry.
+- The scripts are not idempotent right now and assume a mostly empty machine. Make it so that, e.g., an Ubuntu user who
+    wants to switch to i3 and fish could just run this script, reboot, and everything will
+    work. Make it so that multiple runs won't cause excessive harm (e.g. reinstalling an
+    existing package which might cause custom settings to be lost would be acceptable in
+    this case).
 - Haven't done anything with go and not much with Rust so they probably need more work.
