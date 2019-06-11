@@ -28,11 +28,14 @@ To get something that looks like this, run the appropriate script:
 - `new_linux_machine_setup_arch.sh` on Arch, which will give you <a href="https://github.com/Airblader/i3">i3-gaps</a>
     rather than vanilla i3
 - `new_linux_machine_setup_ubuntu.sh` on Ubuntu. The result will mostly resemble the
-    screenshot but will just have vanilla i3.
+    screenshot but will just have vanilla i3. This script may be broken since I'm not
+    actively using Ubuntu at the moment.
 - `new_mac_machine_setup.sh` (doesn't give you i3)
 
 ## Todo
 
+- Right now I'm only actively using Arch, so maintaining the Ubuntu install as I make
+    changes to the Ubuntu script is hard. The Ubuntu script might be broken!
 - JSX is a mess right now. Sorry.
 - The scripts are not idempotent right now and assume a mostly empty machine. Make it so that, e.g., an Ubuntu user who
     wants to switch to i3 and fish could just run this script, reboot, and everything will

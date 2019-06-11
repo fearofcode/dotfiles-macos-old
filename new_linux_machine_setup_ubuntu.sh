@@ -3,10 +3,13 @@ set -euxo pipefail
 
 sudo add-apt-repository ppa:mmstick76/alacritty -y
 sudo apt-add-repository ppa:fish-shell/release-3 -y
+sudo add-apt-repository ppa:jasonpleau/rofi
 
 sudo apt-get update
 
-sudo apt install apt-file alacritty build-essential clang clang-tools cmake curl fish fonts-hack fonts-inconsolata fzf git htop i3 mediainfo neofetch odt2txt postgresql python-chardet python3-dev python3-pip python3-pygments ranger tmux tree universal-ctags unrar vim vim-gtk whois xclip -y
+sudo apt install apt-file alacritty build-essential clang clang-tools cmake curl fish
+sudo apt install fonts-hack fonts-inconsolata fzf git htop i3 mediainfo neofetch odt2txt postgresql
+sudo apt install python-chardet python3-dev python3-pip python3-pygments ranger rofi tmux tree universal-ctags unrar vim vim-gtk whois xclip -y
 
 # make fish default shell
 chsh -s /usr/bin/fish
@@ -29,11 +32,6 @@ cargo install tokei
 
 cargo install racer
 
-# setup xclip to work like pbcopy/pbpaste for Mac
-mkdir -p ~/.config/fish/
-echo "alias pbcopy='xclip -selection clipboard'" | tee -a ~/.config/fish/config.fish
-echo "alias pbpaste='xclip -selection clipboard -o'" | tee -a ~/.config/fish/config.fish
-
 # install jellybeans color theme (for regular vim)
 STARTING_DIR=$(pwd)
 mkdir -p ~/.vim/colors
@@ -41,15 +39,20 @@ cd ~/.vim/colors
 curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
 cd $STARTING_DIR
 
+mkdir -p ~/.config/fish/
 mkdir -p $HOME/.config/alacritty/
 mkdir -p $HOME/.config/i3/
+mkdir -p $HOME/.config/gtk-3.0/
+
 touch $HOME/.projectspecific.vim
 
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
 ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
 ln -sf $STARTING_DIR/alacritty.yml $HOME/.config/alacritty/alacritty.yml
-ln -sf $STARTING_DIR/i3config.ubuntu $HOME/.config/i3/config
+ln -sf $STARTING_DIR/i3config $HOME/.config/i3/config
 ln -sf $STARTING_DIR/i3status.conf $HOME/.config/i3/.i3status.conf
+ln -sf $STARTING_DIR/gtk.css $HOME/.config/gtk-3.0/gtk.css
+ln -sf $STARTING_DIR/config.fish $HOME/.config/fish/config.fish
 
 # install go
 wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz -P ~/Downloads/

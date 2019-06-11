@@ -6,7 +6,8 @@ if [ ! -e "~/.xinitrc"]; then
     echo "exec i3" >> ~/.xinitrc
 fi
 
-sudo pacman -S git openssh pulseaudio pulseaudio-alsa
+# install both dmneu and rofi since we might want to switch and they're small packages
+sudo pacman -S rofi git openssh pulseaudio pulseaudio-alsa
 
 STARTING_DIR=$(pwd)
 cd ~
@@ -58,14 +59,11 @@ cargo install racer
 
 go get -u golang.org/x/tools/cmd/gopls
 
-# setup xclip to work like pbcopy/pbpaste for Mac
 mkdir -p ~/.config/fish/
-echo "alias pbcopy='xclip -selection clipboard'" | tee -a ~/.config/fish/config.fish
-echo "alias pbpaste='xclip -selection clipboard -o'" | tee -a ~/.config/fish/config.fish
-
 mkdir -p $HOME/.config/alacritty/
 mkdir -p $HOME/.config/i3/
 mkdir -p $HOME/.config/gtk-3.0/
+
 touch $HOME/.projectspecific.vim
 
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
@@ -74,6 +72,7 @@ ln -sf $STARTING_DIR/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 ln -sf $STARTING_DIR/i3config $HOME/.config/i3/config
 ln -sf $STARTING_DIR/i3status.conf $HOME/.config/i3/.i3status.conf
 ln -sf $STARTING_DIR/gtk.css $HOME/.config/gtk-3.0/gtk.css
+ln -sf $STARTING_DIR/config.fish $HOME/.config/fish/config.fish
 
 # install Vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
