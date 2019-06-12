@@ -14,7 +14,7 @@ if type -q alacritty
     export TERMINAL="alacritty"
 end
 
-export LESS='--quit-if-one-screen --HILITE-UNREAD --tabs=4 --no-init --window=-4'
+export LESS='--quit-if-one-screen -R'
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
