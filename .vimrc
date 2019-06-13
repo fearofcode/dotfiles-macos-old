@@ -6,6 +6,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Remap 0 to first non-blank character
+map 0 ^
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -83,12 +86,7 @@ set textwidth=90
 set wrap "Wrap lines
 set laststatus=2
 
-" Remap 0 to first non-blank character
-map 0 ^
-
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
+set t_Co=256
 
 if has("gui_running")
     set guioptions-=T
@@ -99,7 +97,7 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
     set guicursor+=a:blinkon0
-    set guifont=Hack\ 14
+    set guifont=xos4\ Terminess\ Powerline\ 12
     autocmd GUIEnter * set vb t_vb=
 endif
 

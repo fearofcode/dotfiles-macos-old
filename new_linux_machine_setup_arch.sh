@@ -24,11 +24,11 @@ yay -S google-chrome
 # why don't my old pulseaudio keybindings work with i3? whatever
 yay -S pacmixer
 
-# so that airline doesn't have manky Unicode error shit in it
-yay -S powerline-fonts-git
-
 # so we can set backgrond color with compton
 yay -S hsetroot
+
+# font used in most places
+yay -S dina-font
 
 cd $STARTING_DIR
 
@@ -39,9 +39,7 @@ else
     echo "Not installing NVIDIA drivers since no NVIDIA hardware was detected"
 fi
 
-sudo pacman -S ttf-lato powerline powerline-fonts
-sudo pacman -S xdg-utils
-sudo pacman -S firefox fish rustup python python-pip tmux tree whois dig wget
+sudo pacman -S xdg-utils firefox fish rustup python python-pip tmux tree whois dig wget
 sudo pacman -S vifm dnsutils go compton clang llvm gvim scrot gimp
 # for watching videos ~ O F F L I N E ~
 sudo pacman -S ffmpeg youtube-dl vlc
@@ -84,7 +82,6 @@ ln -sf $STARTING_DIR/.config/fish/config.fish $HOME/.config/fish/config.fish
 # copy so that we don't have symlinks from system directory into home directory
 sudo cp $STARTING_DIR/scripts/remove_orphan_arch_packages /usr/local/bin/remove_orphan_arch_packages
 sudo chown $(whoami) /usr/local/bin/remove_orphan_arch_packages
-
 
 # install Vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim

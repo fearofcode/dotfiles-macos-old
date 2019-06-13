@@ -1,6 +1,6 @@
 *renderFont: true
-*faceName: Hack
-*faceSize: 14
+*faceName: xos4 Terminess Powerline
+*faceSize: 12
 
 *scrollBar: false
 *cursorBlink: false
@@ -10,7 +10,6 @@ UXTerm*locale: true
 UXTerm*utf8: true
 UXTerm*utf8Title: true
 UXTerm*preeditType: Root
-UXTerm*xftAntialias: true
 
 ! Trim trailing spaces
 UXTerm*trimSelection: true
