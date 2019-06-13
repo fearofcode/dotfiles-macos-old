@@ -97,7 +97,7 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
     set guicursor+=a:blinkon0
-    set guifont=xos4\ Terminess\ Powerline\ 12
+    set guifont=Source\ Code\ Pro\ for\ Powerline\ 16
     autocmd GUIEnter * set vb t_vb=
 endif
 
@@ -138,7 +138,7 @@ Plugin 'machakann/vim-highlightedyank'
 Plugin 'airblade/vim-rooter'
 
 " language stuff
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 Plugin 'w0rp/ale'
 
 Plugin 'cespare/vim-toml'
@@ -170,39 +170,39 @@ Plugin 'gorodinskiy/vim-coloresque'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-if executable('pyls')
-    au User lsp_setup call lsp#register_server({
-                \ 'name': 'pyls',
-                \ 'cmd': {server_info->['pyls']},
-                \ 'whitelist': ['python'],
-                \ })
-endif
-
-if executable('rls')
-    au User lsp_setup call lsp#register_server({
-                \ 'name': 'rls',
-                \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
-                \ 'workspace_config': {'rust': {'clippy_preference': 'on'}},
-                \ 'whitelist': ['rust'],
-                \ })
-endif
-
-if executable('gopls')
-    au User lsp_setup call lsp#register_server({
-                \ 'name': 'gopls',
-                \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
-                \ 'whitelist': ['go'],
-                \ })
-    autocmd BufWritePre *.go LspDocumentFormatSync
-endif
-
-if executable('clangd')
-    au User lsp_setup call lsp#register_server({
-                \ 'name': 'clangd',
-                \ 'cmd': {server_info->['clangd', '-background-index']},
-                \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-                \ })
-endif
+"if executable('pyls')
+"    au User lsp_setup call lsp#register_server({
+"                \ 'name': 'pyls',
+"                \ 'cmd': {server_info->['pyls']},
+"                \ 'whitelist': ['python'],
+"                \ })
+"endif
+"
+"if executable('rls')
+"    au User lsp_setup call lsp#register_server({
+"                \ 'name': 'rls',
+"                \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
+"                \ 'workspace_config': {'rust': {'clippy_preference': 'on'}},
+"                \ 'whitelist': ['rust'],
+"                \ })
+"endif
+"
+"if executable('gopls')
+"    au User lsp_setup call lsp#register_server({
+"                \ 'name': 'gopls',
+"                \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+"                \ 'whitelist': ['go'],
+"                \ })
+"    autocmd BufWritePre *.go LspDocumentFormatSync
+"endif
+"
+"if executable('clangd')
+"    au User lsp_setup call lsp#register_server({
+"                \ 'name': 'clangd',
+"                \ 'cmd': {server_info->['clangd', '-background-index']},
+"                \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+"                \ })
+"endif
 
 let g:vim_isort_python_version = 'python3'
 " let g:flake8_cmd=$HOME."/.local/bin/flake8"

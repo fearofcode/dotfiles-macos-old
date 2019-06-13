@@ -27,8 +27,8 @@ yay -S pacmixer
 # so we can set backgrond color with compton
 yay -S hsetroot
 
-# font used in most places
-yay -S dina-font
+# convenient fonts including the one we use in vim and the terminal
+yay -S powerline-fonts-git
 
 cd $STARTING_DIR
 

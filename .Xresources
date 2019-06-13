@@ -1,8 +1,8 @@
 *renderFont: true
-*faceName: xos4 Terminess Powerline
-*faceSize: 12
+*faceName: Source Code Pro for Powerline
+*faceSize: 16
 
-*scrollBar: false
+scrollBar: false
 *cursorBlink: false
 *termName: xterm-256color
 
@@ -26,9 +26,10 @@ UXTerm*translations: #override \
 ! Select email/url by double click
 XTerm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
 
-! Jellybeans Terminal Colours
-UXTerm*background: #151515
-UXTerm*foreground: #ffffff
+! (Modified) Jellybeans Terminal Colours
+UXTerm*background: #1A1A16
+! a little closer to what it looks like in gvim
+UXTerm*foreground: #FAE9CF
 ! black
 UXTerm*color0: #888888
 UXTerm*color8: #525252
