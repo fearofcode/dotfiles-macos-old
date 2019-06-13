@@ -153,8 +153,8 @@ bindsym $mod+r mode "resize"
 #https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Adjusting_typematic_delay_and_rate
 exec --no-startup-id xset r rate 200 50
 # still need compton even in KDE :(
-exec --no-startup-id compton --config /home/warren/.compton.conf
-exec --no-startup-id hsetroot --solid "#101010"
+exec --no-startup-id compton --config /home/warren/.config/compton.conf
+exec --no-startup-id hsetroot -solid "#101010"
 
 # remove this is physical monitor configuration changes
 # exec --no-startup-id xrandr --output DP-4 --left-of DP-2 --auto
@@ -191,32 +191,5 @@ for_window [class="^.*"] border pixel 2
 gaps inner 10
 smart_gaps on
 
-# non-standard binding I added.
+# non-standard binding I added
 bindsym $mod+Shift+f exec google-chrome-stable
-
-# KDE stuff
-# https://userbase.kde.org/Tutorials/Using_Other_Window_Managers_with_Plasma#Create_a_default_i3_configuration
-# Try to kill the wallpaper set by Plasma (it takes up the entire workspace
-# and hides everythiing)
-exec --no-startup-id wmctrl -c Plasma
-
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
-for_window [class="plasmashell"] floating enable;
-for_window [class="Plasma"] floating enable; border none
-for_window [title="plasma-desktop"] floating enable; border none
-for_window [title="win7"] floating enable; border none
-for_window [class="krunner"] floating enable; border none
-for_window [class="Kmix"] floating enable; border none
-for_window [class="Klipper"] floating enable; border none
-for_window [class="Plasmoidviewer"] floating enable; border none
-for_window [class="(?i)*nextcloud*"] floating disable
-for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px, no_focus
-
-# >>> Avoid tiling for non-Plasma stuff <<<
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="bubble"] floating enable
-for_window [window_role="task_dialog"] floating enable
-for_window [window_role="Preferences"] floating enable
-for_window [window_role="About"] floating enable
-for_window [window_type="dialog"] floating enable
-for_window [window_type="menu"] floating enable

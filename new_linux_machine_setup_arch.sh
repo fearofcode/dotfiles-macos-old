@@ -3,19 +3,8 @@ set -euxo pipefail
 
 sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock alacritty dmenu
 
-# i3? in my KDE? it's more likely than you think.
-# https://userbase.kde.org/Tutorials/Using_Other_Window_Managers_with_Plasma
-sudo pacman -S plasma-meta konsole user-manager volume_key xorg-xprop portaudio
-sudo pacman -S breeze breeze-gtk soundtouch kpackage kde-cli-tools networkmanager
-if [ ! -e "~/.xinitrc"]; then
-    echo "exec startkde" >> ~/.xinitrc
-fi
-
-if [ ! -e "~/kde-i3.sh"]; then
-    # Select this as startup script
-    # https://userbase.kde.org/Tutorials/Using_Other_Window_Managers_with_Plasma#Single_User:_Using_System_Settings
-    echo "#!/bin/sh\nexport KDEWM=/usr/bin/i3" >> $HOME/kde-i3.sh
-    chmod +x $HOME/kde-i3.sh
+if [ ! -e "~/.xinitrc" ]; then
+    echo "exec i3" >> ~/.xinitrc
 fi
 
 # install both dmneu and rofi since we might want to switch and they're small packages
@@ -88,6 +77,7 @@ touch $HOME/.projectspecific.vim
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
 ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
 ln -sf $STARTING_DIR/.config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+ln -sf $STARTING_DIR/.config/compton.conf $HOME/.config/compton.conf
 ln -sf $STARTING_DIR/.config/i3/config $HOME/.config/i3/config
 ln -sf $STARTING_DIR/.config/i3/.i3status.conf $HOME/.config/i3/.i3status.conf
 ln -sf $STARTING_DIR/.config/gtk-3.0/gtk.css $HOME/.config/gtk-3.0/gtk.css
