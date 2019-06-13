@@ -29,8 +29,15 @@ yay -S hsetroot
 
 cd $STARTING_DIR
 
+if lspci | grep NVIDIA; then
+    echo "Installing NVIDIA drivers since they were detected"
+    sudo pacman -S nvidia nvidia-settings
+else
+    echo "Not installing NVIDIA drivers since no NVIDIA hardware was detected"
+fi
+
 sudo pacman -S ttf-lato powerline powerline-fonts
-sudo pacman -S nvidia nvidia-settings xdg-utils
+sudo pacman -S xdg-utils
 sudo pacman -S firefox fish rustup python python-pip tmux tree whois dig wget
 sudo pacman -S vifm dnsutils go compton clang llvm gvim scrot gimp
 # for watching videos ~ O F F L I N E ~
@@ -74,6 +81,11 @@ ln -sf $STARTING_DIR/.config/i3/.i3status.conf $HOME/.config/i3/.i3status.conf
 ln -sf $STARTING_DIR/.config/gtk-3.0/gtk.css $HOME/.config/gtk-3.0/gtk.css
 ln -sf $STARTING_DIR/.config/fish/config.fish $HOME/.config/fish/config.fish
 
+# copy so that we don't have symlinks from system directory into home directory
+sudo cp $STARTING_DIR/scripts/remove_orphan_arch_packages /usr/local/bin/remove_orphan_arch_packages
+sudo chown (whoami) /usr/local/bin/remove_orphan_arch_packages
+
+
 # install Vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
@@ -86,7 +98,8 @@ curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/
 
 # add completers for rust, go, python
 cd ~/.vim/bundle/YouCompleteMe
-python3 install.py --clang-completer --rust-completer --go-completer
+# using clangd rather than default libclang
+python3 install.py --clangd-completer --rust-completer --go-completer
 
 sudo su - postgres
 initdb --locale en_US.UTF-8 -D /var/lib/postgres/data
@@ -99,3 +112,4 @@ sudo su - postgres
 createdb arete
 createdb arete_test
 
+echo "Reboot if NVIDIA drivers were installed."

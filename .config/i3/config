@@ -152,12 +152,11 @@ bindsym $mod+r mode "resize"
 # increase typematic rate, decrease delay
 #https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Adjusting_typematic_delay_and_rate
 exec --no-startup-id xset r rate 200 50
-exec --no-startup-id compton --config /home/warren/.compton.conf
-exec --no-startup-id hsetroot --solid "#101010"
 
+# no compton due to it not helping with screen tearing
+#
 # remove this is physical monitor configuration changes
 # exec --no-startup-id xrandr --output DP-4 --left-of DP-2 --auto
-
 
 # Dracula theme
 

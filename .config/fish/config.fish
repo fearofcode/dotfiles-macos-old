@@ -1,4 +1,4 @@
-set PATH $HOME/.cargo/bin $PATH
+set PATH $HOME/.cargo/bin $HOME/.local/bin $PATH
 
 if status --is-login
     if test -z "$DISPLAY" -a $XDG_VTNR = 1
