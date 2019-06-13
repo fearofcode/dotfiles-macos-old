@@ -2,8 +2,20 @@
 set -euxo pipefail
 
 sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock alacritty dmenu
+
+# i3? in my KDE? it's more likely than you think.
+# https://userbase.kde.org/Tutorials/Using_Other_Window_Managers_with_Plasma
+sudo pacman -S plasma-meta konsole user-manager volume_key xorg-xprop portaudio
+sudo pacman -S breeze breeze-gtk soundtouch kpackage kde-cli-tools networkmanager
 if [ ! -e "~/.xinitrc"]; then
-    echo "exec i3" >> ~/.xinitrc
+    echo "exec startkde" >> ~/.xinitrc
+fi
+
+if [ ! -e "~/kde-i3.sh"]; then
+    # Select this as startup script
+    # https://userbase.kde.org/Tutorials/Using_Other_Window_Managers_with_Plasma#Single_User:_Using_System_Settings
+    echo "#!/bin/sh\nexport KDEWM=/usr/bin/i3" >> $HOME/kde-i3.sh
+    chmod +x $HOME/kde-i3.sh
 fi
 
 # install both dmneu and rofi since we might want to switch and they're small packages
@@ -83,7 +95,7 @@ ln -sf $STARTING_DIR/.config/fish/config.fish $HOME/.config/fish/config.fish
 
 # copy so that we don't have symlinks from system directory into home directory
 sudo cp $STARTING_DIR/scripts/remove_orphan_arch_packages /usr/local/bin/remove_orphan_arch_packages
-sudo chown (whoami) /usr/local/bin/remove_orphan_arch_packages
+sudo chown $(whoami) /usr/local/bin/remove_orphan_arch_packages
 
 
 # install Vundle
