@@ -12,7 +12,9 @@ brew cask install font-hack
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 # intentionally not installing vim. macvim conflicts with vim and macvim is required for YouCompleteMe. macvim includes
 # a full console vim (e.g., has python support built in, etc) so we don't lose anything.
-brew install cmake curl fish fzf git tmux tree macvim vifm
+brew install cmake curl fish fzf git tmux tree macvim vifm less python
+
+pip3 install pygments
 
 echo "Installing Courier Prime Code..."
 wget http://quoteunquoteapps.com/downloads/courier-code.zip -P ~/Downloads/
@@ -57,6 +59,7 @@ touch $HOME/.projectspecific.vim
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
 ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
 ln -sf $STARTING_DIR/.config/alacritty/alacritty.mac.yml $HOME/.config/alacritty/alacritty.yml
+ln -sf $STARTING_DIR/.config/fish/config.fish $HOME/.config/fish/config.fish
 
 echo "set -gx PATH ~/.local/bin ~/.cargo/bin /usr/local/go/bin \$PATH" | tee -a ~/.config/fish/config.fish
 if [ "$(which go)" == "" ]; then
