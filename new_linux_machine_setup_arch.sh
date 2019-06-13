@@ -44,9 +44,6 @@ sudo pacman -S vifm dnsutils go compton clang llvm gvim scrot gimp
 # for watching videos ~ O F F L I N E ~
 sudo pacman -S ffmpeg youtube-dl vlc
 
-wget https://raw.githubusercontent.com/Airblader/dotfiles-manjaro/master/.compton.conf
-mv .compton.conf ~
-
 # make fish default shell
 chsh -s /usr/bin/fish
 
