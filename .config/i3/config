@@ -12,7 +12,7 @@ hide_edge_borders both
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec uxterm
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -152,6 +152,10 @@ bindsym $mod+r mode "resize"
 # increase typematic rate, decrease delay
 #https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Adjusting_typematic_delay_and_rate
 exec --no-startup-id xset r rate 200 50
+# turn off beeping in uxterm
+exec --no-startup-id xset b off
+# update X with current settings
+exec --no-startup-id xrdb /home/warren/.Xresources
 # still need compton even in KDE :(
 exec --no-startup-id compton --config /home/warren/.config/compton.conf
 exec --no-startup-id hsetroot -solid "#101010"

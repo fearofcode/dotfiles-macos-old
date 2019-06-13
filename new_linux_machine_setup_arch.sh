@@ -1,7 +1,9 @@
 # https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
 set -euxo pipefail
 
-sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock alacritty dmenu
+sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock dmenu
+# install a couple different terminals to play around with
+sudo pacman -Syu xterm rxvt-unicode
 
 if [ ! -e "~/.xinitrc" ]; then
     echo "exec i3" >> ~/.xinitrc
@@ -65,15 +67,14 @@ cargo install racer
 go get -u golang.org/x/tools/cmd/gopls
 
 mkdir -p ~/.config/fish/
-mkdir -p $HOME/.config/alacritty/
 mkdir -p $HOME/.config/i3/
 mkdir -p $HOME/.config/gtk-3.0/
 
 touch $HOME/.projectspecific.vim
 
+ln -sf $STARTING_DIR/.Xresources $HOME/.Xresources
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
 ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
-ln -sf $STARTING_DIR/.config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 ln -sf $STARTING_DIR/.config/compton.conf $HOME/.config/compton.conf
 ln -sf $STARTING_DIR/.config/i3/config $HOME/.config/i3/config
 ln -sf $STARTING_DIR/.config/i3/.i3status.conf $HOME/.config/i3/.i3status.conf

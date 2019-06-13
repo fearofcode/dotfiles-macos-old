@@ -1,0 +1,56 @@
+*renderFont: true
+*faceName: Hack
+*faceSize: 14
+
+*scrollBar: false
+*cursorBlink: false
+*termName: xterm-256color
+
+UXTerm*locale: true
+UXTerm*utf8: true
+UXTerm*utf8Title: true
+UXTerm*preeditType: Root
+UXTerm*xftAntialias: true
+
+! Trim trailing spaces
+UXTerm*trimSelection: true
+
+! Fix alt-key inputting
+UXTerm*eightBitInput: false
+UXTerm*metaSendsEscape: true
+
+! Copy and paste with clipboard
+UXTerm*translations: #override \
+	Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n\
+	Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD)
+
+! Select email/url by double click
+XTerm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
+
+! Jellybeans Terminal Colours
+UXTerm*background: #151515
+UXTerm*foreground: #ffffff
+! black
+UXTerm*color0: #888888
+UXTerm*color8: #525252
+! red
+UXTerm*color1: #cf6a4c
+UXTerm*color9: #ff9d80
+! green
+UXTerm*color2: #99ad6a
+UXTerm*color10: #c3e6ad
+! yellow
+UXTerm*color3: #fad07a
+UXTerm*color11: #ffefbf
+! blue
+UXTerm*color4: #8197bf
+UXTerm*color12: #accaff
+! magenta
+UXTerm*color5: #8787af
+UXTerm*color13: #c4c4ff
+! cyan
+UXTerm*color6: #8fbfdc
+UXTerm*color14: #80bfaf
+! white
+UXTerm*color7: #888888
+UXTerm*color15: #e8e8d3

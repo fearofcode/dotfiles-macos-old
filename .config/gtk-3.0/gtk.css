@@ -3,3 +3,7 @@
 window#vim-main-window {
     background-color: @YOUR_BACKGROUND_COLOR;
 }
+
+window#uxterm-main-window {
+    background-color: @YOUR_BACKGROUND_COLOR;
+}
