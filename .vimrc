@@ -95,7 +95,7 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
     set guicursor+=a:blinkon0
-    set guifont=Source\ Code\ Pro\ for\ Powerline\ 16
+    set guifont=Source\ Code\ Pro\ for\ Powerline\ 18
     autocmd GUIEnter * set vb t_vb=
 endif
 
@@ -133,7 +133,7 @@ Plugin 'airblade/vim-rooter'
 Plugin 'cespare/vim-toml'
 Plugin 'plasticboy/vim-markdown'
 
-Plugin 'lukejmcc/vim-handmade-hero'
+Plugin 'fearofcode/vim-handmade-hero'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 

@@ -1,6 +1,6 @@
 *renderFont: true
 *faceName: Source Code Pro for Powerline
-*faceSize: 16
+*faceSize: 18
 
 scrollBar: false
 *cursorBlink: false
@@ -27,18 +27,18 @@ UXTerm*translations: #override \
 XTerm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
 
 ! (Modified) Jellybeans Terminal Colours
-UXTerm*background: #1A1A16
+UXTerm*background: #161616
 ! a little closer to what it looks like in gvim
-UXTerm*foreground: #FAE9CF
+UXTerm*foreground: #A08563
 ! black
-UXTerm*color0: #888888
-UXTerm*color8: #525252
+UXTerm*color0: #7D7D7D
+UXTerm*color8: #333333
 ! red
 UXTerm*color1: #cf6a4c
 UXTerm*color9: #ff9d80
 ! green
-UXTerm*color2: #99ad6a
-UXTerm*color10: #c3e6ad
+UXTerm*color2: #6B8E23
+UXTerm*color10: #6B8E23
 ! yellow
 UXTerm*color3: #fad07a
 UXTerm*color11: #ffefbf

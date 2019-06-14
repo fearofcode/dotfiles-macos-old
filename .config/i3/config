@@ -17,11 +17,17 @@ bindsym $mod+Return exec uxterm
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-# bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -i -sb "#A08563" -sf "#161616" -fn "Source Code Pro for Powerline-12"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+set $bg-color            #A08563
+set $inactive-bg-color   #514A41
+set $text-color          #161616
+set $inactive-text-color #161616
+set $urgent-bg-color     #161616
 
 
 # change focus
@@ -152,8 +158,27 @@ exec --no-startup-id xset r rate 200 50
 exec --no-startup-id xset b off
 # update X with current settings
 exec --no-startup-id xrdb /home/warren/.Xresources
-exec --no-startup-id compton --config /home/warren/.config/compton.conf
-exec --no-startup-id hsetroot -solid "#101010"
+
+# window colors
+#                       border              background         text                 indicator
+client.focused          $bg-color           $bg-color          $text-color          #00ff00
+client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+
+bar {
+  status_command i3status -c /home/warren/.config/i3/.i3status.conf
+  font pango:Source Code Pro for Powerline 12
+  colors {
+    background $bg-color
+    separator $inactive-bg-color
+    statusline $text-color
+    #                  border             background         text
+    focused_workspace  $bg-color          $bg-color          $text-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+  }
+}
 
 # gaps. this will only work with i3-gaps
 for_window [class="^.*"] border pixel 2
