@@ -167,13 +167,5 @@ let NERDTreeShowHidden = 1
 " let g:ctrlp_user_command = ['.git','git ls-files -co --exclude-standard | grep -v some_binary_directory | grep -v    something_else']
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard'] "Hide files in .gitignore
 
-let g:jellybeans_overrides = {
-\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
-\}
-if has('termguicolors') && &termguicolors
-    let g:jellybeans_overrides['background']['guibg'] = 'none'
-endif
-highlight Normal guifg=#FAE9CF guibg=#1A1A16
-
 source $HOME/.projectspecific.vim
 

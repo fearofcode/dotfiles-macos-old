@@ -21,17 +21,7 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-# bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'Lato-12'"
-
-set $bg-color            #FAE9CF
-set $inactive-bg-color   #7E7569
-set $text-color          #1A1A16
-set $inactive-text-color #10100F
-set $urgent-bg-color     #1A1A16
-
-# -show run to show all applications
-bindsym $mod+d exec rofi -show drun -bw 0 -bc "#FAE9CF" -bg "#FAE9CF" -fg "#1EA16" -hlbg "#FAE9CF" -hlfg "#7E7569" -font "Source Code Pro for Powerline 16"
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 
 # change focus
@@ -164,28 +154,6 @@ exec --no-startup-id xset b off
 exec --no-startup-id xrdb /home/warren/.Xresources
 exec --no-startup-id compton --config /home/warren/.config/compton.conf
 exec --no-startup-id hsetroot -solid "#101010"
-
-
-# window colors
-#                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
-
-bar {
-  status_command i3status -c /home/warren/.config/i3/.i3status.conf
-  font pango:Source Code Pro for Powerline 12
-  colors {
-    background $bg-color
-    separator $inactive-bg-color
-    statusline $text-color
-    #                  border             background         text
-    focused_workspace  $bg-color          $bg-color          $text-color
-    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-    urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-  }
-}
 
 # gaps. this will only work with i3-gaps
 for_window [class="^.*"] border pixel 2
