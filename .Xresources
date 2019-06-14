@@ -31,14 +31,14 @@ UXTerm*background: #161616
 ! a little closer to what it looks like in gvim
 UXTerm*foreground: #A08563
 ! black
-UXTerm*color0: #7D7D7D
-UXTerm*color8: #333333
+UXTerm*color0: #161616
+UXTerm*color8: #323232
 ! red
 UXTerm*color1: #cf6a4c
 UXTerm*color9: #ff9d80
 ! green
 UXTerm*color2: #6B8E23
-UXTerm*color10: #6B8E23
+UXTerm*color10: #6BAE23
 ! yellow
 UXTerm*color3: #fad07a
 UXTerm*color11: #ffefbf
