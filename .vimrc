@@ -95,7 +95,7 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
     set guicursor+=a:blinkon0
-    set guifont=Source\ Code\ Pro\ for\ Powerline\ 18
+    set guifont=Hack\ 14
     autocmd GUIEnter * set vb t_vb=
 endif
 
@@ -133,7 +133,7 @@ Plugin 'airblade/vim-rooter'
 Plugin 'cespare/vim-toml'
 Plugin 'plasticboy/vim-markdown'
 
-Plugin 'fearofcode/vim-handmade-hero'
+Plugin 'ajh17/spacegray.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -142,12 +142,12 @@ filetype plugin indent on    " required
 
 let g:strip_whitespace_on_save = 1
 
-" vim-handmade-hero recommends ubaryd theme but it seems to have changed to have much more
-" green in it
+let g:spacegray_underline_search = 1
+let g:spacegray_use_italics = 1
 let g:airline_theme='minimalist'
 
 try
-    colorscheme handmade-hero
+    colorscheme spacegray
 catch
 endtry
 

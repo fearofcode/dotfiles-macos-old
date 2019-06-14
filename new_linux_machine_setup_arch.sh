@@ -3,7 +3,7 @@ set -euxo pipefail
 
 sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock dmenu
 # install a couple different terminals to play around with
-sudo pacman -Syu xterm rxvt-unicode
+sudo pacman -Syu xterm rxvt-unicode ttf-hack
 
 if [ ! -e "~/.xinitrc" ]; then
     echo "exec i3" >> ~/.xinitrc
@@ -40,7 +40,7 @@ else
 fi
 
 sudo pacman -S xdg-utils firefox fish rustup python python-pip tmux tree whois dig wget
-sudo pacman -S vifm dnsutils go compton clang llvm gvim scrot gimp
+sudo pacman -S vifm dnsutils go compton clang llvm gvim scrot gimp evince docker
 # for watching videos ~ O F F L I N E ~
 sudo pacman -S ffmpeg youtube-dl vlc
 

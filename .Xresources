@@ -1,6 +1,6 @@
 *renderFont: true
-*faceName: Source Code Pro for Powerline
-*faceSize: 18
+*faceName: Hack
+*faceSize: 14
 
 scrollBar: false
 *cursorBlink: false
