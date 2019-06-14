@@ -125,8 +125,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mhinz/vim-signify'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'machakann/vim-highlightedyank'
@@ -135,16 +133,21 @@ Plugin 'airblade/vim-rooter'
 Plugin 'cespare/vim-toml'
 Plugin 'plasticboy/vim-markdown'
 
+Plugin 'CreaturePhil/vim-handmade-hero'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 let g:strip_whitespace_on_save = 1
 
-" match editor theme
-let g:airline_theme='jellybeans'
+" vim-handmade-hero recommends ubaryd theme but it seems to have changed to have much more
+" green in it
+let g:airline_theme='minimalist'
 
 try
-    colorscheme jellybeans
+    colorscheme handmade-hero
 catch
 endtry
 
