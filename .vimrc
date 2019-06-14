@@ -86,8 +86,6 @@ set textwidth=90
 set wrap "Wrap lines
 set laststatus=2
 
-set t_Co=256
-
 if has("gui_running")
     set guioptions-=T
     set guioptions-=m
@@ -124,9 +122,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " generic stuff
 Plugin 'scrooloose/nerdtree'
-" Plugin 'dracula/vim'
-" Plugin 'Rigellute/shades-of-purple.vim'
-" Plugin 'arcticicestudio/nord-vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -137,86 +132,11 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'airblade/vim-rooter'
 
-" language stuff
-" Bundle 'Valloric/YouCompleteMe'
-Plugin 'w0rp/ale'
-
 Plugin 'cespare/vim-toml'
 Plugin 'plasticboy/vim-markdown'
 
-Plugin 'vim-scripts/indentpython.vim'
-Bundle "mgedmin/python-imports.vim"
-Plugin 'plytophogy/vim-virtualenv'
-Plugin 'fisadev/vim-isort'
-Plugin 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-
-Plugin 'fatih/vim-go', {'do': ':GoInstallBinaries'}
-
-
-Plugin 'rust-lang/rust.vim'
-Plugin 'prabirshrestha/async.vim'
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'racer-rust/vim-racer'
-
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'HerringtonDarkholme/yats.vim'
-Plugin 'vim-syntastic/syntastic'
-
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'gorodinskiy/vim-coloresque'
-
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-"if executable('pyls')
-"    au User lsp_setup call lsp#register_server({
-"                \ 'name': 'pyls',
-"                \ 'cmd': {server_info->['pyls']},
-"                \ 'whitelist': ['python'],
-"                \ })
-"endif
-"
-"if executable('rls')
-"    au User lsp_setup call lsp#register_server({
-"                \ 'name': 'rls',
-"                \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
-"                \ 'workspace_config': {'rust': {'clippy_preference': 'on'}},
-"                \ 'whitelist': ['rust'],
-"                \ })
-"endif
-"
-"if executable('gopls')
-"    au User lsp_setup call lsp#register_server({
-"                \ 'name': 'gopls',
-"                \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
-"                \ 'whitelist': ['go'],
-"                \ })
-"    autocmd BufWritePre *.go LspDocumentFormatSync
-"endif
-"
-"if executable('clangd')
-"    au User lsp_setup call lsp#register_server({
-"                \ 'name': 'clangd',
-"                \ 'cmd': {server_info->['clangd', '-background-index']},
-"                \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-"                \ })
-"endif
-
-let g:vim_isort_python_version = 'python3'
-" let g:flake8_cmd=$HOME."/.local/bin/flake8"
-let g:rustfmt_autosave = 1
-
-let g:racer_cmd = $HOME."/.cargo/bin/racer"
-
-" auto flake 8 on save
-" autocmd BufWritePost *.py call flake8#Flake8()
-" show flake 8 errors in the file
-" let g:flake8_show_in_file=1
-
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 let g:strip_whitespace_on_save = 1
 
@@ -228,17 +148,8 @@ try
 catch
 endtry
 
-" let g:shades_of_purple_airline = 1
-" let g:airline_theme='shades_of_purple'
-
-" let g:airline_theme='base16_nord'
-
 " stops broken Unicode from showing up on arch
 let g:airline_powerline_fonts = 1
-
-" this will break if you have a different virtualenv setup than the one I use. sigh.
-let g:virtualenv_directory = '.'
-let g:virtualenv_auto_activate = 1
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -251,30 +162,18 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden = 1
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe = 'node_modules/.bin/eslint'
-
-
-" Use clangd for C autocomplete rather than libclang
-
-" Let clangd fully control code completion
-let g:ycm_clangd_uses_ycmd_caching = 0
-" Use installed clangd, not YCM-bundled clangd which doesn't get updates.
-let g:ycm_clangd_binary_path = exepath("clangd")
-
 " if additional directories should be excluded for a specific project, you can filter git
 " ls-files output like so and put it in .projectspecific.vim:
 " let g:ctrlp_user_command = ['.git','git ls-files -co --exclude-standard | grep -v some_binary_directory | grep -v    something_else']
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard'] "Hide files in .gitignore
 
+let g:jellybeans_overrides = {
+\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+\}
+if has('termguicolors') && &termguicolors
+    let g:jellybeans_overrides['background']['guibg'] = 'none'
+endif
 highlight Normal guifg=#FAE9CF guibg=#1A1A16
+
 source $HOME/.projectspecific.vim
 
