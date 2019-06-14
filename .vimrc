@@ -133,7 +133,7 @@ Plugin 'airblade/vim-rooter'
 Plugin 'cespare/vim-toml'
 Plugin 'plasticboy/vim-markdown'
 
-Plugin 'CreaturePhil/vim-handmade-hero'
+Plugin 'lukejmcc/vim-handmade-hero'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
