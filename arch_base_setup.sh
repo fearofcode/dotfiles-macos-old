@@ -3,7 +3,7 @@ set -euxo pipefail
 
 sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock dmenu
 # install a couple different terminals to play around with
-sudo pacman -Syu xterm rxvt-unicode ttf-hack
+sudo pacman -Syu xterm rxvt-unicode
 
 if [ ! -e "~/.xinitrc" ]; then
     echo "exec i3" >> ~/.xinitrc
