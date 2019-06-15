@@ -7,17 +7,11 @@ fi
 
 brew update
 brew tap homebrew/cask-fonts
-brew cask install homebrew/cask-fonts/font-source-code-pro font-hack
+brew cask install homebrew/cask-fonts/font-source-code-pro
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-brew install cmake curl fish fzf git tmux tree macvim vifm less python
+brew install curl fish git tmux tree macvim vifm less python
 
-echo "Installing Courier Prime Code..."
-wget http://quoteunquoteapps.com/downloads/courier-code.zip -P ~/Downloads/
 STARTING_DIR=$(pwd)
-cd ~/Downloads
-unzip ~/Downloads/courier-code.zip
-cp ttf/* ~/Library/Fonts
-cd $STARTING_DIR
 
 if [ "$(which python3)" == "" ]; then
   echo "Installing Python..."
