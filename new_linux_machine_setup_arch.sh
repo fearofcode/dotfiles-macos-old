@@ -109,4 +109,8 @@ sudo su - postgres
 createdb arete
 createdb arete_test
 
+# setup Yubico key support
+cd /etc/udev/rules.d/
+sudo wget https://raw.githubusercontent.com/Yubico/libu2f-host/master/70-u2f.rules
+
 echo "Reboot if NVIDIA drivers were installed."

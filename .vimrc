@@ -117,8 +117,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " add plugins here
-" not using syntastic because it's not super helpful and conflicts with flake8
-" see https://github.com/vim-syntastic/syntastic/issues/1924
 
 " generic stuff
 Plugin 'scrooloose/nerdtree'
