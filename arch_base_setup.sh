@@ -42,6 +42,9 @@ fi
 sudo pacman -S xdg-utils firefox fish python python-pip tmux tree whois dig wget
 sudo pacman -S vifm dnsutils gvim tokei ripgrep
 
+# for working with Windows USB drives
+sudo pacman -S ntfspropgs dosfstools exfat-utils
+
 # make fish default shell
 chsh -s /usr/bin/fish
 
