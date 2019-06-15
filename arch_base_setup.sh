@@ -10,7 +10,7 @@ if [ ! -e "~/.xinitrc" ]; then
 fi
 
 # install both dmneu and rofi since we might want to switch and they're small packages
-sudo pacman -S rofi git openssh pulseaudio pulseaudio-alsa
+sudo pacman -S rofi git openssh pulseaudio pulseaudio-alsa go
 
 STARTING_DIR=$(pwd)
 cd ~
@@ -39,30 +39,13 @@ else
     echo "Not installing NVIDIA drivers since no NVIDIA hardware was detected"
 fi
 
-sudo pacman -S xdg-utils firefox fish rustup python python-pip tmux tree whois dig wget
-sudo pacman -S vifm dnsutils go compton clang llvm gvim scrot gimp evince docker
-# for watching videos ~ O F F L I N E ~
-sudo pacman -S ffmpeg youtube-dl vlc
+sudo pacman -S xdg-utils firefox fish python python-pip tmux tree whois dig wget
+sudo pacman -S vifm dnsutils gvim tokei ripgrep
 
 # make fish default shell
 chsh -s /usr/bin/fish
 
 pip3 install yapf isort flake8
-
-rustup update
-rustup toolchain add nightly
-rustup default nightly
-rustup component add rls rust-analysis rust-src
-
-# ripgrep is a fast grep replacement https://github.com/BurntSushi/ripgrep
-cargo install ripgrep
-
-# code lines counter
-cargo install tokei
-
-cargo install racer
-
-go get -u golang.org/x/tools/cmd/gopls
 
 mkdir -p ~/.config/fish/
 mkdir -p $HOME/.config/i3/
@@ -87,27 +70,6 @@ sudo chown $(whoami) /usr/local/bin/remove_orphan_arch_packages
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim +PluginInstall +qall
-
-# install jellybeans color theme (for regular vim)
-mkdir -p ~/.vim/colors
-cd ~/.vim/colors
-curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
-
-# add completers for rust, go, python
-cd ~/.vim/bundle/YouCompleteMe
-# using clangd rather than default libclang
-python3 install.py --clangd-completer --rust-completer --go-completer
-
-sudo su - postgres
-initdb --locale en_US.UTF-8 -D /var/lib/postgres/data
-exit
-sudo systemctl start postgresql
-sudo systemctl enable postgresql
-sudo su - postgres
-
-# this is for my personal projects, feel free to remove
-createdb arete
-createdb arete_test
 
 # setup Yubico key support
 cd /etc/udev/rules.d/
