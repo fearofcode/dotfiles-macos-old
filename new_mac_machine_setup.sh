@@ -6,7 +6,6 @@ if [ "$(which brew)" == "" ]; then
 fi
 
 brew update
-brew cask install alacritty
 brew tap homebrew/cask-fonts
 brew cask install homebrew/cask-fonts/font-source-code-pro font-hack
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
