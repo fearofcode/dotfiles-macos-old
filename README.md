@@ -8,12 +8,11 @@ These files can give you a simple, text-oriented programming environment featuri
     default colors and font can be easily overridden. See <a
     href="https://github.com/fearofcode/shared/blob/master/.Xresources">the
     .Xresources</a> file to see how this is done.
-* vim with a bunch of plugins added that give you autocomplete for Rust, Go and Python
-* Other stuff I use at work and at home, like PostgreSQL (see scripts for details)
+* vim with quite a few plugins, although I have given up trying to use it as an IDE
 
-Here is a sample session showing a web browser, a copy of <a
-href="https://github.com/fearofcode/arete">arete</a>, a shell, vim, and a copy of <a
-href="https://github.com/fearofcode/pyrepl">pyrepl</a> running:
+Here is a sample session showing some terminal sessions, Chrome, and <a
+href="https://plugins.jetbrains.com/plugin/11938-one-dark-theme">IntelliJ with a One
+Dark theme</a> installed:
 
 <img src="https://raw.githubusercontent.com/fearofcode/shared/master/2019-06-16-151919_5120x1440_scrot.png" alt="Simple i3 session using these dotfiles.">
 
@@ -35,3 +34,4 @@ To get something that looks like this, run the appropriate script:
 
 - I had previously tried to maintain setup for both Arch and Ubuntu but it was painful.
 - The scripts are not idempotent right now and assume a mostly empty machine. 
+- The one dark vim theme doesn't match the rest of the system in console mode.
