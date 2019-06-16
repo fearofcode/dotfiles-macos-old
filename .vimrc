@@ -1,3 +1,4 @@
+syntax on
 let mapleader = ','
 
 " make splits nicer
@@ -131,8 +132,8 @@ Plugin 'airblade/vim-rooter'
 Plugin 'cespare/vim-toml'
 Plugin 'plasticboy/vim-markdown'
 
-" Plugin 'ajh17/spacegray.vim'
-Plugin 'arcticicestudio/nord-vim'
+Plugin 'joshdick/onedark.vim'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -141,12 +142,10 @@ filetype plugin indent on    " required
 
 let g:strip_whitespace_on_save = 1
 
-" let g:spacegray_underline_search = 1
-" let g:spacegray_use_italics = 1
-let g:airline_theme='base16_nord'
+let g:airline_theme='onedark'
 
 try
-    colorscheme nord
+    colorscheme onedark
 catch
 endtry
 
