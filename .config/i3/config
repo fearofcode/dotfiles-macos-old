@@ -1,10 +1,6 @@
 # Mod4 for Windows key, Mod1 for Alt. Mod1 makes $mod+hjkl easier to use on a Kinesis.
 set $mod Mod1
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-# no need to set this if we don't show window titles
-
 # thin borders
 hide_edge_borders both
 
@@ -149,6 +145,8 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id xset r rate 200 50
 # turn off beeping in uxterm
 exec --no-startup-id xset b off
+# xterm seems to reset every reset if this isn't done
+exec --no-startup-id xrdb /home/warren/.Xresources
 
 # Colors
 # class                 border  backgr. text    indicator child_border
