@@ -153,7 +153,7 @@ exec --no-startup-id xset b off
 # Colors
 # class                 border  backgr. text    indicator child_border
 client.focused          #282C34 #282C34 #ABB2BF #BE5046   #b7c5e1
-client.focused_inactive #2f343f #2f343f #ABB2BF #282C34   #6c7381
+client.focused_inactive #2f343f #2f343f #ABB2BF #282C34   #2f343f
 client.unfocused        #2f343f #2f343f #ABB2BF #282C34   #2f343f
 client.urgent           #BE5046 #BE5046 #ABB2BF #BE5046   #BE5046
 client.placeholder      #000000 #0c0c0c #ABB2BF #282C34   #0c0c0c
