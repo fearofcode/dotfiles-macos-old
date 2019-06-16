@@ -15,7 +15,7 @@ Here is a sample session showing a web browser, a copy of <a
 href="https://github.com/fearofcode/arete">arete</a>, a shell, vim, and a copy of <a
 href="https://github.com/fearofcode/pyrepl">pyrepl</a> running:
 
-<img src="https://raw.githubusercontent.com/fearofcode/shared/master/2019-06-16-151656_5120x1440_scrot.png" alt="Simple i3 session using these dotfiles.">
+<img src="https://raw.githubusercontent.com/fearofcode/shared/master/2019-06-16-151919_5120x1440_scrot.png" alt="Simple i3 session using these dotfiles.">
 
 Notice the border around the active and inactive windows. Little features like this are
 intended to make this a lightweight, distraction-free environment that is still functional
