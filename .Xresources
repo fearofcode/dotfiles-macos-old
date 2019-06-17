@@ -1,6 +1,6 @@
 *renderFont: true
 *faceName: Hack
-*faceSize: 14
+*faceSize: 12
 
 scrollBar: false
 *cursorBlink: false
@@ -31,19 +31,19 @@ XTerm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35
 *.cursorColor:   #5C6370
 *.highlightColor:#3A3F4B
 
-! Negro y gris
+! Black and grey
 *.color0:        #1E2127
 *.color8:        #5C6370
-! Rojos
+! Red
 *.color1:        #E06C75
 *.color9:        #E06C75
-! Verde
+! Green
 *.color2:        #98C379
 *.color10:       #98C379
-! Amarillo
+! Yellow
 *.color3:        #D19A66
 *.color11:       #D19A66
-! Azul
+! Blue
 *.color4:        #61AFEF
 *.color12:       #61AFEF
 ! Magenta
@@ -52,6 +52,6 @@ XTerm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35
 ! Cyan
 *.color6:        #56B6C2
 *.color14:       #56B6C2
-! Blanco
+! White
 *.color7:        #ABB2BF
 *.color15:       #FFFFFF
