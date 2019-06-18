@@ -39,16 +39,16 @@ else
     echo "Not installing NVIDIA drivers since no NVIDIA hardware was detected"
 fi
 
-sudo pacman -S xdg-utils firefox fish python python-pip tmux tree whois dig wget
-sudo pacman -S vifm dnsutils gvim tokei ripgrep
+sudo pacman -S xdg-utils firefox fish python python-pip tmux tree whois dnsutils wget
+sudo pacman -S vifm dnsutils gvim tokei ripgrep unzip
 
 # for working with Windows USB drives
-sudo pacman -S ntfspropgs dosfstools exfat-utils
+sudo pacman -S ntfsprogs dosfstools exfat-utils
 
 # make fish default shell
 chsh -s /usr/bin/fish
 
-pip3 install yapf isort flake8
+pip3 install --user yapf isort flake8
 
 mkdir -p ~/.config/fish/
 mkdir -p $HOME/.config/i3/
