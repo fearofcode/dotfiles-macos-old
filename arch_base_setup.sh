@@ -3,7 +3,7 @@ set -euxo pipefail
 
 sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock dmenu
 # install a couple different terminals to play around with
-sudo pacman -Syu xterm rxvt-unicode ttf-lato
+sudo pacman -Syu xterm rxvt-unicode ttf-lato compton
 
 if [ ! -e "~/.xinitrc" ]; then
     echo "exec i3" >> ~/.xinitrc
@@ -17,6 +17,8 @@ cd ~
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+
+yay -S compton.conf
 
 # sorry
 yay -S google-chrome
