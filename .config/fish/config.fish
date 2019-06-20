@@ -1,4 +1,8 @@
 set PATH $HOME/.cargo/bin $HOME/.local/bin $PATH
+# disable prompt since we are using bob the fish that displays this for us
+set -x VIRTUAL_ENV_DISABLE_PROMPT 1
+# as per https://github.com/oh-my-fish/theme-bobthefish#installation
+set -g theme_nerd_fonts yes
 
 set is_linux (uname | grep Linux)
 
