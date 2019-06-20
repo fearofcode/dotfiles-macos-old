@@ -87,4 +87,7 @@ curl -L https://get.oh-my.fish | fish
 # nice powerline theme https://github.com/oh-my-fish/theme-bobthefish
 omf install bobthefish
 
+# todo check if ntpd should be added here. does it fix the issue with dual booting clock
+# changes by itself? do we need to add anything from timedatectl?
+
 echo "Reboot if NVIDIA drivers were installed."

@@ -178,7 +178,7 @@ bar {
 
 # gaps. this will only work with i3-gaps
 for_window [class="^.*"] border pixel 2
-gaps inner 10
+gaps inner 15
 smart_gaps on
 
 # non-standard binding I added
