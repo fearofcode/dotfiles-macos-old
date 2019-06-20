@@ -23,6 +23,9 @@ export LESS='--quit-if-one-screen -R'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+# https://github.com/Peltoche/lsd
+alias ls='lsd'
+
 ### BEGIN: AUTOVENV
 ### Automatically activate a virtualenv stored in sub-directory called "venv"
 

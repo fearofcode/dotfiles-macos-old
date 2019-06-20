@@ -30,6 +30,7 @@ source $HOME/.cargo/env
 pip3 install yapf isort flake8
 
 cargo install ripgrep
+cargo install lsd
 cargo install tokei
 
 touch $HOME/.projectspecific.vim
