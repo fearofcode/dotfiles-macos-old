@@ -3,7 +3,7 @@ set -euxo pipefail
 
 sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock dmenu
 # install a couple different terminals to play around with
-sudo pacman -Syu xterm rxvt-unicode ttf-lato compton
+sudo pacman -Syu xterm rxvt-unicode ttf-lato compton hsetroot
 
 if [ ! -e "~/.xinitrc" ]; then
     echo "exec i3" >> ~/.xinitrc
@@ -82,5 +82,9 @@ sudo wget https://raw.githubusercontent.com/Yubico/libu2f-host/master/70-u2f.rul
 
 # workaround for https://github.com/fish-shell/fish-shell/issues/5689
 sudo wget "https://raw.githubusercontent.com/fish-shell/fish-shell/c6ec4235136e82c709e8d7b455f7c463f9714b48/share/completions/systemctl.fish" -O /usr/share/fish/completions/systemctl.fish
+
+curl -L https://get.oh-my.fish | fish
+# nice powerline theme https://github.com/oh-my-fish/theme-bobthefish
+omf install bobthefish
 
 echo "Reboot if NVIDIA drivers were installed."
