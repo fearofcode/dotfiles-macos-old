@@ -96,7 +96,7 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
     set guicursor+=a:blinkon0
-    set guifont=Hack\ 14
+    set guifont=Source\ Code\ Pro\ for\ Powerline\ 14
     autocmd GUIEnter * set vb t_vb=
 endif
 
