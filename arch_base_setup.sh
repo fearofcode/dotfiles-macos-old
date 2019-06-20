@@ -42,7 +42,7 @@ else
 fi
 
 sudo pacman -S xdg-utils firefox fish python python-pip tmux tree whois dnsutils wget
-sudo pacman -S vifm dnsutils gvim tokei ripgrep unzip
+sudo pacman -S vifm dnsutils gvim tokei ripgrep unzip gimp
 
 # for working with Windows USB drives
 sudo pacman -S ntfsprogs dosfstools exfat-utils

@@ -153,8 +153,8 @@ exec --no-startup-id hsetroot --solid "#101012"
 # Colors
 # class                 border  backgr. text    indicator child_border
 client.focused          #282C34 #282C34 #ABB2BF #BE5046   #ABB2BF
-client.focused_inactive #2f343f #2f343f #ABB2BF #282C34   #ABB2BF
-client.unfocused        #2f343f #2f343f #ABB2BF #282C34   #ABB2BF
+client.focused_inactive #2f343f #2f343f #ABB2BF #282C34   #9AA0AC
+client.unfocused        #2f343f #2f343f #ABB2BF #282C34   #9AA0AC
 client.urgent           #BE5046 #BE5046 #ABB2BF #BE5046   #BE5046
 client.placeholder      #000000 #0c0c0c #ABB2BF #282C34   #0c0c0c
 
