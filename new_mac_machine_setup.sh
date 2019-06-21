@@ -10,7 +10,7 @@ brew tap homebrew/cask-fonts
 # make Python icon in bobthefish show up correctly by installing nerd fonts
 brew cask install homebrew/cask-fonts/font-source-code-pro-nerd-font
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-brew install curl fish git tmux tree macvim vifm less python
+brew install curl fish git tmux tree macvim vifm less python httpie
 
 STARTING_DIR=$(pwd)
 
