@@ -144,6 +144,8 @@ let g:strip_whitespace_on_save = 1
 
 let g:airline_theme='onedark'
 
+let g:onedark_hide_endofbuffer = 1
+let g:onedark_terminal_italics = 1
 try
     colorscheme onedark
 catch
