@@ -42,7 +42,7 @@ else
 fi
 
 sudo pacman -S xdg-utils firefox fish python python-pip tmux tree whois dnsutils wget
-sudo pacman -S vifm dnsutils gvim tokei ripgrep unzip gimp httpie
+sudo pacman -S vifm dnsutils gvim tokei ripgrep unzip gimp httpie exa
 
 # for working with Windows USB drives
 sudo pacman -S ntfsprogs dosfstools exfat-utils
@@ -82,10 +82,6 @@ sudo wget https://raw.githubusercontent.com/Yubico/libu2f-host/master/70-u2f.rul
 
 # workaround for https://github.com/fish-shell/fish-shell/issues/5689
 sudo wget "https://raw.githubusercontent.com/fish-shell/fish-shell/c6ec4235136e82c709e8d7b455f7c463f9714b48/share/completions/systemctl.fish" -O /usr/share/fish/completions/systemctl.fish
-
-curl -L https://get.oh-my.fish | fish
-# nice powerline theme https://github.com/oh-my-fish/theme-bobthefish
-omf install bobthefish
 
 # todo check if ntpd should be added here. does it fix the issue with dual booting clock
 # changes by itself? do we need to add anything from timedatectl?

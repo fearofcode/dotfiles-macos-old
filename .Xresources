@@ -1,10 +1,10 @@
 *renderFont: true
 UXTerm.allow_bold:           true
-UXTerm*font: xft:source code pro for powerline:semibold:pixelsize=18
-UXTerm*imFont: xft:source code pro for powerline:semibold:pixelsize=18
-UXTerm*boldFont: xft:source code pro for powerline:bold:pixelsize=18
-UXTerm*italicFont: xft:source code pro for powerline:italic:pixelsize=18
-UXTerm*boldItalicFont: xft:source code pro for powerline:bold:italic:pixelsize=18
+UXTerm*font: xft:source code pro:semibold:size=14
+UXTerm*imFont: xft:source code pro:semibold:size=14
+UXTerm*boldFont: xft:source code pro:bold:size=14
+UXTerm*italicFont: xft:source code pro:italic:size=14
+UXTerm*boldItalicFont: xft:source code pro:bold:italic:size=14
 UXTerm*letterSpace: -1
 
 scrollBar: false

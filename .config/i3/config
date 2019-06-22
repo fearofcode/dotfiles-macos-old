@@ -1,5 +1,8 @@
 # Mod4 for Windows key, Mod1 for Alt. Mod1 makes $mod+hjkl easier to use on a Kinesis.
-set $mod Mod1
+# But IntelliJ uses Alt+Enter for stuff like importing. I don't want to change $mod+Enter
+# since that's very standard for tiling window managers, and I don't know what shortcut
+# would make more sense for IntelliJ, so this is the simplest compromise.
+set $mod Mod4
 
 # thin borders
 hide_edge_borders both

@@ -134,16 +134,16 @@ Plugin 'plasticboy/vim-markdown'
 
 Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'itchyny/lightline.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 let g:strip_whitespace_on_save = 1
 
-let g:airline_theme='onedark'
-
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
 let g:onedark_hide_endofbuffer = 1
 let g:onedark_terminal_italics = 1
 try
