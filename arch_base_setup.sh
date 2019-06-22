@@ -9,8 +9,11 @@ if [ ! -e "~/.xinitrc" ]; then
     echo "exec i3" >> ~/.xinitrc
 fi
 
-# install both dmneu and rofi since we might want to switch and they're small packages
-sudo pacman -S rofi git openssh pulseaudio pulseaudio-alsa go
+# install both dmenu and rofi since we might want to switch and they're small packages
+sudo pacman -S rofi git openssh pulseaudio go redshift
+
+# not sorry not sorry not sorry
+sudo pacman -S file-roller pcmanfm-gtk3 arc-gtk-theme gtk-theme-switch2
 
 STARTING_DIR=$(pwd)
 cd ~
@@ -23,6 +26,8 @@ yay -S compton.conf
 # sorry
 yay -S google-chrome
 
+yay -S redshiftgui-gtk
+
 # why don't my old pulseaudio keybindings work with i3? whatever
 yay -S pacmixer
 
@@ -30,7 +35,7 @@ yay -S pacmixer
 yay -S hsetroot
 
 # convenient fonts including the one we use in vim and the terminal
-yay -S powerline-fonts-git
+yay -S adobe-source-code-pro-fonts
 
 cd $STARTING_DIR
 

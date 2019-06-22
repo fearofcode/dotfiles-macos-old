@@ -14,6 +14,8 @@ map 0 ^
 filetype plugin on
 filetype indent on
 
+set mouse=a " allow scrolling with the mouse wheel
+
 set number
 
 set fileformat=unix
@@ -141,6 +143,7 @@ filetype plugin indent on    " required
 
 let g:strip_whitespace_on_save = 1
 
+set noshowmode " no need to show in second status line since airline shows it
 let g:lightline = {
       \ 'colorscheme': 'one',
       \ }
@@ -150,6 +153,11 @@ try
     colorscheme onedark
 catch
 endtry
+
+" use the right cursor shape in insert mode
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
 
 " make the color scheme not look like shit in terminal
 
@@ -166,8 +174,6 @@ if (empty($TMUX))
   endif
 endif
 
-" stops broken Unicode from showing up on arch
-let g:airline_powerline_fonts = 1
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif

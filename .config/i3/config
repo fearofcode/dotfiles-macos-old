@@ -152,6 +152,8 @@ exec --no-startup-id xset b off
 exec --no-startup-id xrdb /home/warren/.Xresources
 exec --no-startup-id compton
 exec --no-startup-id hsetroot -solid "#fdfaf0"
+# Berkeley, CA. No, we aren't all hippies. Just most of us.
+exec --no-startup-id redshift -l 37.87159:-122.27275
 
 # Colors
 # class                 border  backgr. text    indicator child_border
@@ -166,7 +168,7 @@ client.background       #282C34
 bar {
     position top
         status_command i3status -c /home/warren/.config/i3/.i3status.conf
-        font pango:Lato 10
+        font pango:Source Code Pro Semibold 10
         colors {
             background #282C34
             statusline #ABB2BF
