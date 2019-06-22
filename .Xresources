@@ -5,7 +5,6 @@ UXTerm*imFont: xft:source code pro:semibold:size=14
 UXTerm*boldFont: xft:source code pro:bold:size=14
 UXTerm*italicFont: xft:source code pro:italic:size=14
 UXTerm*boldItalicFont: xft:source code pro:bold:italic:size=14
-UXTerm*letterSpace: -1
 
 scrollBar: false
 *cursorBlink: false
