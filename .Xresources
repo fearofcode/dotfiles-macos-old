@@ -1,3 +1,7 @@
+! Deal with cursor being too large
+! https://bbs.archlinux.org/viewtopic.php?id=206270
+Xcursor.size: 16
+
 *renderFont: true
 UXTerm.allow_bold:           true
 UXTerm*font: xft:source code pro:semibold:size=14
