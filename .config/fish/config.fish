@@ -10,8 +10,8 @@ if test -n "$is_linux"
     end
 end
 
-if type -q alacritty
-    export TERMINAL="alacritty"
+if type -q uxterm
+    export TERMINAL="uxterm"
 end
 
 export LESS='--quit-if-one-screen -R'
@@ -20,6 +20,9 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 alias ls='exa'
+
+# gives neat Ctrl-R history search widget, one of the few things I miss from bash
+fzf_key_bindings
 
 ### BEGIN: AUTOVENV
 ### Automatically activate a virtualenv stored in sub-directory called "venv"

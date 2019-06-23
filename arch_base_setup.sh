@@ -10,7 +10,7 @@ if [ ! -e "~/.xinitrc" ]; then
 fi
 
 # install both dmenu and rofi since we might want to switch and they're small packages
-sudo pacman -S rofi git openssh pulseaudio go redshift
+sudo pacman -S rofi git openssh pulseaudio go redshift fzf
 
 # not sorry not sorry not sorry
 sudo pacman -S file-roller pcmanfm-gtk3 arc-gtk-theme gtk-theme-switch2
@@ -23,10 +23,8 @@ makepkg -si
 
 yay -S compton.conf
 
-# sorry
+# i actually am sorry about this
 yay -S google-chrome
-
-yay -S redshiftgui-gtk
 
 # why don't my old pulseaudio keybindings work with i3? whatever
 yay -S pacmixer
