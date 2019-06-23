@@ -14,15 +14,16 @@ Here is a sample session showing some terminal sessions, Chrome, and <a
 href="https://plugins.jetbrains.com/plugin/11938-one-dark-theme">IntelliJ with a One
 Dark theme</a> installed:
 
-<img src="https://raw.githubusercontent.com/fearofcode/shared/master/2019-06-16-151919_5120x1440_scrot.png" alt="Simple i3 session using these dotfiles.">
+<img src="https://raw.githubusercontent.com/fearofcode/shared/master/2019-06-23-035157_5120x1440_scrot.png" alt="Simple i3 session using these dotfiles.">
 
-Notice the border around the active and inactive windows. Little features like this are
-intended to make this a lightweight, distraction-free environment that is still functional
-and usable.
+The intent is to have something modern but simple. It's intended to be attractive but not
+distracting.
 
-The lack of wallpaper, transparency, elaborate bar widgets showing things that are
-unlikely to be at an abnormal level or change significantly anytime soon such as free disk
-space, and other standard Unix desktop customization tropes is intentional.
+The lack of wallpaper, transparency, elaborate bar widgets showing metrics that are
+unlikely to be at an abnormal level or change significantly anytime soon, such as free disk
+space, and other standard Unix desktop customization tropes is intentional. Of course I
+approve of adding things that are actually useful: if I used Arch on a machine that used
+wifi, I would definitely add a widget for wifi connection status, for instance.
 
 To get something that looks like this, run the appropriate script:
 
@@ -34,4 +35,3 @@ To get something that looks like this, run the appropriate script:
 
 - I had previously tried to maintain setup for both Arch and Ubuntu but it was painful.
 - The scripts are not idempotent right now and assume a mostly empty machine. 
-- The one dark vim theme doesn't match the rest of the system in console mode.

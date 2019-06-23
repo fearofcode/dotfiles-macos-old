@@ -7,10 +7,9 @@ fi
 
 brew update
 brew tap homebrew/cask-fonts
-# make Python icon in bobthefish show up correctly by installing nerd fonts
-brew cask install homebrew/cask-fonts/font-source-code-pro-nerd-font
+brew cask install homebrew/cask-fonts/font-source-code-pro
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-brew install curl fish git tmux tree macvim vifm less python httpie
+brew install curl fish git tmux tree macvim vifm less python httpie exa fzf
 
 STARTING_DIR=$(pwd)
 
@@ -30,7 +29,6 @@ source $HOME/.cargo/env
 pip3 install yapf isort flake8
 
 cargo install ripgrep
-cargo install lsd
 cargo install tokei
 
 touch $HOME/.projectspecific.vim
@@ -47,7 +45,3 @@ vim +PluginInstall +qall
 # make fish default shell
 sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
 chsh -s /usr/local/bin/fish
-
-curl -L https://get.oh-my.fish | fish
-# nice powerline theme https://github.com/oh-my-fish/theme-bobthefish
-omf install bobthefish
