@@ -152,8 +152,7 @@ exec --no-startup-id xset b off
 exec --no-startup-id xrdb /home/warren/.Xresources
 exec --no-startup-id compton
 exec --no-startup-id hsetroot -solid "#fdfaf0"
-# Berkeley, CA. No, we aren't all hippies. Just most of us.
-exec --no-startup-id redshift -l 37.87159:-122.27275
+exec --no-startup-id redshift -l geoclue2 -t 5700:3600 -g 0.8
 
 # Colors
 # class                 border  backgr. text    indicator child_border
