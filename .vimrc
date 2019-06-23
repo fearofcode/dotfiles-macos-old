@@ -136,6 +136,7 @@ Plugin 'plasticboy/vim-markdown'
 
 Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
+" I think using this rather than airline even when we have nerd fonts is fine
 Plugin 'itchyny/lightline.vim'
 
 call vundle#end()            " required

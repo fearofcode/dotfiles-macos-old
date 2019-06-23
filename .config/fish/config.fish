@@ -1,4 +1,6 @@
 set PATH $HOME/.cargo/bin $HOME/.local/bin $PATH
+set -g theme_nerd_fonts yes
+set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
 set is_linux (uname | grep Linux)
 
@@ -10,8 +12,8 @@ if test -n "$is_linux"
     end
 end
 
-if type -q uxterm
-    export TERMINAL="uxterm"
+if type -q alacritty
+    export TERMINAL="alacritty"
 end
 
 export LESS='--quit-if-one-screen -R'
