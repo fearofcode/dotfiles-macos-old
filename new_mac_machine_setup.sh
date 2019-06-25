@@ -9,7 +9,7 @@ brew update
 brew tap homebrew/cask-fonts
 brew cask install homebrew/cask-fonts/font-source-code-pro-nerd-font
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-brew install curl fish git tmux tree macvim vifm less python httpie exa fzf
+brew install curl fish git tmux tree macvim vifm less python httpie exa fzf mosh
 
 STARTING_DIR=$(pwd)
 

@@ -134,7 +134,7 @@ Plugin 'airblade/vim-rooter'
 Plugin 'cespare/vim-toml'
 Plugin 'plasticboy/vim-markdown'
 
-Plugin 'joshdick/onedark.vim'
+Plugin 'rakr/vim-one'
 Plugin 'sheerun/vim-polyglot'
 " I think using this rather than airline even when we have nerd fonts is fine
 Plugin 'itchyny/lightline.vim'
@@ -151,10 +151,11 @@ let g:lightline = {
 let g:onedark_hide_endofbuffer = 1
 let g:onedark_terminal_italics = 1
 try
-    colorscheme onedark
+    colorscheme one
 catch
 endtry
 
+set background=dark
 " use the right cursor shape in insert mode
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
@@ -171,7 +172,9 @@ if (empty($TMUX))
   "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
   " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
   if (has("termguicolors"))
-    set termguicolors
+      if (empty($SSH_TTY))
+        set termguicolors
+      endif
   endif
 endif
 
