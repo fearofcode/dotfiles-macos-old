@@ -100,6 +100,9 @@ if has("gui_running")
     set guicursor+=a:blinkon0
     set guifont=Source\ Code\ Pro\ for\ Powerline\ Semi-bold\ 14
     autocmd GUIEnter * set vb t_vb=
+
+    " specific to me (wkh)
+    au FocusLost arete_scratch.py silent! wa
 endif
 
 " Mac-specific font
