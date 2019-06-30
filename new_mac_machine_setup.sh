@@ -7,7 +7,7 @@ fi
 
 brew update
 brew tap homebrew/cask-fonts
-brew cask install homebrew/cask-fonts/font-source-code-pro-nerd-font
+brew cask install homebrew/cask-fonts/font-source-code-pro
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install curl fish git tmux tree macvim vifm less python httpie exa fzf mosh
 
@@ -47,5 +47,4 @@ sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
 chsh -s /usr/local/bin/fish
 
 curl -L https://get.oh-my.fish | fish
-# nice powerline theme https://github.com/oh-my-fish/theme-bobthefish
-omf install bobthefish
+omf install robbyrussell

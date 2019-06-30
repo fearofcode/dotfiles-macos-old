@@ -4,6 +4,7 @@
 # would make more sense for IntelliJ, so this is the simplest compromise.
 set $mod Mod4
 
+font pango:Source Code Pro Semibold 10
 # thin borders
 hide_edge_borders both
 
@@ -11,7 +12,7 @@ hide_edge_borders both
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec uxterm
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -150,7 +151,6 @@ exec --no-startup-id xset r rate 200 50
 exec --no-startup-id xset b off
 # xterm seems to reset every reset if this isn't done
 exec --no-startup-id xrdb /home/warren/.Xresources
-exec --no-startup-id compton
 exec --no-startup-id hsetroot -solid "#fdfaf0"
 exec --no-startup-id redshift -l geoclue2 -t 5700:3600 -g 0.8
 
@@ -167,7 +167,7 @@ client.background       #282C34
 bar {
     position top
         status_command i3status -c /home/warren/.config/i3/.i3status.conf
-        font pango:Source Code Pro Semibold 10
+        font pango:Source Code Pro 10
         colors {
             background #282C34
             statusline #ABB2BF
@@ -182,7 +182,7 @@ bar {
 
 # gaps. this will only work with i3-gaps
 for_window [class="^.*"] border pixel 2
-gaps inner 15
+gaps inner 20
 smart_gaps on
 
 # non-standard binding I added

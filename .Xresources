@@ -4,11 +4,11 @@ Xcursor.size: 16
 
 *renderFont: true
 UXTerm.allow_bold:           true
-UXTerm*font: xft:source code pro:semibold:size=14
-UXTerm*imFont: xft:source code pro:semibold:size=14
-UXTerm*boldFont: xft:source code pro:bold:size=14
-UXTerm*italicFont: xft:source code pro:italic:size=14
-UXTerm*boldItalicFont: xft:source code pro:bold:italic:size=14
+UXTerm*font: xft:source code pro:normal:size=16
+UXTerm*imFont: xft:source code pro:normal:size=16
+UXTerm*boldFont: xft:source code pro:bold:size=16
+UXTerm*italicFont: xft:source code pro:italic:size=16
+UXTerm*boldItalicFont: xft:source code pro:bold:italic:size=16
 
 scrollBar: false
 *cursorBlink: false

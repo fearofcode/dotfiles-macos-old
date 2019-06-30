@@ -98,7 +98,7 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
     set guicursor+=a:blinkon0
-    set guifont=Source\ Code\ Pro\ for\ Powerline\ Semi-bold\ 14
+    set guifont=Source\ Code\ Pro\ 16
     autocmd GUIEnter * set vb t_vb=
 
     " specific to me (wkh)
@@ -125,17 +125,7 @@ Plugin 'gmarik/Vundle.vim'
 " add plugins here
 
 " generic stuff
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'mhinz/vim-signify'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'machakann/vim-highlightedyank'
-Plugin 'airblade/vim-rooter'
-
-Plugin 'cespare/vim-toml'
-Plugin 'plasticboy/vim-markdown'
 
 Plugin 'rakr/vim-one'
 Plugin 'sheerun/vim-polyglot'
@@ -159,10 +149,6 @@ catch
 endtry
 
 set background=dark
-" use the right cursor shape in insert mode
-let &t_SI = "\<Esc>[6 q"
-let &t_SR = "\<Esc>[4 q"
-let &t_EI = "\<Esc>[2 q"
 
 " make the color scheme not look like shit in terminal
 

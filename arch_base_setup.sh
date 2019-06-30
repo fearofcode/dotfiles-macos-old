@@ -3,7 +3,7 @@ set -euxo pipefail
 
 sudo pacman -Syu xorg-server xorg-xinit xorg-xset i3-gaps i3status i3lock dmenu
 # install a few different terminals to play around with
-sudo pacman -Syu alacritty xterm rxvt-unicode ttf-lato compton hsetroot
+sudo pacman -Syu xterm rxvt-unicode ttf-lato 
 
 if [ ! -e "~/.xinitrc" ]; then
     echo "exec i3" >> ~/.xinitrc
@@ -34,8 +34,6 @@ yay -S hsetroot
 
 # convenient fonts including the one we use in vim and the terminal
 yay -S adobe-source-code-pro-fonts
-# install both variants since different applications recognize them differently
-yay -S nerd-fonts-source-code-pro
 
 cd $STARTING_DIR
 
@@ -67,7 +65,6 @@ touch $HOME/.projectspecific.vim
 ln -sf $STARTING_DIR/.Xresources $HOME/.Xresources
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
 ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
-ln -sf $STARTING_DIR/.config/compton.conf $HOME/.config/compton.conf
 ln -sf $STARTING_DIR/.config/i3/config $HOME/.config/i3/config
 ln -sf $STARTING_DIR/.config/i3/.i3status.conf $HOME/.config/i3/.i3status.conf
 ln -sf $STARTING_DIR/.config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
@@ -94,7 +91,7 @@ sudo wget "https://raw.githubusercontent.com/fish-shell/fish-shell/c6ec4235136e8
 # changes by itself? do we need to add anything from timedatectl?
 
 curl -L https://get.oh-my.fish | fish
-omf install bobthefish
+omf install robbyrussell
 
 echo "Reboot if NVIDIA drivers were installed."
 
