@@ -21,7 +21,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
-yay -S compton.conf
+yay -S compton
 
 # i actually am sorry about this
 yay -S google-chrome
