@@ -166,17 +166,6 @@ if (empty($TMUX))
 endif
 
 
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-nnoremap <Leader>f :NERDTreeToggle<Enter>
-let NERDTreeQuitOnOpen = 1
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeShowHidden = 1
-
 " if additional directories should be excluded for a specific project, you can filter git
 " ls-files output like so and put it in .projectspecific.vim:
 " let g:ctrlp_user_command = ['.git','git ls-files -co --exclude-standard | grep -v some_binary_directory | grep -v    something_else']
