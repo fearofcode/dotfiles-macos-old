@@ -91,7 +91,7 @@ sudo wget "https://raw.githubusercontent.com/fish-shell/fish-shell/c6ec4235136e8
 # changes by itself? do we need to add anything from timedatectl?
 
 curl -L https://get.oh-my.fish | fish
-omf install robbyrussell
+omf install godfather
 
 echo "Reboot if NVIDIA drivers were installed."
 

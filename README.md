@@ -28,7 +28,9 @@ wifi, I would definitely add a widget for wifi connection status, for instance.
 To get something that looks like this, run the appropriate script:
 
 - `arch_base_setup.sh` on Arch, which will give you <a href="https://github.com/Airblader/i3">i3-gaps</a>
-    rather than vanilla i3
+    rather than vanilla i3. Note that this will install other things you may not want,
+    like NVIDIA drivers if NVIDIA hardware is installed. Look over the script before
+    running it.
 - `new_mac_machine_setup.sh` (doesn't give you i3)
 
 ## Todo
