@@ -1,4 +1,4 @@
-set PATH $HOME/.cargo/bin $HOME/.local/bin $PATH
+set PATH $HOME/.cargo/bin $HOME/.local/bin /opt/cuda/bin $PATH
 set is_linux (uname | grep Linux)
 
 if test -n "$is_linux"
