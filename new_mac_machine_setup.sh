@@ -8,7 +8,7 @@ fi
 brew update
 brew tap homebrew/cask-fonts
 brew cask install homebrew/cask-fonts/font-source-code-pro
-brew install curl fish git tmux tree macvim vifm less httpie exa fzf mosh
+brew install fish tmux tree macvim less httpie exa fzf
 
 STARTING_DIR=$(pwd)
 
