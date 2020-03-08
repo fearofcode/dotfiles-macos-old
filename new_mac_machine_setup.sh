@@ -8,8 +8,7 @@ fi
 brew update
 brew tap homebrew/cask-fonts
 brew cask install homebrew/cask-fonts/font-source-code-pro
-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-brew install curl fish git tmux tree macvim vifm less python httpie exa fzf mosh
+brew install curl fish git tmux tree macvim vifm less httpie exa fzf mosh
 
 STARTING_DIR=$(pwd)
 
@@ -26,12 +25,7 @@ fi
 
 source $HOME/.cargo/env
 
-pip3 install yapf isort flake8
-
 cargo install ripgrep
-cargo install tokei
-
-touch $HOME/.projectspecific.vim
 
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
 ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
@@ -47,4 +41,4 @@ sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
 chsh -s /usr/local/bin/fish
 
 curl -L https://get.oh-my.fish | fish
-omf install robbyrussell
+omf install godfather
