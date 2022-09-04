@@ -1,7 +1,7 @@
 set -euxo pipefail
 
-sudo pacman -S dnsutils exa fd firefox fish fzf git gnu-free-fonts go httpie \
-	kitty neovim noto-fonts openssh pipewire-alsa pipewire-pulse ripgrep \
+sudo pacman -S bat dnsutils exa fd firefox fish fzf git gnu-free-fonts go httpie \
+	kitty neofetch neovim noto-fonts openssh pipewire-alsa pipewire-pulse ripgrep \
 	rofi tmux tokei tree unzip vifm wget whois
 
 STARTING_DIR=$(pwd)
@@ -21,6 +21,7 @@ mkdir -p $HOME/.config/rofi/
 
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
 ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
+ln -sf $STARTING_DIR/.config/fish/config.fish $HOME/.config/fish/config.fish
 ln -sf $STARTING_DIR/.config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 ln -sf $STARTING_DIR/.config/i3/config $HOME/.config/i3/config
 ln -sf $STARTING_DIR/.config/i3status/config $HOME/.config/i3status/config
