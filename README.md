@@ -1,3 +1,3 @@
 # some dotfiles
 
-This used to be a working Arch linux configuration but I haven't used it in about a year so you're best off looking somewhere else for a starting point.
+This is the beginnings of a gruvbox themed i3 setup for Arch. It's plain i3, not i3-gaps.
