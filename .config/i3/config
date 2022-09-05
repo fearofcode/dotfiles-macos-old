@@ -205,7 +205,8 @@ bar {
     # Hide bar by default
     mode hide
     hidden_state hide
-
+    # show bar with Alt
+    modifier Mod1
     status_command i3status
 
     colors {

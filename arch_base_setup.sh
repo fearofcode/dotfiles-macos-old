@@ -3,7 +3,7 @@ set -euxo pipefail
 sudo pacman -S bat dnsutils exa fd firefox fish fzf git \
     gnu-free-fonts go httpie kitty man-db neofetch neovim \
     noto-fonts openssh pipewire-alsa pipewire-pulse ripgrep \
-	rofi scrot tmux tokei tree unzip vifm wget whois
+    rofi scrot tmux tokei tree unzip vifm wget whois
 
 go install golang.org/x/tools/gopls@latest
 
