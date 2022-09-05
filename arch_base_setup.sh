@@ -1,7 +1,8 @@
 set -euxo pipefail
 
-sudo pacman -S bat dnsutils exa fd firefox fish fzf git gnu-free-fonts go httpie \
-	kitty neofetch neovim noto-fonts openssh pipewire-alsa pipewire-pulse ripgrep \
+sudo pacman -S bat dnsutils exa fd firefox fish fzf git \
+    gnu-free-fonts go httpie kitty man-db neofetch neovim \
+    noto-fonts openssh pipewire-alsa pipewire-pulse ripgrep \
 	rofi scrot tmux tokei tree unzip vifm wget whois
 
 go install golang.org/x/tools/gopls@latest
@@ -18,11 +19,14 @@ chsh -s /usr/bin/fish
 # kickass fzf integration with fish that is better than built-in fzf_key_bindings
 yay -S fish-fzf
 
+mkdir -p ~/.vim/colors/
 mkdir -p ~/.config/fish/
 mkdir -p $HOME/.config/i3/
 mkdir -p $HOME/.config/i3status/
 mkdir -p $HOME/.config/kitty/
 mkdir -p $HOME/.config/rofi/
+
+wget https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-gruvbox-dark-hard.vim -P $HOME/.vim/colors
 
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 

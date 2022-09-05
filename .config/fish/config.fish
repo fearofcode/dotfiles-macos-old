@@ -1,4 +1,4 @@
-set PATH $HOME/.local/bin $PATH
+set PATH $HOME/go/bin $HOME/.local/bin $PATH
 export LESS='--quit-if-one-screen -R'
 
 alias ls='exa'

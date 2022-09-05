@@ -170,8 +170,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-for_window [class="^.*"] border pixel 1
+# set keyboard repeat rate/delay
+exec --no-startup-id xset r rate 300 60
 
+# remove title bar
+for_window [class="^.*"] border pixel 1
 default_border pixel 1
 default_floating_border pixel 1
 
