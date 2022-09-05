@@ -13,6 +13,9 @@ makepkg -si
 # make fish default shell
 chsh -s /usr/bin/fish
 
+# kickass fzf integration with fish that is better than built-in fzf_key_bindings
+yay -S fish-fzf
+
 mkdir -p ~/.config/fish/
 mkdir -p $HOME/.config/i3/
 mkdir -p $HOME/.config/i3status/

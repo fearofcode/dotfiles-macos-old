@@ -4,8 +4,6 @@ export LESS='--quit-if-one-screen -R'
 alias ls='exa'
 alias cat='bat'
 
-fzf_key_bindings
-
 # base16-fish (https://github.com/tomyun/base16-fish)
 # based on base16-shell (https://github.com/chriskempson/base16-shell)
 # Gruvbox dark, hard scheme by Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
