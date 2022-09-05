@@ -2,24 +2,7 @@ general {
         colors = true
 }
 
-order += "disk /"
-order += "memory"
-order += "cpu_usage"
 order += "time"
-
-disk "/" {
-        format = "%free free"
-}
-
-memory {
-        format = "%used RAM used"
-        threshold_degraded = "25%"
-        format_degraded = "MEMORY: %free"
-}
-
-cpu_usage {
-	format="CPU %usage"
-}
 
 time {
 	format="%Y-%m-%d %H:%M:%S"

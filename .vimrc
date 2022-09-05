@@ -101,3 +101,5 @@ if has("gui_running")
 endif
 
 set background=dark
+let base16colorspace=256
+colorscheme base16-gruvbox-dark-hard

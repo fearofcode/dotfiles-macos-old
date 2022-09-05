@@ -22,6 +22,8 @@ mkdir -p $HOME/.config/i3status/
 mkdir -p $HOME/.config/kitty/
 mkdir -p $HOME/.config/rofi/
 
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
 ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
 ln -sf $STARTING_DIR/.config/fish/config.fish $HOME/.config/fish/config.fish

@@ -8,6 +8,12 @@ alias cat='bat'
 # based on base16-shell (https://github.com/chriskempson/base16-shell)
 # Gruvbox dark, hard scheme by Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
+# Base16 Shell
+if status --is-interactive
+    set BASE16_SHELL "$HOME/.config/base16-shell/"
+    source "$BASE16_SHELL/profile_helper.fish"
+end
+
 function base16-gruvbox-dark-hard -d "Gruvbox dark, hard"
   set color00 1d/20/21 # Base 00 - Black
   set color01 fb/49/34 # Base 08 - Red
@@ -137,3 +143,4 @@ function base16-gruvbox-dark-hard -d "Gruvbox dark, hard"
   functions -e put_template put_template_var put_template_custom
 end
 
+base16-gruvbox-dark-hard
