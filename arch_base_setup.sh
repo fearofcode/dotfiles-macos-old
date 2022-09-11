@@ -39,3 +39,6 @@ ln -sf $STARTING_DIR/.config/i3/config $HOME/.config/i3/config
 ln -sf $STARTING_DIR/.config/i3/picom.conf $HOME/.config/i3/picom.conf
 ln -sf $STARTING_DIR/.config/i3status/config $HOME/.config/i3status/config
 ln -sf $STARTING_DIR/.config/rofi/config.rasi $HOME/.config/rofi/config.rasi 
+
+# disable pc speaker
+echo "xset -b" | tee $HOME/.xinitrc
