@@ -2,8 +2,9 @@ set -euxo pipefail
 
 sudo pacman -S bat dnsutils exa fd firefox fish fzf git \
     gnu-free-fonts go httpie kitty man-db neofetch neovim \
-    noto-fonts openssh pipewire-alsa pipewire-pulse redshift \
-    ripgrep rofi scrot tmux tokei tree unzip vifm wget whois
+    noto-fonts openssh picom pipewire-alsa pipewire-pulse \
+    redshift ripgrep rofi scrot tmux tokei tree unzip vifm \
+    wget whois
 
 go install golang.org/x/tools/gopls@latest
 
@@ -35,5 +36,6 @@ ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
 ln -sf $STARTING_DIR/.config/fish/config.fish $HOME/.config/fish/config.fish
 ln -sf $STARTING_DIR/.config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 ln -sf $STARTING_DIR/.config/i3/config $HOME/.config/i3/config
+ln -sf $STARTING_DIR/.config/i3/picom.conf $HOME/.config/i3/picom.conf
 ln -sf $STARTING_DIR/.config/i3status/config $HOME/.config/i3status/config
 ln -sf $STARTING_DIR/.config/rofi/config.rasi $HOME/.config/rofi/config.rasi 
