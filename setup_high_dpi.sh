@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euxo pipefail
-echo "Xft.dpi: 192" | tee $HOME/.Xresources
-echo "xrdb -merge ~/.Xresources" | tee $HOME/.xinitrc
+echo "Xft.dpi: 192" | tee -a $HOME/.Xresources
+echo "xrdb -merge ~/.Xresources" | tee -a $HOME/.xinitrc
 
 # setup high dpi for login screen
 STARTING_DIR=$(pwd)
