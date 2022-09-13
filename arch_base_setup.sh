@@ -32,6 +32,7 @@ wget https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/bas
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
+ln -sf $STARTING_DIR/.config/nvim/init.vim $HOME/.config/nvim/init.vim
 ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
 ln -sf $STARTING_DIR/.config/fish/config.fish $HOME/.config/fish/config.fish
 ln -sf $STARTING_DIR/.config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
@@ -39,6 +40,12 @@ ln -sf $STARTING_DIR/.config/i3/config $HOME/.config/i3/config
 ln -sf $STARTING_DIR/.config/i3/picom.conf $HOME/.config/i3/picom.conf
 ln -sf $STARTING_DIR/.config/i3status/config $HOME/.config/i3status/config
 ln -sf $STARTING_DIR/.config/rofi/config.rasi $HOME/.config/rofi/config.rasi 
+
+# install vim plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# install neovim plugins
+nvim +PlugInstall
 
 # disable pc speaker
 echo "xset -b" | tee $HOME/.xinitrc
