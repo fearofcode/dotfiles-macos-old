@@ -109,6 +109,9 @@ call plug#begin()
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
     Plug 'nvim-lualine/lualine.nvim'
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'hrsh7th/cmp-vsnip'
+    Plug 'hrsh7th/vim-vsnip'
 call plug#end()
 
 set completeopt=menu,menuone,noselect
@@ -116,3 +119,5 @@ set completeopt=menu,menuone,noselect
 lua require('config')
 
 colorscheme gruvbox-baby
+
+:au FocusLost * silent! wa

@@ -4,11 +4,12 @@ sudo pacman -S bat dnsutils exa fd firefox fish fzf git \
     gnu-free-fonts go httpie kitty man-db neofetch neovim \
     noto-fonts openssh picom pipewire-alsa pipewire-pulse \
     redshift ripgrep rofi scrot tmux tokei tree unzip vifm \
-    wget whois
+    xorg-mkfontscale xorg-mkfontdir wget whois
 
 # go language server
 go install golang.org/x/tools/gopls@latest
 go install github.com/go-delve/delve/cmd/dlv@latest
+go install github.com/cosmtrek/air@latest
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -28,6 +29,8 @@ chsh -s /usr/bin/fish
 
 # kickass fzf integration with fish that is better than built-in fzf_key_bindings
 yay -S fish-fzf
+
+yay -S nerd-fonts-source-code-pro
 
 mkdir -p $HOME/vim/colors/
 mkdir -p $HOME/.config/nvim/lua/

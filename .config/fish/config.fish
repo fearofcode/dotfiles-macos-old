@@ -147,4 +147,5 @@ function base16-gruvbox-dark-hard -d "Gruvbox dark, hard"
   functions -e put_template put_template_var put_template_custom
 end
 
-base16-gruvbox-dark-hard
+# try to avoid weird ansi shit printed when doing shell redirect stuff
+# base16-gruvbox-dark-hard
