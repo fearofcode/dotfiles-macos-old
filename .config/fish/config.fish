@@ -3,6 +3,7 @@ export LESS='--quit-if-one-screen -R'
 
 alias ls='exa'
 alias cat='bat'
+alias vim='nvim'
 
 # https://github.com/sharkdp/bat#customization
 export BAT_THEME="gruvbox-dark"

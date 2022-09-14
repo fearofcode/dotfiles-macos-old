@@ -97,9 +97,22 @@ let base16colorspace=256
 "
 
 call plug#begin()
- Plug 'scrooloose/nerdtree'
- Plug 'neovim/nvim-lspconfig'
- Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'scrooloose/nerdtree'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-cmdline'
+    Plug 'hrsh7th/nvim-cmp'
+    Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+    Plug 'nvim-lualine/lualine.nvim'
 call plug#end()
 
+set completeopt=menu,menuone,noselect
+
 lua require('config')
+
+colorscheme gruvbox-baby

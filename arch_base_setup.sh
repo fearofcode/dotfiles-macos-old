@@ -8,6 +8,8 @@ sudo pacman -S bat dnsutils exa fd firefox fish fzf git \
 
 # go language server
 go install golang.org/x/tools/gopls@latest
+go install github.com/go-delve/delve/cmd/dlv@latest
+
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
