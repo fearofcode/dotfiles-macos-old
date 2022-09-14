@@ -98,4 +98,8 @@ let base16colorspace=256
 
 call plug#begin()
  Plug 'scrooloose/nerdtree'
+ Plug 'neovim/nvim-lspconfig'
+ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
+
+lua require('config')
