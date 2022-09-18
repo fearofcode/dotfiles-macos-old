@@ -53,7 +53,6 @@ return packer.startup(function(use)
 	use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
 	use({ "lewis6991/impatient.nvim", commit = "969f2c5c90457612c09cf2a13fee1adaa986d350" })
 	use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
-	use({"folke/which-key.nvim", commit = "6885b669523ff4238de99a7c653d47b081b5506d"})
   use({ "nvim-zh/better-escape.vim", commit = "6b16a45a839727977277f6ab11bded63e9ed86bb"})
   use({ "romgrk/barbar.nvim", commit = "c41ad6e3f68c2c9f6aa268c6232cdef885107303"})
 
