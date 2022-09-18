@@ -40,13 +40,11 @@ mkdir -p $HOME/.config/i3status/
 mkdir -p $HOME/.config/kitty/
 mkdir -p $HOME/.config/rofi/
 
-wget https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-gruvbox-dark-hard.vim -P $HOME/.vim/colors
-
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
-ln -sf $STARTING_DIR/.config/nvim/init.vim $HOME/.config/nvim/init.vim
-ln -sf $STARTING_DIR/.config/nvim/lua/config.lua $HOME/.config/nvim/lua/config.lua
+ln -sf $STARTING_DIR/.config/nvim/init.lua $HOME/.config/nvim/init.lua
+cp -rs $STARTING_DIR/.config/nvim/ $HOME/.config/nvim/
 ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
 ln -sf $STARTING_DIR/.config/fish/config.fish $HOME/.config/fish/config.fish
 ln -sf $STARTING_DIR/.config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
@@ -54,12 +52,6 @@ ln -sf $STARTING_DIR/.config/i3/config $HOME/.config/i3/config
 ln -sf $STARTING_DIR/.config/i3/picom.conf $HOME/.config/i3/picom.conf
 ln -sf $STARTING_DIR/.config/i3status/config $HOME/.config/i3status/config
 ln -sf $STARTING_DIR/.config/rofi/config.rasi $HOME/.config/rofi/config.rasi 
-
-# install vim plug
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-# install neovim plugins
-nvim +PlugInstall
 
 # disable pc speaker
 echo "xset -b" | tee $HOME/.xinitrc
