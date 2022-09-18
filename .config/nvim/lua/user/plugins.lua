@@ -51,11 +51,11 @@ return packer.startup(function(use)
 	use({ "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" })
 	use({ "nvim-lualine/lualine.nvim", commit = "3362b28f917acc37538b1047f187ff1b5645ecdd" })
 	use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
-	use({ "ahmedkhalf/project.nvim", commit = "541115e762764bc44d7d3bf501b6e367842d3d4f" })
 	use({ "lewis6991/impatient.nvim", commit = "969f2c5c90457612c09cf2a13fee1adaa986d350" })
 	use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
 	use({"folke/which-key.nvim", commit = "6885b669523ff4238de99a7c653d47b081b5506d"})
   use({ "nvim-zh/better-escape.vim", commit = "6b16a45a839727977277f6ab11bded63e9ed86bb"})
+  use({ "romgrk/barbar.nvim", commit = "c41ad6e3f68c2c9f6aa268c6232cdef885107303"})
 
 	-- Colorschemes
   use({ "luisiacc/gruvbox-baby", commit = "a7dd15a89fba420b73d712ca9cfc0c08158b2904", branch="main"})

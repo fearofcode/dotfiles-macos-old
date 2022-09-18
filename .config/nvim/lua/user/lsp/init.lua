@@ -8,7 +8,4 @@ require("user.lsp.handlers").setup()
 require "user.lsp.null-ls"
 
 require "trouble".setup {
-  -- use_diagnostic_signs = true,
-  auto_open = true,
-  auto_close = true
 }
