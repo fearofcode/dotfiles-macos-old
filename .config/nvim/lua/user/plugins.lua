@@ -54,7 +54,7 @@ return packer.startup(function(use)
   use({ "romgrk/barbar.nvim", commit = "c41ad6e3f68c2c9f6aa268c6232cdef885107303"})
 
 	-- Colorschemes
-  use({ "luisiacc/gruvbox-baby", commit = "a7dd15a89fba420b73d712ca9cfc0c08158b2904", branch="main"})
+  use({ "luisiacc/gruvbox-baby", commit = "a7dd15a89fba420b73d712ca9cfc0c08158b2904"})
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
@@ -67,6 +67,8 @@ return packer.startup(function(use)
 	-- snippets
 	use({ "L3MON4D3/LuaSnip", commit = "79b2019c68a2ff5ae4d732d50746c901dd45603a" }) --snippet engine
 	use({ "rafamadriz/friendly-snippets", commit = "d27a83a363e61009278b6598703a763ce9c8e617" }) -- a bunch of snippets to use
+
+  use({ "NvChad/nvim-colorizer.lua", commit = "004a2b3ef62b01d3d1db454d1efe76d31934d43b"})
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig", commit = "148c99bd09b44cf3605151a06869f6b4d4c24455" }) -- enable LSP
@@ -93,4 +95,10 @@ return packer.startup(function(use)
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
+
+  local colorizer_ok, colorizer = pcall(require, "colorizer")
+  if not colorizer_ok then
+    return
+  end
+  colorizer.setup()
 end)
