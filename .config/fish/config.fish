@@ -147,5 +147,6 @@ function base16-gruvbox-dark-hard -d "Gruvbox dark, hard"
   functions -e put_template put_template_var put_template_custom
 end
 
-# try to avoid weird ansi shit printed when doing shell redirect stuff
-# base16-gruvbox-dark-hard
+# injects weird shell shit when you pipe commands and stuff, but at least it makes 
+# the terminal look the same as the editor?
+base16-gruvbox-dark-hard
