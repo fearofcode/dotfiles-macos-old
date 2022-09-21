@@ -87,6 +87,19 @@ return packer.startup(function(use)
 		commit = "518e27589c0463af15463c9d675c65e464efc2fe",
 	})
 
+  use({
+    "ggandor/leap.nvim",
+    commit = "aba53d7a8870426bea89eeca6c3b265d1f94c584",
+    config = function()
+      require('leap').set_default_keymaps()
+    end
+  })
+
+  use({
+    "nvim-pack/nvim-spectre",
+    commit = "6f990755c46cb9b11a37c3e334ee06ad866a4bf8",
+    config = function() require('spectre').setup() end
+  })
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
 
