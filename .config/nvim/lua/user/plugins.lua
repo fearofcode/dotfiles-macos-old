@@ -88,7 +88,15 @@ return packer.startup(function(use)
 	})
 
   -- DAP (must dab before using DAP)
-  use({ "mfussenegger/nvim-dap", commit = "bbd3e7e15ac6b5e7aceb680515f7352d6a0953be"})
+  use({
+    "mfussenegger/nvim-dap",
+    commit = "bbd3e7e15ac6b5e7aceb680515f7352d6a0953be",
+    config = function()
+      -- change breakpoint marker from default 'B' to little dot thing
+      vim.fn.sign_define('DapBreakpoint', {text='', texthl='', linehl='', numhl=''})
+    end
+  })
+
   use({
     "theHamsta/nvim-dap-virtual-text",
     commit = "2971ce3e89b1711cc26e27f73d3f854b559a77d4",
