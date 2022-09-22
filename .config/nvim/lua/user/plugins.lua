@@ -87,6 +87,31 @@ return packer.startup(function(use)
 		commit = "518e27589c0463af15463c9d675c65e464efc2fe",
 	})
 
+  -- DAP (must dab before using DAP)
+  use({ "mfussenegger/nvim-dap", commit = "bbd3e7e15ac6b5e7aceb680515f7352d6a0953be"})
+  use({
+    "theHamsta/nvim-dap-virtual-text",
+    commit = "2971ce3e89b1711cc26e27f73d3f854b559a77d4",
+    config = function ()
+      require("nvim-dap-virtual-text").setup()
+    end
+  })
+  use({
+    "rcarriga/nvim-dap-ui",
+    commit = "4af75ae48a213aede653b1954459a47b3fc18dac",
+    config =function ()
+      require("dapui").setup()
+    end
+  })
+  use({
+    "leoluz/nvim-dap-go",
+    commit = "c2902bb96c45e872d947d7e174775e652439add4",
+    config =function ()
+      require("dap-go").setup()
+    end
+  })
+
+  -- motion
   use({
     "ggandor/leap.nvim",
     commit = "aba53d7a8870426bea89eeca6c3b265d1f94c584",
