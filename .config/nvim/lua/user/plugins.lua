@@ -123,13 +123,17 @@ return packer.startup(function(use)
     end
   })
 
-  -- motion
+  -- motion. leap is cool but I found it confusing (I am stupid)
+  -- use({
+  --   "ggandor/leap.nvim",
+  --   commit = "aba53d7a8870426bea89eeca6c3b265d1f94c584",
+  --   config = function()
+  --     require('leap').set_default_keymaps()
+  --   end
+  -- })
   use({
-    "ggandor/leap.nvim",
-    commit = "aba53d7a8870426bea89eeca6c3b265d1f94c584",
-    config = function()
-      require('leap').set_default_keymaps()
-    end
+    "ggandor/lightspeed.nvim",
+    commit = "a5b79ddbd755ac8d21a8704c370b5f643dda94aa",
   })
 
   use({

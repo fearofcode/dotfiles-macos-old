@@ -3,15 +3,9 @@ env:
   WINIT_X11_SCALE_FACTOR: '1.0'
 
 font:
-  size: 18.0
+  size: 20.0
   normal:
-    family: 'LiterationMono Nerd Font Mono'
-  bold:
-    family: 'LiterationMono Nerd Font Mono'
-  italic:
-    family: 'LiterationMono Nerd Font Mono'
-  bold_italic:
-    family: 'LiterationMono Nerd Font Mono'
+    family: 'Iosevka'
 live_config_reload: true
 
 colors:

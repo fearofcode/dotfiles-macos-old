@@ -31,6 +31,7 @@ chsh -s /usr/bin/fish
 yay -S fish-fzf
 
 yay -S nerd-fonts-source-code-pro
+yay -S ttf-iosevka-nerd
 yay -S nerd-fonts-liberation-mono
 
 mkdir -p $HOME/vim/colors/
