@@ -71,7 +71,7 @@ keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 -- basic telescope and spectre commands
 vim.cmd [[ 
   nnoremap <leader>ff <cmd>Telescope find_files<cr>
-  nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+  nnoremap <leader>lg <cmd>Telescope live_grep<cr>
   nnoremap <leader>fb <cmd>Telescope buffers<cr>
   nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
@@ -86,7 +86,7 @@ vim.cmd [[
 ]]
 
 -- debugging keybindings
-local ok, _dap = pcall(require, "dap")
+local ok, _ = pcall(require, "dap")
 if not ok then return end
 
 -- based off IntelliJ shortcuts

@@ -66,7 +66,6 @@ return packer.startup(function(use)
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip", commit = "79b2019c68a2ff5ae4d732d50746c901dd45603a" }) --snippet engine
-	use({ "rafamadriz/friendly-snippets", commit = "d27a83a363e61009278b6598703a763ce9c8e617" }) -- a bunch of snippets to use
 
   use({ "NvChad/nvim-colorizer.lua", commit = "004a2b3ef62b01d3d1db454d1efe76d31934d43b"})
 
