@@ -94,6 +94,8 @@ return packer.startup(function(use)
     config = function()
       -- change breakpoint marker from default 'B' to little dot thing
       vim.fn.sign_define('DapBreakpoint', {text='', texthl='', linehl='', numhl=''})
+      vim.fn.sign_define('DapBreakpointCondition', {text='', texthl='', linehl='', numhl=''})
+      vim.fn.sign_define('DapBreakpointRejected', {text='', texthl='', linehl='', numhl=''})
     end
   })
 
