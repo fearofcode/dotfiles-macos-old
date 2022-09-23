@@ -72,6 +72,17 @@ return packer.startup(function(use)
 	-- LSP
 	use({ "neovim/nvim-lspconfig", commit = "148c99bd09b44cf3605151a06869f6b4d4c24455" }) -- enable LSP
   use({
+    "glepnir/lspsaga.nvim",
+    commit = "ae099d5844b005cec66a66ab30a44d3bf8867af9",
+    config = function()
+        local saga = require("lspsaga")
+
+        saga.init_lsp_saga({
+            -- your configuration
+        })
+    end,
+  })
+  use({
     "williamboman/mason.nvim",
     commit = "4a5aaf7d4cf91b595b8defc0f3ed9b5c995755ad",
     config = function() require("mason").setup() end
@@ -86,7 +97,6 @@ return packer.startup(function(use)
       })
   end
   })
-	use({ "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }) -- for formatters and linters
 
   -- Adds go-specific functions for running, testing, gofmt, etc
   use({ "fatih/vim-go", commit = "22b2273cfe562ac1c1af976ce77f18a3b1776f3c"})
