@@ -71,7 +71,21 @@ return packer.startup(function(use)
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig", commit = "148c99bd09b44cf3605151a06869f6b4d4c24455" }) -- enable LSP
-	use({ "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" }) -- simple to use language server installer
+  use({
+    "williamboman/mason.nvim",
+    commit = "4a5aaf7d4cf91b595b8defc0f3ed9b5c995755ad",
+    config = function() require("mason").setup() end
+  })
+  use({
+    "williamboman/mason-lspconfig.nvim",
+    commit = "1f7948fd516d922fcbf922788e56afe3bea93de1",
+    config = function ()
+      require("mason-lspconfig").setup({
+          -- see also server list in lsp/configs.lua
+          ensure_installed = { "jsonls", "sumneko_lua", "gopls", "rust_analyzer" }
+      })
+  end
+  })
 	use({ "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }) -- for formatters and linters
 
   -- Adds go-specific functions for running, testing, gofmt, etc
