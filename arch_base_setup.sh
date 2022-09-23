@@ -55,5 +55,8 @@ ln -sf $STARTING_DIR/.config/i3/picom.conf $HOME/.config/i3/picom.conf
 ln -sf $STARTING_DIR/.config/i3status/config $HOME/.config/i3status/config
 ln -sf $STARTING_DIR/.config/rofi/config.rasi $HOME/.config/rofi/config.rasi 
 
+sudo ln -sf $STARTING_DIR/scripts/dim_lights /usr/local/bin/dim_lights
+sudo ln -sf $STARTING_DIR/scripts/lights_up /usr/local/bin/lights_up
+
 # disable pc speaker
 echo "xset -b" | tee $HOME/.xinitrc
