@@ -4,12 +4,13 @@ sudo pacman -S alacritty bat dnsutils exa fd firefox fish fzf git \
     gnu-free-fonts go httpie man-db neofetch neovim \
     noto-fonts openssh picom pipewire-alsa pipewire-pulse \
     redshift ripgrep rofi scrot tmux tokei tree unzip vifm \
-    xorg-mkfontscale xorg-mkfontdir wget whois
+    xorg-mkfontscale xorg-mkfontdir xorg-set wget whois
 
 # go language server
 go install golang.org/x/tools/gopls@latest
 go install github.com/go-delve/delve/cmd/dlv@latest
 go install github.com/cosmtrek/air@latest
+go install mvdan.cc/gofumpt@latest
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -58,5 +59,6 @@ ln -sf $STARTING_DIR/.config/rofi/config.rasi $HOME/.config/rofi/config.rasi
 sudo ln -sf $STARTING_DIR/scripts/dim_lights /usr/local/bin/dim_lights
 sudo ln -sf $STARTING_DIR/scripts/lights_up /usr/local/bin/lights_up
 
+xorg r rate 200 50
 # disable pc speaker
 echo "xset -b" | tee $HOME/.xinitrc

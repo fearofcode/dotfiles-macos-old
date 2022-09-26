@@ -147,16 +147,36 @@ return packer.startup(function(use)
   })
 
   -- motion. leap is cool but I found it confusing (I am stupid)
-  -- use({
-  --   "ggandor/leap.nvim",
-  --   commit = "aba53d7a8870426bea89eeca6c3b265d1f94c584",
-  --   config = function()
-  --     require('leap').set_default_keymaps()
-  --   end
-  -- })
   use({
-    "ggandor/lightspeed.nvim",
-    commit = "a5b79ddbd755ac8d21a8704c370b5f643dda94aa",
+    "ggandor/leap.nvim",
+    commit = "aba53d7a8870426bea89eeca6c3b265d1f94c584",
+    config = function()
+      require('leap').set_default_keymaps()
+    end
+  })
+  -- Alternative motion plugins
+  -- use({
+  --   "ggandor/lightspeed.nvim",
+  --   commit = "a5b79ddbd755ac8d21a8704c370b5f643dda94aa",
+  -- })
+  -- use({
+  --   "justinmk/vim-sneak"
+  -- })
+
+  -- Emacs/bash keybindings when in insert mode
+  use({
+    "tpope/vim-rsi",
+    commit = "4c673fb6c70652a09682c50a0e308184731ca70b"
+  })
+  -- old school shit right here. helpers for adding/changing parens, quotes etc
+  use({
+    "tpope/vim-surround",
+    commit = "bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea"
+  })
+  -- EditorConfig support
+  use({
+    "gpanders/editorconfig.nvim",
+    commit = "7d10fe6bc340fd783c0b61cf627dd235100284db"
   })
 
   use({
