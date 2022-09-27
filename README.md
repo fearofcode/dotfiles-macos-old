@@ -10,4 +10,6 @@ The `setup_high_dpi.sh` script assumes you have checked this repo out to `~/dotf
 
 The Firefox theme is <a href="https://addons.mozilla.org/en-US/firefox/addon/alabaster-dark/">a Firefox port of Alabaster Dark</a>.
 
-<img src="alabster-dark.png">
+Because i3's window titles are hidden and the i3 status bar is hidden except when you press Super, there is no Alabaster Dark theming of i3. This is simply because I couldn't find one.
+
+<img src="alabaster-dark.png">
