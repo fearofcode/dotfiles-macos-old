@@ -53,8 +53,11 @@ return packer.startup(function(use)
   use({ "nvim-zh/better-escape.vim", commit = "6b16a45a839727977277f6ab11bded63e9ed86bb"})
   use({ "romgrk/barbar.nvim", commit = "c41ad6e3f68c2c9f6aa268c6232cdef885107303"})
 
-	-- Colorschemes
-  use({ "luisiacc/gruvbox-baby", commit = "a7dd15a89fba420b73d712ca9cfc0c08158b2904"})
+	-- Color scheme
+  -- use({ "luisiacc/gruvbox-baby", commit = "a7dd15a89fba420b73d712ca9cfc0c08158b2904"})
+  -- use 'rktjmp/lush.nvim'
+  -- use 'Lokaltog/monotone.nvim'
+  use 'p00f/alabaster_dark.nvim'
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
@@ -99,7 +102,8 @@ return packer.startup(function(use)
   })
 
   -- Adds go-specific functions for running, testing, gofmt, etc
-  use({ "fatih/vim-go", commit = "22b2273cfe562ac1c1af976ce77f18a3b1776f3c"})
+  -- seems to add to startup time significantly so leaving this disabled unless actually specifically needed
+  -- use({ "fatih/vim-go", commit = "22b2273cfe562ac1c1af976ce77f18a3b1776f3c"})
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })
@@ -146,7 +150,7 @@ return packer.startup(function(use)
     end
   })
 
-  -- motion. leap is cool but I found it confusing (I am stupid)
+  -- motion. leap is cool but confusing (I am stupid)
   use({
     "ggandor/leap.nvim",
     commit = "aba53d7a8870426bea89eeca6c3b265d1f94c584",

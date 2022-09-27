@@ -43,8 +43,6 @@ mkdir -p $HOME/.config/i3status/
 mkdir -p $HOME/.config/alacritty/
 mkdir -p $HOME/.config/rofi/
 
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-
 ln -sf $STARTING_DIR/.vimrc $HOME/.vimrc
 ln -sf $STARTING_DIR/.config/nvim/init.lua $HOME/.config/nvim/init.lua
 cp -rs $STARTING_DIR/.config/nvim/ $HOME/.config/nvim/
@@ -56,9 +54,14 @@ ln -sf $STARTING_DIR/.config/i3/picom.conf $HOME/.config/i3/picom.conf
 ln -sf $STARTING_DIR/.config/i3status/config $HOME/.config/i3status/config
 ln -sf $STARTING_DIR/.config/rofi/config.rasi $HOME/.config/rofi/config.rasi 
 
+ln -sf $STARTING_DIR/.config/i3/rofi_regular.config ~/.config/i3/rofi_regular.config
+# default to low DPI
+ln -sf $STARTING_DIR/.config/i3/rofi_regular.config ~/.config/i3/rofi.config
+ln -sf $STARTING_DIR/.config/i3/rofi_high_dpi.config ~/.config/i3/rofi_high_dpi.config
+
 sudo ln -sf $STARTING_DIR/scripts/dim_lights /usr/local/bin/dim_lights
 sudo ln -sf $STARTING_DIR/scripts/lights_up /usr/local/bin/lights_up
 
-xorg r rate 200 50
+xset r rate 200 50
 # disable pc speaker
 echo "xset -b" | tee $HOME/.xinitrc

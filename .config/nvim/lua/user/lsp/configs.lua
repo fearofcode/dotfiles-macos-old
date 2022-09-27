@@ -1,6 +1,6 @@
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "sumneko_lua", "gopls", "rust_analyzer" }
+local servers = { "gopls", "rust_analyzer" }
 
 for _, server in pairs(servers) do
 	local opts = {

@@ -2,40 +2,80 @@ env:
   TERM: alacritty
 
 font:
-  size: 20.0
+  size: 14.0
   normal:
     family: 'Iosevka'
 live_config_reload: true
 
+# Gruvbox dark
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x1d2021'
+#     foreground: '0xd5c4a1'
+#
+#   # Colors the cursor will use if `custom_cursor_colors` is true
+#   cursor:
+#     text: '0x1d2021'
+#     cursor: '0xd5c4a1'
+#
+#   # Normal colors
+#   normal:
+#     black:   '0x1d2021'
+#     red:     '0xfb4934'
+#     green:   '0xb8bb26'
+#     yellow:  '0xfabd2f'
+#     blue:    '0x83a598'
+#     magenta: '0xd3869b'
+#     cyan:    '0x8ec07c'
+#     white:   '0xd5c4a1'
+#
+#   # Bright colors
+#   bright:
+#     black:   '0x665c54'
+#     red:     '0xfb4934'
+#     green:   '0xb8bb26'
+#     yellow:  '0xfabd2f'
+#     blue:    '0x83a598'
+#     magenta: '0xd3869b'
+#     cyan:    '0x8ec07c'
+#     white:   '0xfbf1c7'
+
+# Alabaster dark
 colors:
   # Default colors
   primary:
-    background: '0x1d2021'
-    foreground: '0xd5c4a1'
+    background:        '#0e1415'
+    foreground:        '#cecece'
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
+  # Cursor colors
   cursor:
-    text: '0x1d2021'
-    cursor: '0xd5c4a1'
+    text:   '#0e1415'
+    cursor: '#cd974b'
+
+  # Selection colors
+  selection:
+    text:       '#000000'
+    background: '#293334'
 
   # Normal colors
   normal:
-    black:   '0x1d2021'
-    red:     '0xfb4934'
-    green:   '0xb8bb26'
-    yellow:  '0xfabd2f'
-    blue:    '0x83a598'
-    magenta: '0xd3869b'
-    cyan:    '0x8ec07c'
-    white:   '0xd5c4a1'
+    black:   '#000000'
+    red:     '#d2322d'
+    green:   '#6abf40'
+    yellow:  '#cd974b'
+    blue:    '#217EBC'
+    magenta: '#9B3596'
+    cyan:    '#178F79'
+    white:   '#cecece'
 
   # Bright colors
   bright:
-    black:   '0x665c54'
-    red:     '0xfb4934'
-    green:   '0xb8bb26'
-    yellow:  '0xfabd2f'
-    blue:    '0x83a598'
-    magenta: '0xd3869b'
-    cyan:    '0x8ec07c'
-    white:   '0xfbf1c7'
+    black:   '#333333'
+    red:     '#c33c33'
+    green:   '#95cb82'
+    yellow:  '#dfdf8e'
+    blue:    '#71aed7'
+    magenta: '#cc8bc9'
+    cyan:    '#47BEA9'
+    white:   '#ffffff'
