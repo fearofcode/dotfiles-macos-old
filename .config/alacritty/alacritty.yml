@@ -4,7 +4,9 @@ env:
 font:
   size: 14.0
   normal:
-    family: 'Iosevka'
+    # if we don't specifically use Iosevka Term here, spacing with icons will get fucked up!
+    family: 'Iosevka Term'
+
 live_config_reload: true
 
 # Gruvbox dark

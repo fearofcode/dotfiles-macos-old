@@ -1,7 +1,7 @@
 set -euxo pipefail
 
 sudo pacman -S alacritty bat dnsutils exa fd firefox fish fzf git \
-    gnu-free-fonts go httpie man-db neofetch neovim \
+    gnu-free-fonts go httpie imagemagick man-db neofetch neovim \
     noto-fonts openssh picom pipewire-alsa pipewire-pulse \
     redshift ripgrep rofi scrot tmux tokei tree unzip vifm \
     xorg-mkfontscale xorg-mkfontdir xorg-set wget whois

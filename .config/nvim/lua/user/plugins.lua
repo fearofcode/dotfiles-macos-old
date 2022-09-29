@@ -104,6 +104,17 @@ return packer.startup(function(use)
   -- Adds go-specific functions for running, testing, gofmt, etc
   -- seems to add to startup time significantly so leaving this disabled unless actually specifically needed
   -- use({ "fatih/vim-go", commit = "22b2273cfe562ac1c1af976ce77f18a3b1776f3c"})
+  use({
+    'ray-x/guihua.lua',
+    commit = "64a4e22e2f033d1dfbb27ff034cc7d351d5bfdae"
+  })
+  use({
+    'ray-x/go.nvim',
+    commit = "24270e540b96bcd6c0c8184532b93a5d4a55c38b",
+    config = function() require('go').setup({
+      run_in_floaterm = true
+    }) end
+  })
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })

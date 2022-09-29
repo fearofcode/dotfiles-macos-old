@@ -66,7 +66,14 @@ cmp.setup {
     { name = "nvim_lsp" },
     -- We don't need snippets for basic language syntax
     -- { name = "luasnip" },
-    { name = "buffer" },
+    { name = "buffer",
+      -- complete based on all buffers rather than current one only
+      option = {
+          get_bufnrs = function()
+            return vim.api.nvim_list_bufs()
+          end
+        }
+    },
     { name = "path" },
   },
   confirm_opts = {

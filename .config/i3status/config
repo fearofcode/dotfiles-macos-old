@@ -1,8 +1,8 @@
 general {
         colors = true
-        color_good = "#98971a"
+        color_good = "#CECECE"
         color_bad = "#cc241d"
-        color_degraded = "#fabd2f"
+        color_degraded = "#F9E0FF"
 }
 
 order += "wireless _first_"
