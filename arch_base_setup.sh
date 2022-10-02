@@ -1,7 +1,7 @@
 set -euxo pipefail
 
-sudo pacman -S alacritty bat dnsutils exa fd firefox fish fzf git \
-    gnu-free-fonts go httpie imagemagick man-db neofetch neovim \
+sudo pacman -S alacritty bat clang dnsutils exa fd firefox fish fzf git \
+    gnu-free-fonts go httpie imagemagick lldb man-db neofetch neovim \
     noto-fonts openssh picom pipewire-alsa pipewire-pulse \
     redshift ripgrep rofi scrot tmux tokei tree unzip vifm \
     xorg-mkfontscale xorg-mkfontdir xorg-set wget whois
@@ -27,6 +27,9 @@ makepkg -si
 
 # make fish default shell
 chsh -s /usr/bin/fish
+
+# install starfish
+curl -sS https://starship.rs/install.sh | sh
 
 # kickass fzf integration with fish that is better than built-in fzf_key_bindings
 yay -S fish-fzf
