@@ -89,7 +89,11 @@ vim.cmd [[
 local ok, _ = pcall(require, "dap")
 if not ok then return end
 
--- based off IntelliJ shortcuts
+-- sort of like Super + Alt + L for IntelliJ but Alacritty doesn't recognize
+-- super key shortcut apparently
+-- https://vi.stackexchange.com/questions/37212/super-key-not-working-in-neovim-on-linux
+vim.keymap.set("n", "<leader>l", ":lua vim.lsp.buf.format()<CR>", opts)
+-- based off IntelliJ debugger shortcuts
 vim.keymap.set("n", "<F9>", ":lua require'dap'.continue()<CR>")
 vim.keymap.set("n", "<F8>", ":lua require'dap'.step_over()<CR>")
 vim.keymap.set("n", "<F7>", ":lua require'dap'.step_into()<CR>")
