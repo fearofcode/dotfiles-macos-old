@@ -17,7 +17,7 @@
    blackselect:      #303030;
    darkgray:         #848484;
    scrollbarcolor:   #505050;
-   font: "Iosevka 14";
+   font: "SauceCode Pro Nerd Font 14";
    background-color: @blackdarkest;
 }
 

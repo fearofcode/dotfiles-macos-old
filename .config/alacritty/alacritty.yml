@@ -4,8 +4,8 @@ env:
 font:
   size: 14.0
   normal:
-    # if we don't specifically use Iosevka Term here, spacing with icons will get fucked up!
-    family: 'Iosevka Term'
+    # wish I could use Iosevka but I keep seeing Nerd Font icon issues in different apps
+    family: 'SauceCodePro Nerd Font'
 
 live_config_reload: true
 
