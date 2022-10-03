@@ -2,7 +2,7 @@ set -euxo pipefail
 
 sudo pacman -S alacritty bat clang dnsutils exa fd firefox fish fzf git \
     gnu-free-fonts go httpie imagemagick lldb man-db neofetch neovim \
-    noto-fonts nvidia-settings openssh picom pipewire-alsa pipewire-pulse \
+    noto-fonts noto-fonts-emoji nvidia-settings openssh picom pipewire-alsa pipewire-pulse \
     redshift ripgrep rofi scrot tmux tokei tree unzip vifm \
     xorg-mkfontscale xorg-mkfontdir xorg-set wget whois
 

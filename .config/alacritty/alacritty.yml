@@ -4,8 +4,9 @@ env:
 font:
   size: 14.0
   normal:
-    # wish I could use Iosevka but I keep seeing Nerd Font icon issues in different apps
-    family: 'SauceCodePro Nerd Font'
+    family: 'Iosevka Term'
+  bold:
+    family: 'Iosevka Term'
 
 live_config_reload: true
 
