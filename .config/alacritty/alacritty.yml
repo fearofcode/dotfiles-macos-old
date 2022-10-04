@@ -2,11 +2,11 @@ env:
   TERM: alacritty
 
 font:
-  size: 14.0
+  size: 20.0
   normal:
-    family: 'Iosevka Term'
+    family: 'Iosevka Nerd Font'
   bold:
-    family: 'Iosevka Term'
+    family: 'Iosevka Nerd Font'
 
 live_config_reload: true
 

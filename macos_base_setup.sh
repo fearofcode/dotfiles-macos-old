@@ -27,3 +27,8 @@ brew install wget
 # so that chsh fish will work
 sudo sh -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
 chsh -s /opt/homebrew/bin/fish
+
+sudo mkdir -p -m 775 /usr/local/bin
+
+brew tap homebrew/cask-fonts
+brew install --cask font-iosevka-nerd-font

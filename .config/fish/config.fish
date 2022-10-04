@@ -1,4 +1,5 @@
-set PATH $HOME/.cargo/bin $HOME/go/bin $HOME/.local/bin $PATH
+set PATH /opt/homebrew/opt/gnu-sed/libexec/gnubin $HOME/.cargo/bin $HOME/go/bin $HOME/.local/bin $PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
 export LESS='--quit-if-one-screen -R'
 
 alias ls='exa'
