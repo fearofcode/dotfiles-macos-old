@@ -42,3 +42,5 @@ ln -sf $STARTING_DIR/.config/rofi/config.rasi $HOME/.config/rofi/config.rasi
 
 sudo ln -sf $STARTING_DIR/scripts/dim_lights /usr/local/bin/dim_lights
 sudo ln -sf $STARTING_DIR/scripts/lights_up /usr/local/bin/lights_up
+
+chsh -s /usr/bin/fish

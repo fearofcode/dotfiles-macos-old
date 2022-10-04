@@ -23,3 +23,7 @@ brew install tokei
 brew install tree
 brew install vifm
 brew install wget
+
+# so that chsh fish will work
+sudo sh -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
+chsh -s /opt/homebrew/bin/fish
