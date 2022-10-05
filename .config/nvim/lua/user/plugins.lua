@@ -106,7 +106,7 @@ return packer.startup(function(use)
 		commit = "aebc6cf",
 	})
 
-  -- DAP (must dab before using DAP)
+  -- DAP (you must dab before using DAP)
   use({
     "mfussenegger/nvim-dap",
     commit = "0b320f5bd4e5f81e8376f9d9681b5c4ee4483c25",
@@ -117,7 +117,33 @@ return packer.startup(function(use)
       vim.fn.sign_define('DapBreakpointRejected', {text='', texthl='', linehl='', numhl=''})
       vim.fn.sign_define('DapStopped', {text='', texthl='', linehl='', numhl=''})
       vim.fn.sign_define('DapLogPoint', {text='朗', texthl='', linehl='', numhl=''})
-    end
+
+      local dap = require('dap')
+      dap.adapters.lldb = {
+        type = 'executable',
+        command = '/opt/homebrew/opt/llvm/bin/lldb-vscode', -- adjust as needed, must be absolute path
+        name = 'lldb'
+      }
+      dap.configurations.cpp = {
+        {
+          name = 'Launch',
+          type = 'lldb',
+          request = 'launch',
+          program = function()
+            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+          end,
+          cwd = '${workspaceFolder}',
+          stopOnEntry = false,
+          args = {},
+
+        },
+      }
+
+      -- If you want to use this for Rust and C, add something like this:
+
+      dap.configurations.c = dap.configurations.cpp
+      dap.configurations.rust = dap.configurations.cpp
+  end
   })
 
   use({

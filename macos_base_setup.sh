@@ -15,7 +15,9 @@ brew install fd
 brew install fish
 brew install fzf
 brew install go
+brew install htop
 brew install httpie
+brew install llvm # this won't get linked. we just want the lldb-vscode binary without dealing with 50 goddamn malware warnings
 brew install neovim
 brew install ripgrep
 brew install tmux
