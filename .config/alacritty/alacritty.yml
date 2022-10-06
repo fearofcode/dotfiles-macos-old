@@ -2,11 +2,11 @@ env:
   TERM: alacritty
 
 font:
-  size: 20.0
+  size: 18.0
   normal:
-    family: 'Iosevka Nerd Font'
+    family: 'Liga SFMono Nerd Font'
   bold:
-    family: 'Iosevka Nerd Font'
+    family: 'Liga SFMono Nerd Font'
 
 live_config_reload: true
 
