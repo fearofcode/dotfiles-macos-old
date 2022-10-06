@@ -32,8 +32,8 @@ chsh -s /opt/homebrew/bin/fish
 
 sudo mkdir -p -m 775 /usr/local/bin
 
-wget https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized/archive/refs/heads/main.zip -O sf_mono_nerd_font_ligaturized.zip
-echo "TODO automatically extract and install SF Mono font zip"
+brew tap epk/epk
+brew install --cask font-sf-mono-nerd-font
 
 # need this to easily install fish-fzf
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher

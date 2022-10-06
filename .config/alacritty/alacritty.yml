@@ -4,9 +4,9 @@ env:
 font:
   size: 18.0
   normal:
-    family: 'Liga SFMono Nerd Font'
+    family: 'SFMono Nerd Font'
   bold:
-    family: 'Liga SFMono Nerd Font'
+    family: 'SFMono Nerd Font'
 
 live_config_reload: true
 
