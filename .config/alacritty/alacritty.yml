@@ -1,6 +1,13 @@
 env:
   TERM: alacritty
 
+selection:
+  save_to_clipboard: true
+
+cursor:
+  style:
+    shape: Beam
+
 window:
   padding:
     x: 18
