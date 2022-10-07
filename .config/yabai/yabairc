@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+yabai -m config layout bsp
+
+# ignore apps that will look like shit in tiling
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Font Book$" manage=off
+yabai -m rule --add app="^Archive Utility$" manage=off
+yabai -m rule --add app="^Creative Cloud$" manage=off
+yabai -m rule --add app="^Alfred Preferences$" manage=off
+
+echo "yabai configuration loaded.."
+
