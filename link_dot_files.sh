@@ -10,6 +10,7 @@ STARTING_DIR=$(pwd)
 
 ln -sf $STARTING_DIR/.config/nvim/init.lua $HOME/.config/nvim/init.lua
 ln -sf $STARTING_DIR/.tmux.conf $HOME/.tmux.conf
+ln -sf $STARTING_DIR/.ideavimrc $HOME/.ideavimrc
 ln -sf $STARTING_DIR/.config/fish/config.fish $HOME/.config/fish/config.fish
 ln -sf $STARTING_DIR/.config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 ln -sf $STARTING_DIR/.config/yabai/yabairc $HOME/.config/yabai/yabairc

@@ -1,0 +1,119 @@
+set clipboard+=unnamed
+set clipboard+=ideaput
+"" not sure these actually work
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set textobj-entire
+set ReplaceWithRegister
+set NERDTree
+"" https://plugins.jetbrains.com/plugin/15976-which-key
+set which-key
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+nnoremap <leader>fn :NERDTreeFocus<CR>
+nnoremap <leader>nt :NERDTree<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+set smartcase
+set relativenumber
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+vnoremap < <gv
+vnoremap > >gv
+
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+"" code action
+nnoremap <leader>ca :action Refactorings.QuickListPopupAction<CR>
+
+nnoremap <leader>ff :action FindInPath<CR>
+nnoremap <leader>ga :action GotoAction<CR>
+nnoremap <leader>gf :action GotoFile<CR>
+nnoremap <leader>fu :action FindUsages<CR>
+
+nnoremap <leader>snb :action ShowNavBar<CR>
+nnoremap <leader>gs :action GotoSymbol<CR>
+nnoremap <leader>gc :action GotoClass<CR>
+nnoremap <leader>gi :action GotoImplementation<CR>
+nnoremap <leader>gd :action GotToDeclaration<CR>
+nnoremap <leader>gsm :action GotToSuperMethod<CR>
+nnoremap <leader>gt :action GotoTest<CR>
+nnoremap <leader>eb :action Back<CR>
+nnoremap <leader>ef :action Forward<CR>
+nnoremap <leader>ge :action GotoNextError<CR>
+nnoremap <leader>gE :action GotoPreviousError<CR>
+
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+sethandler <c-h> a:vim
+sethandler <c-l> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+nnoremap <c-p> :action JumpToLastWindow<CR>
+nnoremap <c-x> :action HideAllWindows<CR>
+
+nnoremap <s-h> :action PreviousTab<CR>
+nnoremap <s-l> :action NextTab<CR>
+
+"" S = bidirectional search, f = forward only search
+map <leader>j <Plug>(easymotion-s)
+map <leader>J <Plug>(easymotion-f)
+
+nnoremap ,r :action ContextRun<CR>
+nnoremap ,c :action RunClass<CR>
+nnoremap ,f :action ChooseRunConfiguration<CR>
+nnoremap ,t :action ActivateRunToolWindow<CR>
+nnoremap ,u :action Rerun<CR>
+nnoremap ,f :action RerunFailedTests<CR>
+nnoremap ,b :action ToggleLineBreakpoint<CR>
+nnoremap ,d :action ContextDebug<CR>
+nnoremap ,n :action ActivateDebugToolWindow<CR>
+
+map <leader>d <Action>(Debug)
+map <leader>r <Action>(RenameElement)
+map <leader>c <Action>(Stop)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+
+map <leader>s <Action>(SelectInProjectView)
+map <leader>a <Action>(Annotate)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <S-Space> <Action>(GotoNextError)
+
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>o <Action>(FileStructurePopup)
+
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
+
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+
+
+
