@@ -14,5 +14,7 @@ source "$HOME/.cargo/env"
 curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.cargo/bin/rust-analyzer
 chmod +x ~/.cargo/bin/rust-analyzer
 
+cargo install cargo-watch
+
 # install starfish
 curl -sS https://starship.rs/install.sh | sh
