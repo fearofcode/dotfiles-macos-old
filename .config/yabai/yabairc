@@ -2,6 +2,9 @@
 
 yabai -m config layout bsp
 
+# specifically force emacs to tile
+yabai -m rule --add app=Emacs manage=on
+
 # ignore apps that will look like shit in tiling
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^App Store$" manage=off

@@ -10,6 +10,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew install --cask alacritty
 brew install bat
+brew install --cask emacs
 brew install exa
 brew install fd
 brew install fish

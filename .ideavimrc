@@ -21,9 +21,7 @@ set which-key
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
-nnoremap <leader>fn :NERDTreeFocus<CR>
-nnoremap <leader>nt :NERDTree<CR>
-nnoremap <leader>e :NERDTreeToggle<CR>
+set timeoutlen = 10000
 
 """ Common settings -------------------------
 set showmode
@@ -47,6 +45,10 @@ nnoremap ]] :action MethodDown<CR>
 
 "" code action
 nnoremap <leader>ca :action Refactorings.QuickListPopupAction<CR>
+
+nnoremap <leader>fn :NERDTreeFocus<CR>
+nnoremap <leader>nt :NERDTree<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
 
 nnoremap <leader>ff :action FindInPath<CR>
 nnoremap <leader>ga :action GotoAction<CR>
