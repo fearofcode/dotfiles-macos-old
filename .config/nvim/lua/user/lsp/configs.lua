@@ -2,7 +2,7 @@ local lspconfig = require("lspconfig")
 
 local servers = { 
   {name = "gopls", call_setup = true}, 
-  {name = "rust_analyzer", call_setup = false}, -- rust-tools will call setup for us
+  {name = "rust_analyzer", call_setup = true}, -- rust-tools will call setup for us
 }
 
 for _, server in pairs(servers) do
