@@ -191,10 +191,10 @@ return packer.startup(function(use)
     end 
   })
   -- Emacs/bash keybindings when in insert mode
-  use({
-    "tpope/vim-rsi",
-    commit = "4c673fb6c70652a09682c50a0e308184731ca70b"
-  })
+  -- use({
+  --   "tpope/vim-rsi",
+  --   commit = "4c673fb6c70652a09682c50a0e308184731ca70b"
+  -- })
   -- old school shit right here. helpers for adding/changing parens, quotes etc
   use({
     "tpope/vim-surround",
