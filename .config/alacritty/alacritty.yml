@@ -17,12 +17,9 @@ window:
 
 font:
   size: 18.0
-  use_thin_strokes: true
   normal:
     family: 'SFMono Nerd Font'
     style: Regular
-  bold:
-    family: 'SFMono Nerd Font'
 
 live_config_reload: true
 
@@ -36,7 +33,7 @@ colors:
   # Cursor colors
   cursor:
     text:   '#0e1415'
-    cursor: '#cd974b'
+    cursor: '#dedede'
 
   # Selection colors
   selection:
