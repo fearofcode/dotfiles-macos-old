@@ -18,7 +18,7 @@ window:
 font:
   size: 18.0
   normal:
-    family: 'SFMono Nerd Font'
+    family: 'BerkeleyMono Nerd Font'
     style: Regular
 
 live_config_reload: true
