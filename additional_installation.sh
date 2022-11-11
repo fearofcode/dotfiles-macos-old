@@ -18,3 +18,8 @@ cargo install cargo-watch
 
 # install starfish
 curl -sS https://starship.rs/install.sh | sh
+
+# install leiningen
+wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+chmod +x lein
+sudo mv lein /usr/local/bin
