@@ -18,4 +18,4 @@
 
 -- vim.cmd [[ colorscheme monotone]]
 
-vim.cmd [[ colorscheme alabaster_dark ]]
+vim.cmd [[ colorscheme alabaster ]]

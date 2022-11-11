@@ -54,7 +54,7 @@ return packer.startup(function(use)
   -- use({ "luisiacc/gruvbox-baby", commit = "a7dd15a89fba420b73d712ca9cfc0c08158b2904"})
   -- use 'rktjmp/lush.nvim'
   -- use 'Lokaltog/monotone.nvim'
-  use 'p00f/alabaster_dark.nvim'
+  use 'p00f/alabaster.nvim'
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp", commit = "2427d06" }) -- The completion plugin
@@ -62,6 +62,13 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-path", commit = "447c87c" }) -- path completions
 	use({ "saadparwaiz1/cmp_luasnip", commit = "a9de941" }) -- snippet completions
 	use({ "hrsh7th/cmp-nvim-lsp", commit = "affe808" })
+  use({
+    'leoluz/nvim-dap-go', 
+    commit = "ce73cf9bce542e0731bb731690a8a72f03fe116b", 
+    config = function()
+      require('dap-go').setup()
+    end
+  })
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip", commit = "8f8d493" }) --snippet engine
