@@ -85,3 +85,6 @@
 (set-face-attribute 'variable-pitch nil :font "SF Mono-18")
 
 (load-theme 'modus-vivendi t)
+
+(unless (package-installed-p 'cider)
+  (package-install 'cider))
